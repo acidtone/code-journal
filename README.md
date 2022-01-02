@@ -72,3 +72,5 @@ Goal: Install `vue-luxon` locally, or I'll try installing vanilla luxon.
 - After a break, and some research, I found this tutorial:
     - [How to make use of Vue.js Plugins in Nuxt - [Vue-awesome-swiper] ](https://dev.to/olawanle_joel/how-to-make-use-of-vue-js-plugins-in-nuxt-2bao)
 - Ugh, giving up on Luxon for now. Going to try doing the week-number math manually.
+    - [current commit](https://github.com/sait-wbdv/winter-2022/commit/d3f2b0082477e16a16e30591b3370aaf529a54d6)
+
