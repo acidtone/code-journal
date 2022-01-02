@@ -74,3 +74,13 @@ Goal: Install `vue-luxon` locally, or I'll try installing vanilla luxon.
 - Ugh, giving up on Luxon for now. Going to try doing the week-number math manually.
     - [current commit](https://github.com/sait-wbdv/winter-2022/commit/d3f2b0082477e16a16e30591b3370aaf529a54d6)
 
+Goal: Auto prepend the lesson plan titles with the course code without having to add it to every markdown file.
+- Does the nuxt content module support directory json/yaml files that contain default front matter variables for lessons?
+- It doesn't look like it? 
+- Backup plan: build a superset yaml file that feeds the fetch loop for all the content that's date centric
+    - lessons
+    - holidays
+    - assignment due dates
+    - important milestones 
+        - "last day to get 4 dailies in before end of course"
+- didn't get very far. 
