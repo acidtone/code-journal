@@ -59,6 +59,7 @@ Goal: Divide a list of sorted days into weeks.
         - [Nuxt Plugins directory](https://nuxtjs.org/docs/directory-structure/plugins/)
 - Successfully installed `vue-luxon` (I think) but hitting a roadblock trying to access it from a component. 
     - [`vue-luxon` docs](https://github.com/casbloem/vue-luxon) say use `this`:
+
         ```js
         this.$luxon("2020-10-05T14:48:00.000Z")
         ```
@@ -66,3 +67,8 @@ Goal: Divide a list of sorted days into weeks.
         But `this` is not defined.
     - no variations I can think of are working :(
         - [current broken code](https://github.com/sait-wbdv/winter-2022/commit/62096aa839e1bf3bc4f2a9ada421a26d57a1c695)
+
+Goal: Install `vue-luxon` locally, or I'll try installing vanilla luxon.
+- After a break, and some research, I found this tutorial:
+    - [How to make use of Vue.js Plugins in Nuxt - [Vue-awesome-swiper] ](https://dev.to/olawanle_joel/how-to-make-use-of-vue-js-plugins-in-nuxt-2bao)
+- Ugh, giving up on Luxon for now. Going to try doing the week-number math manually.
