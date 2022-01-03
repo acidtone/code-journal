@@ -55,6 +55,8 @@ Goal: Divide a list of sorted days into weeks.
     - deleting `package-lock.json` and `node_modules` with an install and audit finally fixed the issue (for now). Not sure how this could have broken?
 - Not sure how to install luxon as a nuxt module? I've `npm install vue-luxon` but adding it to the Nuxt `plugin` property in the config gives me a "plugin not found" error.
     - most likely have to add this on the vue level but need to learn more about how that works within Nuxt.
+    - Starting to feel the rage. This must be how the students must feel. Constant searching on Google is failing me "nuxt vue-luxon", and any variation on it, returns the same list of useless pages.
+        - Note for teaching: rage quitting is real. Right now I want to punch every Nuxt dev in the face for making shitty assumptions about me.
     - Docs to the rescue! Unless this page sucks.
         - [Nuxt Plugins directory](https://nuxtjs.org/docs/directory-structure/plugins/)
 - Successfully installed `vue-luxon` (I think) but hitting a roadblock trying to access it from a component. 
@@ -84,3 +86,37 @@ Goal: Auto prepend the lesson plan titles with the course code without having to
     - important milestones 
         - "last day to get 4 dailies in before end of course"
 - didn't get very far. 
+
+## Jan 3, 2022
+Goal: Split the WBDV schedule into Weeks
+- [Repo](https://github.com/sait-wbdv/winter-2022)
+- [Issue](https://github.com/sait-wbdv/winter-2022/issues/5)
+- recap: installing Luxon was problematic and DayJS is an optional build module that might work. BUT, I think I'm just going to do the Week math manually and maybe refactor for a library later.
+- Got to find the article that gave me the math before:
+    - Search: "js date week number"
+        - Top result: [Get Week Number of the Year in JavaScript](https://www.delftstack.com/howto/javascript/javascript-get-week-number/)
+        - relevant code example from article:
+
+            ```js
+            currentdate = new Date();
+            var oneJan = new Date(currentdate.getFullYear(),0,1);
+            var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+            var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+            console.log(`The week number of the current date (${currentdate}) is ${result}.`);
+            ```
+
+            The code seems to be based on the 1st of Jan and then defining a week as +7 days. The Schedule only needs to count starting on the first Monday as Week 1.
+- The logic shouldn't be too far off from above. Pseudo-code:
+    1. Loop through sorted list of days in Schedule `script`.
+    2. Define the start of Week 1 as the Monday of the first date in the list (if first day is a Tuesday, use the day before)
+    3. Create date object of this Monday as `startDate`
+    4. Set `week` iterator to 1.
+    5. foreach date:
+        1. Subtract `startDate` from `current`
+        2. divide by 7 days
+        3. round down
+        4. If: not equal to `week` iterator, set `week` to new value
+        5. set `item.week` to `week`
+- Once the week is set for each item, it should be straight forward (hopefully) to build Past, Current, Upcoming weeks into the Schedule `template`.
+- [starting commit](https://github.com/sait-wbdv/winter-2022/commit/04465debba12eb9ef849ad95a3ad071f47bc78a4)
+- 
