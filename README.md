@@ -183,3 +183,31 @@ Walk-through
 
 Reflection
 - In hindsight, I should have spent more time figuring out how to add a proper datetime library to Nuxt. Nuxt auto converting the YYYY-MM-DD dates in the lesson front matter burned soooo much time.
+
+## Jan 4, 2022
+Goal: Test DayJS in Nuxt
+- Ash installed `$dayjs` as a build module and I'm figuring out how to use it to solve the timezone issues.
+- Last resort: If I can't get tz to work, I'm just going to explicitly set a full UTC datetime string as `lesson.date` in all the markdown files.
+    - If you can't tell, I'm losing faith in Nuxt. Yesterday's rage still lingers.
+- [setting the timezone in the config](https://www.npmjs.com/package/@nuxtjs/dayjs) so far has no effect on `item.date` output from Nuxt Content.
+- According to the [timezone plugin docs](https://day.js.org/docs/en/plugin/timezone) I might have to explicitly extend DayJS:
+
+    ```js
+    var utc = require('dayjs/plugin/utc')
+    var timezone = require('dayjs/plugin/timezone') // dependent on utc plugin
+    dayjs.extend(utc)
+    dayjs.extend(timezone)
+
+    dayjs.tz("2014-06-01 12:00", "America/New_York")
+
+    dayjs("2014-06-01 12:00").tz("America/New_York")
+
+    dayjs.tz.guess()
+
+    dayjs.tz.setDefault("America/New_York")
+    ```
+
+    - First of all, `var`? How old are these docs?
+    - Going to try to use `dayjs.tz.guess()` to confirm the set timezone. Ash already listed `utc` and `timezone` as plugins in the config but how do I use `.extend(utc)` from within Nuxt?
+    - [DayJS might not support global plugins](https://github.com/nuxt-community/dayjs-module/issues/182) but I just imported locally to the schedule component. It's outputting `America/Edmonton` as the timezone but the problem still seems to be the conversion Nuxt applies to front matter dates. DayJS doesn't seem to be used for this conversion.
+    - It might be time for the last resort...
