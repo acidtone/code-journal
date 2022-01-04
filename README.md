@@ -122,4 +122,36 @@ Goal: Split the WBDV schedule into Weeks
         5. set `item.week` to `week`
 - Once the week is set for each item, it should be straight forward (hopefully) to build Past, Current, Upcoming weeks into the Schedule `template`.
 - [starting commit](https://github.com/sait-wbdv/winter-2022/commit/04465debba12eb9ef849ad95a3ad071f47bc78a4)
-- Morty: 
+- -> Morty
+- Added link to pair session with Ash!
+- Back to weeks thing...
+
+[Step 1. Declare base `week` and `startDate`](https://github.com/sait-wbdv/winter-2022/blob/04465debba12eb9ef849ad95a3ad071f47bc78a4/pages/schedule.vue#L36)
+- `firstDate` is better than `startDate`?
+- Oooo, I almost got distracted from the goal by trying to set the lesson date to 8am. Midnight is good enough for now.
+
+Step 2: 
+- Search: "intl date day of week"
+    - I really want to use `Intl` but `Date` object is good enough for now
+- Managed to maybe figure out some really sloppy code but I'll test after I finish the steps. Cuz I'm crazy like that.
+
+[ Step 3. Else: subtract `startDate` from `currentDate`, divide by 7 and round down (`currentWeek`)](https://github.com/sait-wbdv/winter-2022/blob/04465debba12eb9ef849ad95a3ad071f47bc78a4/pages/schedule.vue#L39)
+- I'm pretty proud of this one. Steps 3 and 4 complete in one line:
+
+    ```js
+    week = week + (floor((currentDate - firstMon) / 24 / 60 / 60 / 7))
+    ```
+- Time for the reckoning: let's boot this puppy up...
+    - `ReferenceError: floor is not defined`
+        - lolz.
+    - Well, week 1 is correct :)
+    - the Date Object is kicking me in the ass. 
+- Good to know - front matter dates in YYYY-MM-DD are converted to the following in Nuxt Content:
+    
+    ```
+    2022-01-10T00:00:00.000Z
+    ```
+    - TODO: Set the timezone in Nuxt/Vue config
+    - TODO: Possible to set default start time (8am) to lessons?
+
+- taking a break
