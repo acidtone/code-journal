@@ -153,5 +153,33 @@ Step 2:
     ```
     - TODO: Set the timezone in Nuxt/Vue config
     - TODO: Possible to set default start time (8am) to lessons?
-
 - taking a break
+- -> Rick
+- [mid-session commit](https://github.com/sait-wbdv/winter-2022/commit/3d9515fc2d9359911480f3d530b0765c2e0c7f61)
+- Just realized the message for the above commit is not appropriate. Instead of "mid-session transfer to Rick", it should have been more descriptive of the code, like "buggy - added first draft of Schedule by Week"
+- Logic error 1:
+    - `week` was proceeding from 1, to 144, to 430, to 589 but not sure why
+    - `week` is now returning NaN after playing with some date formatting
+    - going to try figuring out how Nuxt Content is affecting my code with it's date object
+    - it looks like dates are converted to a UTC string?
+    - My math is also off for subtracting a day's worth of seconds if the first day of class isn't a Monday:
+        - search: "js new date minus 1 day"
+        - top result: [How to subtract days from a plain Date?](https://stackoverflow.com/questions/1296358/how-to-subtract-days-from-a-plain-date)
+        - it worked!
+- Logic error 2
+    - `firstMon` is inheriting the time that the code is running
+    - going to explicitly set the time to 8am when creating `itemDate`
+    - Fixed, but it's needs optimization
+- Logic error 3
+    - Monday is turning to Sunday because of timezone (-7 hours)
+    - This was such a pain in the a$$! I tapped out and just added a day to `itemDate` to compensate for the timezone. 
+    - The problem: Nuxt Content converting YYYY-MM-DD to a date object in UTC. Very frustrating.
+- The proper `week` is now inserting into the lesson objects.
+    - [brute force commit](https://github.com/sait-wbdv/winter-2022/commit/af33d08067fd3dcc462b14be5db07bbd04cf184a)
+
+Walk-through
+- [cleaned up commit](https://github.com/sait-wbdv/winter-2022/commit/68b5bcd69334fabccf71531f39559695d09e1e7a)
+    - Will eventually fix a [potential bug with adding a day for timezone](https://github.com/sait-wbdv/winter-2022/blob/68b5bcd69334fabccf71531f39559695d09e1e7a/pages/schedule.vue#L43-L44) but not today
+
+Reflection
+- In hindsight, I should have spent more time figuring out how to add a proper datetime library to Nuxt. Nuxt auto converting the YYYY-MM-DD dates in the lesson front matter burned soooo much time.
