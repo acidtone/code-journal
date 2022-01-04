@@ -87,6 +87,9 @@ Goal: Auto prepend the lesson plan titles with the course code without having to
         - "last day to get 4 dailies in before end of course"
 - didn't get very far. 
 
+## Jan 2, 2022
+- [Pair Code with Ash](https://hackmd.io/Brs_kxvrQbuHCB1NlVzqbw)
+
 ## Jan 3, 2022
 Goal: Split the WBDV schedule into Weeks
 - [Repo](https://github.com/sait-wbdv/winter-2022)
@@ -119,4 +122,4 @@ Goal: Split the WBDV schedule into Weeks
         5. set `item.week` to `week`
 - Once the week is set for each item, it should be straight forward (hopefully) to build Past, Current, Upcoming weeks into the Schedule `template`.
 - [starting commit](https://github.com/sait-wbdv/winter-2022/commit/04465debba12eb9ef849ad95a3ad071f47bc78a4)
-- 
+- Morty: 
