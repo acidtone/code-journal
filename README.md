@@ -241,4 +241,22 @@ Goal: Research - what's the best way to add Nuxt pagination for post dates in th
 - It's looking more and more like we need a master store for the program schedule that will power the Schedule and lesson Prev/Next nav?
 
 Goal: Migrate layout templates from `fall-2021` to `winter-2021`
-- 
+- Trying to copy the structure as much as possible so I removed the separate primary and utility nav. Merging into one primary nav is good enough and will let me keep most of the styling.
+    - Pair code with Ash: add Utility nav later
+- Question: when to use `nuxt-link`?
+    - Search: "nuxt-link vs a"
+    - A: [nuxt-link is for all internal links](https://nuxtjs.org/docs/features/nuxt-components/#the-nuxtlink-component), use `a` for external links
+- Question: what goes into `static` and what goes into `assets`?
+    - Search: "nuxt assets vs static"
+    - [`assets` is processed by Webpack](https://stackoverflow.com/questions/48808182/nuxt-assets-and-static-folder-when-to-use-which) but what about Vite (maybe doesn't matter)?
+- Question: How do I link to internal images?
+    - Search: "nuxt img src"
+    - Looks like [`~/assets` is the way to go](https://nuxtjs.org/docs/directory-structure/assets/)
+- Moving on to adding css to the `head` using `vue-meta` (I think).
+    - Noice. Ash links [to the docs](https://nuxtjs.org/docs/configuration-glossary/configuration-css/) again.
+    - Hooking up the css was almost trivial.
+- I know I said I was going to keep the original design of the header but I can't help myself.
+    - Inspiration: [CSS Tricks](https://css-tricks.com/)
+        - It's a nice, compact design that runs fro end to end of the page. That'll leave room for the extra links and the Utility nav can go to the far left.
+- Done!
+    - [finishing commit](https://github.com/sait-wbdv/winter-2022/commit/58bff0eac85803e1f543141898dedcfa7e20a896)
