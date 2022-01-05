@@ -225,3 +225,20 @@ Goal: Add some hierarchy to the Schedule.
 - Now to add some "Week X" headings. This may quickly turn into a pair session with Ash.
 - I notice that the `v-for` is inside a `ul` where it outputs the `li`s. I can't immediately visualize how to add conditional headings and list containers to a flat loop.
 - I think my time is better spent adding pagination to the lesson pages.
+
+Goal: Research - what's the best way to add Nuxt pagination for post dates in the future?
+- Search: "nuxt pagination"
+    - First red herring: [Adding Pagination With Nuxt Content](https://redfern.dev/articles/adding-pagination-nuxt-content-blog/)
+        - I tried cloning [the same blog](https://github.com/garethredfern/nuxt-basic-blog) but it won't boot.
+        - Moving on...
+- Most of the tutorials are specific to blogs whereas we're an edge case. 
+    - dates are often in the future
+    - no pagination nav needed besides Prev/Next links
+    - content is spread out over multiple content modules and manually concatenated.
+- I think the easiest solution would be to simply add `prev` and `next` properties to the `lessons` array. 
+    - `index - 1` and `index + 1` should give the loop access to the `dir` and `slug` properties.
+    - Problem: how do we share the dynamic data from `schedule.vue` with the individual lessons?
+- It's looking more and more like we need a master store for the program schedule that will power the Schedule and lesson Prev/Next nav?
+
+Goal: Migrate layout templates from `fall-2021` to `winter-2021`
+- 
