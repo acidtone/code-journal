@@ -212,3 +212,16 @@ Goal: Test DayJS in Nuxt
     - [DayJS might not support global plugins](https://github.com/nuxt-community/dayjs-module/issues/182) but I just imported locally to the schedule component. It's outputting `America/Edmonton` as the timezone but the problem still seems to be the conversion Nuxt applies to front matter dates. DayJS doesn't seem to be used for this conversion.
     - It might be time for the last resort...
 - [final session commit](https://github.com/sait-wbdv/winter-2022/commit/73644a6be11438e97f0d6d9b559c808c125fd354)
+
+Goal: Add some hierarchy to the Schedule.
+- Plan: 
+    1. Add some draft titles to the lessons for testing.
+    2. Remove duplicate "Day X" from lesson titles (if they're allowed to be empty)
+    3. Add "Week X" headings to the for loop.
+        - Code Spike: how to add dynamic containers for each week from a flat `v-for` loop?
+        - It might be easier to build weeks into the data structure.
+- Content added:
+    - [commit](https://github.com/sait-wbdv/winter-2022/commit/4794d171609dd9b42ca673bf478cebab1f202331)
+- Now to add some "Week X" headings. This may quickly turn into a pair session with Ash.
+- I notice that the `v-for` is inside a `ul` where it outputs the `li`s. I can't immediately visualize how to add conditional headings and list containers to a flat loop.
+- I think my time is better spent adding pagination to the lesson pages.
