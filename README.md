@@ -280,3 +280,17 @@ Goal: Learn some `v-for`, and output the buggy nested array I just built :)
     - 
 - Noice! In hindsight, maybe a branch wasn't needed.
     - [base functionality](https://github.com/sait-wbdv/winter-2022/commit/ca1d16c8cc81dd72d2c9a24e3df33d378067dd1d)
+- -> Rick
+    - Ugh, now I have to merge and delete the branch
+    - [merged commit](https://github.com/sait-wbdv/winter-2022/commit/ca1d16c8cc81dd72d2c9a24e3df33d378067dd1d)
+    - Aaaaan how do I delete a remote and local branch again (for the 50th time)?
+        - Search: "git delete branch"
+        - Top result (again): [How to Delete a Git Branch Both Locally and Remotely](https://www.freecodecamp.org/news/how-to-delete-a-git-branch-both-locally-and-remotely/)
+
+            ```shell
+            // delete branch locally
+            git branch -d localBranchName
+
+            // delete branch remotely
+            git push origin --delete remoteBranchName
+            ```
