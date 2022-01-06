@@ -294,3 +294,7 @@ Goal: Learn some `v-for`, and output the buggy nested array I just built :)
             // delete branch remotely
             git push origin --delete remoteBranchName
             ```
+- [Cleaned up the code and added the date](https://github.com/sait-wbdv/winter-2022/blob/1e536d673188ae579fb9631cf9de0619abedf8d9/pages/schedule.vue)
+
+Goal: Output pretty dates on the Schedule
+- research: [content:file:beforeInsert](https://content.nuxtjs.org/advanced/#contentfilebeforeinsert)
