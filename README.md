@@ -271,3 +271,12 @@ Goal: [Master schedule by week array](https://github.com/sait-wbdv/winter-2022/i
 - Brute force: [initial commit](https://github.com/sait-wbdv/winter-2022/blob/b1f27a016e07490320cea1b1c73ade2d69bedc10/pages/schedule.vue#L65-L66)
 - I've got [the week array mostly working](https://github.com/sait-wbdv/winter-2022/blob/3f7573e66b37e62ec37039a0679fd860bf3fa73e/pages/schedule.vue#L65-L80) but there's a bug that I think is caused by the hacky way I calculated weeks. But that's good enough to move on.
 - TODO: Add new issue about the bug
+- -> Morty
+
+Goal: Learn some `v-for`, and output the buggy nested array I just built :)
+- I'm weak on `v-anything` atm so setting up [a new branch with a test `v-for`](https://github.com/sait-wbdv/winter-2022/commit/c8d5ae89cac580de110271407a6d9d06190c4ff1)
+- Noice. Got it working; just have to figure out how to output `index + 1` in the heading
+    - Search: "v-for index"
+    - 
+- Noice! In hindsight, maybe a branch wasn't needed.
+    - [base functionality](https://github.com/sait-wbdv/winter-2022/commit/ca1d16c8cc81dd72d2c9a24e3df33d378067dd1d)
