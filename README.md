@@ -260,3 +260,14 @@ Goal: Migrate layout templates from `fall-2021` to `winter-2021`
         - It's a nice, compact design that runs fro end to end of the page. That'll leave room for the extra links and the Utility nav can go to the far left.
 - Done!
     - [finishing commit](https://github.com/sait-wbdv/winter-2022/commit/58bff0eac85803e1f543141898dedcfa7e20a896)
+
+## Jan 5, 2022
+Goal: [Master schedule by week array](https://github.com/sait-wbdv/winter-2022/issues/16)
+- After talking with Ash, I'm going to try a quick and dirty brute force of a Schedule by week that will work in the template
+- Plan
+    1. Create an additional array of weeks, each with lesson list
+    2. export that array to the `template`
+    3. Output component with two `v-for` (one for weeks and the other for lessons)
+- Brute force: [initial commit](https://github.com/sait-wbdv/winter-2022/blob/b1f27a016e07490320cea1b1c73ade2d69bedc10/pages/schedule.vue#L65-L66)
+- I've got [the week array mostly working](https://github.com/sait-wbdv/winter-2022/blob/3f7573e66b37e62ec37039a0679fd860bf3fa73e/pages/schedule.vue#L65-L80) but there's a bug that I think is caused by the hacky way I calculated weeks. But that's good enough to move on.
+- TODO: Add new issue about the bug
