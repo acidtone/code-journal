@@ -298,3 +298,48 @@ Goal: Learn some `v-for`, and output the buggy nested array I just built :)
 
 Goal: Output pretty dates on the Schedule
 - research: [content:file:beforeInsert](https://content.nuxtjs.org/advanced/#contentfilebeforeinsert)
+    - cleanup: `beforeInsert` is only for saving data to the file
+    - `beforeParse` is for changing data before it's used in the app but you only have access to the raw front matter.
+- Given the limitations of the Content module, I ended up just explicitly setting the time (adjusted for UTC) on every lesson.
+- I find that the Content module breaks down quickly for end cases.
+
+Goal: Give individual lessons access to a global index of lessons for Prev/Next links.
+- Research: As soon as I need data that is accessed by mutliple components, it looks like I need state and `vuex` is how I do it.
+- Search: "nuxt state mutation patterns"
+- Top result: [
+Scalable state management with Vuex and Nuxt.js](https://blog.logrocket.com/scalable-state-management-with-vuex-and-nuxt-js/)
+    - Gotta be honest, I didn't read it, yet. One of the images is from the docs so I went there first: [What is a state management pattern?](https://vuex.vuejs.org/#what-is-a-state-management-pattern)
+    - From there the Vuex docs gave me [When Should I Use It?](https://vuex.vuejs.org/#when-should-i-use-it):
+        > "A simple [store pattern](https://vuejs.org/v2/guide/state-management.html#Simple-State-Management-from-Scratch) may be all you need"
+- Pet Peeve: I'm still reading through the previous link and sample code like suffers from a common fault that I know I'm guilty of (and would like to rectify):
+    ```js
+    var store = {
+      debug: true,
+        state: {
+            message: 'Hello!'
+        },
+        setMessageAction (newValue) {
+            if (this.debug) console.log('setMessageAction triggered with', newValue)
+            this.state.message = newValue
+        },
+        clearMessageAction () {
+            if (this.debug) console.log('clearMessageAction triggered')
+            this.state.message = ''
+        }
+    }
+    ```
+
+    - This is a bad example (for me) but a beginner will ask the question: "do I need to name it `state`" or can I choose my own name?
+        - There are soooo many examples of framework code where this applies, particularly to lifecycle hooks. For example, `setup()` (I think?) is now a Vue 3 hook but how does the beginner know that it's a reserved keyword?
+    - TODO: Bring this up with Ash (and team) about how to have our lessons/documentation take this into account.
+    - Another example:
+
+        ```js
+        var vmA = new Vue({
+            data: {
+                privateState: {},
+                sharedState: store.state
+            }
+        })
+        ```
+        - does `data` need to be named `data`?
