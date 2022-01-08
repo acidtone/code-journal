@@ -343,3 +343,16 @@ Scalable state management with Vuex and Nuxt.js](https://blog.logrocket.com/scal
         })
         ```
         - does `data` need to be named `data`?
+
+
+## Jan 7, 2022
+Goal: Create a `store` if a flat chronological array of lesson slugs.
+- Video: [Vuex Store with Nuxt and Vue](https://www.youtube.com/watch?v=53tRnb2d6r0)
+    - `/store/index.js`
+
+        ```js
+        // state
+        // getters
+        // actions
+        // mutations
+        ```
