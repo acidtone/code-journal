@@ -352,7 +352,35 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
 
         ```js
         // state
+        export const state = () => {}
+
         // getters
+        export const getters = {}
         // actions
+        export const actions = {}
+
         // mutations
+        export const mutations = {}
         ```
+- Video: [Learn Vuex in 30 MINUTES! (Vue JS 3)](https://www.youtube.com/watch?v=nFh7-HfODYY)
+    
+    - `/store/index.js`
+
+        ```js
+        import { createStore } from 'vuex'
+        
+        export default createStore({
+            state: {},
+            mutations: {},
+            actions: {},
+            getters: {},
+            modules: {}
+        })
+        ```
+- These two videos show different ways to create a store but then I realized:
+    1. There's Vue 2 and 3
+    2. There's Veux 3 and 4
+    3. I'm creating a store in Nuxt 2
+- Search: "nuxt 2 vuex"
+    - Nuxt Docs: [Store directory](https://nuxtjs.org/docs/directory-structure/store/)
+        - These docs give a pretty decent summary of what I need to do.
