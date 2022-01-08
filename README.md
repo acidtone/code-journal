@@ -352,7 +352,7 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
 
         ```js
         // state
-        export const state = () => {}
+        export const state = () => ({})
 
         // getters
         export const getters = {}
@@ -380,7 +380,18 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
 - These two videos show different ways to create a store but then I realized:
     1. There's Vue 2 and 3
     2. There's Veux 3 and 4
+        - turnes out `createStore()` is newer and probs won't work with our site
     3. I'm creating a store in Nuxt 2
 - Search: "nuxt 2 vuex"
     - Nuxt Docs: [Store directory](https://nuxtjs.org/docs/directory-structure/store/)
         - These docs give a pretty decent summary of what I need to do.
+
+- -> Rick
+- Goal: Set up a `/store/index.js` file
+- Sources: 
+    - [Nuxt Docs - Store directory](https://nuxtjs.org/docs/directory-structure/store/)
+    - [Learn Vuex in 30 MINUTES! (Vue JS 3)](https://www.youtube.com/watch?v=nFh7-HfODYY)
+- Been staring at nonsensical articles and documentation for awhile. [I've gotten this far](https://github.com/sait-wbdv/winter-2022/commit/66378af5d5ac378be78560bd9e1915b95d33b743)
+    1. How do I initialize these `store` hooks to invoke [`getLessons()`](https://github.com/sait-wbdv/winter-2022/blob/66378af5d5ac378be78560bd9e1915b95d33b743/store/index.js#L12-L16)?
+    2. How do I load the data just once when the app loads?
+    3. Once the data is loaded, how do I access the `store` from the component?
