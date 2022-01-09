@@ -415,7 +415,7 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
     - [ ] Dasa day fix
     - [ ] Add two 201 days!
 - add home work to 
-    - [ ] 201 day 1 and 2
+    - [x] 201 day 1 and 2
     - [ ] 270 day 1-4
     - [ ] 262 day 1-5
 
@@ -427,7 +427,7 @@ Goal: Knock as many down as I can and throw Assignment ideas in the parking lot
 
 Goal: Add Homework and Labs to 201 Lessons
 - Plan
-    1. [ ] Migrate: Orientation -> Day 0
+    1. [x] Migrate: Orientation -> Day 0
     2. Test homework component: Add issues as needed
     3. Create Labs content directory
         - Day 1: Follow the white rabbit
