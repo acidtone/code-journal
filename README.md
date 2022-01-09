@@ -404,21 +404,23 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
 
 ### To Dos
 - Migrations:
-    - Schedule -> Home page
-    - Home page -> Test Page
+    - [x] Schedule -> Home page
+    - [x] Home page -> Test Page
     - f21 -> 
-      - House Rules
-      - Library
+      - [x] House Rules
+      - [x] Library
 - Research: Takeaways
+    - [ ] do slugs include directory segments?
 - Schedule: 
-    - Dasa day fix
-    - Add two 201 days!
+    - [ ] Dasa day fix
+    - [ ] Add two 201 days!
 - add home work to 
-    - 201 day 1 and 2
-    - 270 day 1-4
-    - 262 day 1-5
+    - [ ] 201 day 1 and 2
+    - [ ] 270 day 1-4
+    - [ ] 262 day 1-5
 
 Goal: Knock as many down as I can and throw Assignment ideas in the parking lot
 - [starting commit](https://github.com/sait-wbdv/winter-2022/commit/d4239468bcba6ef5ca424c003783c18d577b358b)
 - Starting to get the hang of Nuxt Content. 
 - Taking a break. [commit: migrated page content](https://github.com/sait-wbdv/winter-2022/commit/a2a84a4eef97253b8d9b411feaa1e179234fe809)
+- Back from break. [Added checkboxes to the todos]().
