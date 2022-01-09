@@ -395,3 +395,28 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
     1. How do I initialize these `store` hooks to invoke [`getLessons()`](https://github.com/sait-wbdv/winter-2022/blob/66378af5d5ac378be78560bd9e1915b95d33b743/store/index.js#L12-L16)?
     2. How do I load the data just once when the app loads?
     3. Once the data is loaded, how do I access the `store` from the component?
+- I'm giving up on the page nav for now. I posted to Pixels but no response yet.
+
+## Jan 8, 2022
+### Winter-2022 rollout
+- Repo: [winter-2022](https://github.com/sait-wbdv/winter-2022)
+- Live Site TBD ([to be deployed](https://github.com/sait-wbdv/winter-2022/issues/21))
+
+### To Dos
+- Migrations:
+    - Schedule -> Home page
+    - Home page -> Test Page
+    - f21 -> 
+      - House Rules
+      - Library
+- Research: Takeaways
+- Schedule: 
+    - Dasa day fix
+    - Add two 201 days!
+- add home work to 
+    - 201 day 1 and 2
+    - 270 day 1-4
+    - 262 day 1-5
+
+Goal: Knock as many down as I can and throw Assignment ideas in the parking lot
+- [starting commit](https://github.com/sait-wbdv/winter-2022/commit/d4239468bcba6ef5ca424c003783c18d577b358b)
