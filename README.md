@@ -420,3 +420,5 @@ Goal: Create a `store` if a flat chronological array of lesson slugs.
 
 Goal: Knock as many down as I can and throw Assignment ideas in the parking lot
 - [starting commit](https://github.com/sait-wbdv/winter-2022/commit/d4239468bcba6ef5ca424c003783c18d577b358b)
+- Starting to get the hang of Nuxt Content. 
+- Taking a break. [commit: migrated page content](https://github.com/sait-wbdv/winter-2022/commit/a2a84a4eef97253b8d9b411feaa1e179234fe809)
