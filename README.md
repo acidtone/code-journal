@@ -427,9 +427,12 @@ Goal: Knock as many down as I can and throw Assignment ideas in the parking lot
 
 Goal: Add Homework and Labs to 201 Lessons
 - Plan
-    1. Migrate: Orientation -> Day 0
-    2. Test homework component
-        - Add issues as needed
+    1. [ ] Migrate: Orientation -> Day 0
+    2. Test homework component: Add issues as needed
     3. Create Labs content directory
         - Day 1: Follow the white rabbit
         - Day 2: [Project: Publish a webpage with Git and GitHub Pages](https://gist.github.com/acidtone/5d45f96bc11fada75038e552f9ba1a5c)
+- commit: [201 day0](https://github.com/sait-wbdv/winter-2022/commit/280fdc89d9ff29041614c921b5655a2f869bc993)
+
+Goal: Add Homework
+- TODO: Change "Homework" to "Prep" or similar.
