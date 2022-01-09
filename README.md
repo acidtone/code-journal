@@ -423,4 +423,13 @@ Goal: Knock as many down as I can and throw Assignment ideas in the parking lot
 - [starting commit](https://github.com/sait-wbdv/winter-2022/commit/d4239468bcba6ef5ca424c003783c18d577b358b)
 - Starting to get the hang of Nuxt Content. 
 - Taking a break. [commit: migrated page content](https://github.com/sait-wbdv/winter-2022/commit/a2a84a4eef97253b8d9b411feaa1e179234fe809)
-- Back from break. [Added checkboxes to the todos]().
+- Back from break. [Added checkboxes to the todos](https://github.com/acidtone/code-journal/commit/ed3ac088a079cef7c3b93a69ce8141516d5c0085).
+
+Goal: Add Homework and Labs to 201 Lessons
+- Plan
+    1. Migrate: Orientation -> Day 0
+    2. Test homework component
+        - Add issues as needed
+    3. Create Labs content directory
+        - Day 1: Follow the white rabbit
+        - Day 2: [Project: Publish a webpage with Git and GitHub Pages](https://gist.github.com/acidtone/5d45f96bc11fada75038e552f9ba1a5c)
