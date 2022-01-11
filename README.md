@@ -439,3 +439,7 @@ Goal: Add Homework
 - commits: 
     - [Added some content and tested some homework](https://github.com/sait-wbdv/winter-2022/commit/4a2372b56cac0f732fac68eacbac3a7e9a475826)
     - [added test pages](https://github.com/sait-wbdv/winter-2022/commit/8f7ab9d47034c468cc819f1960ab32877a38fc9b)
+
+## Jan 10, 2022
+Goal: Type some stuff for the stoodents.
+- Hello world!
