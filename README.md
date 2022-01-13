@@ -439,3 +439,23 @@ Goal: Add Homework
 - commits: 
     - [Added some content and tested some homework](https://github.com/sait-wbdv/winter-2022/commit/4a2372b56cac0f732fac68eacbac3a7e9a475826)
     - [added test pages](https://github.com/sait-wbdv/winter-2022/commit/8f7ab9d47034c468cc819f1960ab32877a38fc9b)
+
+## Jan 9, 2022
+Goal: Figure out how to get [Unknown Dynamic Nested Routes](https://nuxtjs.org/docs/features/file-system-routing/#unknown-dynamic-nested-routes) working. 
+- Specifically, I want [this page](https://github.com/sait-wbdv/winter-2022/commit/9111f41120862367d77337d1931b6b483863a676) (also my initial commit) to render when I enter this url:
+    - `/library/breakdowns/making-clickable-elements-recognizable`
+    - plus, I don't want to fiddle with the `pages` directory if I organize these md files in sub directories.
+- Recap: got it working pretty quickly. `_.vue` files are a nice feature (for now).
+    - [finishing commit](https://github.com/sait-wbdv/winter-2022/commit/ea246d6cf3a8bb62182a281c9242fb070c2f5782)
+
+## Jan 10, 2022
+- First class of `#winter-2022`. Totally forgot to add markdown to W1W Prep :/
+    - search: "[github flavoured markdown cheatsheet](https://www.google.com/search?q=github+flavoured+markdown+cheatsheet)"
+
+Goal: Continue to add content to the Library, and test the `_.vue` file for [Unknown Dynamic Nested Routes](https://nuxtjs.org/docs/features/file-system-routing/#unknown-dynamic-nested-routes).
+- Time to try this Nuxt feature out to easily migrate last semester's content to an expanded Library directory:
+    - breakdowns: synopsis files for individual articles, videos, tutorials, etc (aka resources).
+    - takeaways: summaries of topics that aren't associated with one resource.
+    - tools: Summaries of cheats, tutorials and documentation for VS Code, bash apps, Firefox, etc.
+- if the `_.vue` file works as advertized, I should be able to add markdown to the `content/library` subdirectories without adding sister `vue` components to the `pages` directory.
+- [starting commit](https://github.com/sait-wbdv/winter-2022/commit/0dded36ff7927cb0bcb97602b55a80c16c1b44da)
