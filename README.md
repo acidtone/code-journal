@@ -443,3 +443,10 @@ Goal: Add Homework
 ## Jan 10, 2022
 Goal: Type some stuff for the stoodents.
 - Hello world!
+
+## Jan 15, 2022
+- Links from Ellie's guest speaker session
+    - [Laws of UX](https://lawsofux.com/)
+        > Laws of UX is a collection of best practices that designers can consider when building user interfaces.
+    - [Frontend Mentor](https://www.frontendmentor.io/)
+        > Solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs. Join 282,931 developers building projects, reviewing code, and helping each other get better.
