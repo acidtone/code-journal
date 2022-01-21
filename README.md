@@ -28,6 +28,34 @@ What's the best starting config for a Terminology module?
     - [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
     - [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
     - [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)    
+- At first glance, the directory is pretty light. That's a good sign.
+- It looks like the `schemas` directory is where all the action is.
+- Question: how do I boot this up locally?
+    - The docs look pretty polished so far: [Getting started with Sanity CLI](https://www.sanity.io/docs/getting-started-with-sanity-cli)
+        - `sanity start`
+- I just realized `sanity init` installs everything in the `pwd`. Moving into a directory...
+- `sanity start` works as expected. But now I have questions about where to go from here.
+    - What's the relationship between `localhost:3333` and the data?
+    - I've just started a `hello-sanity` project. Is this using up quotas on my free Sanity account?
+        - Looks like I'm limited to two [datasets](https://www.sanity.io/docs/datasets).
+    - How many projects can I set up with `sanity init` before I have to pay? So far I have `hello-sanity` and `browser-therapy` but the second has no studio code installed.
+        - Ahhh, that's what `production` is: the dataset. So it looks like I can choose my dataset when I build a new project.
+            - So what if I delete schemas that another project depends on?
+- Where do I store data for the terms project? 
+    - `production`? 
+    - Where do I put the `hello-sanity` data?
+    - It doesn't look like I can rename the production dataset.
+    - Maybe the blog schema is general enough that I can just keep those and add the terms schema to it. Whatevs, I can just burn it all and create a new account with my GH login.
+- I'll try adding terms and maybe move the project out of `_hello` once there's data/code that I don't want to lose.
+
+Goal: add terms schema
+- fields:
+    - term
+    - description
+    - slug
+    - any other Sanity fields that seem handy
+- First decision: what schema type do I use?
+    - [Schema Types Docs](https://www.sanity.io/docs/schema-types)
 
 ---
 
