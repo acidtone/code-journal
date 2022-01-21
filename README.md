@@ -1,4 +1,35 @@
 # Code Journal
+Tony's notes and such for his coding explorations.
+
+---
+
+## Jan 20, 2022
+### R&D: Hello Sanity
+#### Goal
+What's the best starting config for a Terminology module?
+
+#### Plan it out
+1. `sanity init` the blog template because that's what [Kapehe did](https://www.youtube.com/watch?v=32RP-sG1njE)
+2. Sniff around the template and see what's what.
+3. Depending on what I find out, try creating a terms schema.
+4. What's the easiest way to import bulk data, preferably YAML?
+
+#### Brute force
+- Tried a few video tutorials and Kapehe comes up as a guest on a few YT Channels. Her script is the same for most so I'm following [the one from Traversy](https://www.youtube.com/watch?v=32RP-sG1njE).
+- Installing a vanilla blog: `$ sanity init`
+    - have to login
+    - Project: hello-sanity
+    - Dataset: production
+    - Template: blog 
+        - Kapehe says this has a schema but no data. The others have sample data.
+- The README links:
+    - [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
+    - Check out the example frontend: [React/Next.js](https://github.com/sanity-io/tutorial-sanity-blog-react-next)
+    - [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
+    - [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
+    - [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)    
+
+---
 
 ## Jan 15, 2022
 - Links from Ellie's guest speaker session
