@@ -56,6 +56,16 @@ Goal: add terms schema
     - any other Sanity fields that seem handy
 - First decision: what schema type do I use?
     - [Schema Types Docs](https://www.sanity.io/docs/schema-types)
+    - Looks like `document` is the base type. Good enough for now.
+- Next decision: what field type should I use for term description?
+    - Is not a string, but `blockContent` seems like overkill. Is there a middle type?
+    - Kinda? There's the `text` field type but it looks like all `blockContent` is, is an array of special `text` fields.
+    So the question is do I want to use formatting like bold and italic?
+    - Given that I still need to import all these terms, I'll go simple and use `text`. Maybe there's a plugin to add markdown to the import and use `blockContent` later.
+- OK, created `./schemas/term.js` and it's not showing up in Studio. Looks like I have to register it...
+    - Boom. Just have to add it to `./schemas/schema.js`. Pretty slick.
+- I think I'm going to stop here for now and look into [bulk imports](https://www.sanity.io/docs/importing-data) next session.
+
 
 ---
 
