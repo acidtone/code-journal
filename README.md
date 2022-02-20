@@ -23,6 +23,11 @@ Results:
     - [How can you survive without a load balancer in every home?](https://www.loadbalancer.org/blog/how-can-you-survive-without-a-load-balancer-in-every-home/)
         - Still not convinced I need a load balancer but if I do...
         - I don't think I'll go with the free version of Kemp? I think HAProxy is the way to go if I can find a NetworkChuck-level tutorial to walk me through the process. Worst case, I guess I can take notes on NC's video and figure out how to do it on HAProxy.
+- hardware:
+    - [What hardware to buy for OPNsense router in 2021](https://teklager.se/en/opnsense-hardware/)
+        - None of the routers on this list are available at MemEx. In fact, I can't find any non-wifi routers other than Ubiquiti (which seem to not have a good following)
+        - TODO: Find a good router that can run either OPNSense (preferred) or pfSense
+
 
 ---
 
