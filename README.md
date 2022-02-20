@@ -3,6 +3,132 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## Jan 30, 2022
+Goal: Looking for js-based libraries that can be used as CDN examples.
+- The requirements of the library are still vague but here's what I can think of so far:
+    - A minimal amount of JS knowledge is required to give us a starting point for JS lessons:
+        - variables and assignment
+        - function invocation
+        - object literals
+    - The library should provide immediate value to the coder installing it;
+    - The difficulty of the library should be appropriate to the coder's skill level
+
+- Revealjs
+    - This is the first library I thought of and most of the installation was review for me.
+    - The [installation options](https://revealjs.com/installation/) do not include CDNs
+    - The simplest option, [Basic Setup](https://revealjs.com/installation/#basic-setup) comes with _a lot_ of extra files and directories:
+        - `/dist` plus `theme`
+        - `/plugin`
+        - `gulp.js`
+        - `LICENSE`
+        - etc, etc
+    - The other options are [Full Setup](https://revealjs.com/installation/#full-setup) ("Recommended") and [Install from npm](https://revealjs.com/installation/#installing-from-npm)
+    - What seems to be missing is a "blank boilerplate" install using a CDN?
+    - Question: Is there a simple config/setup option that would make a good introduction to JS?
+        - The [Markup Guide](https://revealjs.com/markup/) has a bare bones set up that could make a good intro to invoking a function:
+
+            ```html
+            <html>
+            <head>
+                <link rel="stylesheet" href="dist/reveal.css">
+                <link rel="stylesheet" href="dist/theme/white.css">
+            </head>
+            <body>
+                <div class="reveal">
+                <div class="slides">
+                    <section>Slide 1</section>
+                    <section>Slide 2</section>
+                </div>
+                </div>
+                <script src="dist/reveal.js"></script>
+                <script>
+                Reveal.initialize();
+                </script>
+            </body>
+            </html>
+            ```
+        - The [Config Options](https://revealjs.com/config/) could be a good intro to object literals:
+
+            ```js
+            Reveal.initialize({
+                controls: true,
+                rtl: false,
+                navigationMode: 'default',
+                preloadIframes: null,
+                autoAnimateEasing: 'ease',
+                autoAnimateDuration: 1.0,
+                autoAnimateUnmatched: true,
+                autoAnimateStyles: [
+                    'opacity',
+                    'color',
+                    'background-color',
+                    'padding',
+                    'font-size',
+                    'line-height',
+                    'letter-spacing',
+                    'border-width',
+                    'border-color',
+                    'border-radius',
+                    'outline',
+                    'outline-offset'
+                ],
+                autoSlide: 0,
+                // Transition style
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+                pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+                hideCursorTime: 5000
+            });
+            ```
+
+            - complex value types: object literal as the container, array as a config option
+            - boolean, string, number and null as primitives
+        - The [`Reveal.configure()`](https://revealjs.com/config/#reconfiguring) could be used to introduce methods (and serve as a `button` assignment for triggering events).
+    - The bare bones example they give is all that's needed to get things started, but I'll use a CDN so it will fit in a Gist.
+
+## Jan 22, 2022
+**Goal**: Import a subset of terms into Sanity 
+
+**Plan**:
+1. Convert a terms file to ndjson.
+2. Import to sanity using the cli.
+3. Add some categories to the terms using studio.
+4. Export the result.
+5. Figure out how to structure a full import.
+
+**Brute force**
+- Materials from last session
+    - [bulk imports](https://www.sanity.io/docs/importing-data)
+    - [content modelling](https://www.sanity.io/docs/content-modelling)
+- Imports seem to complete without error but they don't show up in studio. 
+- I've had to try importing a few times after changes but I get `Document by ID "global" already exists` errors the second time around.
+    - I got away with the first change by changing test-import to terms but now I've got to try deleting `production`?
+    - I need to figure out how to burn the farm.
+
+## Jan 21, 2022
+### R&D: Sanity data imports
+#### Goal
+What's the best process for burning the farm and importing my terminology data from scratch?
+
+#### Plan
+- If I have a list of terms in YAML, how do I import them into Sanity so that they use categories that I've already entered into Sanity? 
+- What are the CRUD implications of referencing categories in an import (if possible)?
+
+#### Brute Force
+- Looking up [bulk imports](https://www.sanity.io/docs/importing-data), found in the last session.
+- I'm learning things! There's a such thing as NDJSON - Newline delimited JSON. So, no: it doesn't look like Sanity supports yaml imports. 
+    - yaml -> json -> ndjson will need to be a thing.
+- From the docs: 
+    - Documents should follow the [structure of your data model](https://www.sanity.io/docs/content-modelling):
+    - most importantly, the requirement of a `_type` attribute. 
+    - the `_id` field is optional – but helpful – in case you want to make references or be able to re-import your data replacing data from an old import.
+    - `_id`s in Sanity are usually a GUID, but any string containing only letters, numbers, hyphens and underscores are valid.
+        - Can slug act as effective ids? How about overloaded terms like "view" or "property"? 
+            - `property-object` vs `property-css`
+            - Maybe there's a way to auto-append categories to the term to make them unique(ish)?
+                - I can't think of an instance where a term with the exact same categories would be different. It just means that categories would need to be used for repeating terms.
+
+---
+
 ## Jan 20, 2022
 ### R&D: Hello Sanity
 #### Goal
