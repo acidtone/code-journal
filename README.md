@@ -3,6 +3,29 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## Feb 19, 2022
+Goals: 
+- Secure my local network
+- Potentially open network so I have access to my files outside my home
+- Learn network shit
+- Create a base setup where I can:
+    - sniff packets coming from the Nest
+    - sniff packets in general
+    - Unicorn: create a Youtube history of videos I've watched in the Shield/Roku/etc
+        - Goal: reference for educational vids I can use for lesson plans/activities/etc.
+
+Results:
+- pfsense vs opnsense
+    - [pfSense® vs OPNSense - which firewall OS is better?](https://teklager.se/en/pfsense-vs-opnsense/)
+        - I had no idea there was nerd-drama between pgSense and OPNsense. Juicy.
+        - It seems like I can go either way but the (apparent) behaviour of the pfSense community pisses me off enough to offset the bigger ecosystem. Going to try OPNSense!
+- load balancing
+    - [How can you survive without a load balancer in every home?](https://www.loadbalancer.org/blog/how-can-you-survive-without-a-load-balancer-in-every-home/)
+        - Still not convinced I need a load balancer but if I do...
+        - I don't think I'll go with the free version of Kemp? I think HAProxy is the way to go if I can find a NetworkChuck-level tutorial to walk me through the process. Worst case, I guess I can take notes on NC's video and figure out how to do it on HAProxy.
+
+---
+
 ## Jan 30, 2022
 Goal: Looking for js-based libraries that can be used as CDN examples.
 - The requirements of the library are still vague but here's what I can think of so far:
