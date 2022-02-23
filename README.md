@@ -3,6 +3,21 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## Feb 22, 2022
+Goal: Find a router for OPNSense
+- Apparently, Memory Express isn't what it used to be. Every potential router brand that will run pfSense or OPNSense is not found. The only appliance that comes close are Ubiquiti brand, which have a bad reputation. Shame.
+- Found this Reddit thread: [Best little hardware device for OpnSense/PFSense?](https://www.reddit.com/r/homelab/comments/f4ge95/best_little_hardware_device_for_opnsensepfsense/) 
+    - Mentioned brands:
+        - Something with a [PCEngines](https://www.pcengines.ch/) board
+        - [HP T620+](https://support.hp.com/ca-en/document/c04017240) with a quad-port PCIe NIC
+        - [Protectli](https://protectli.com/product-comparison/)
+        - [Qotom](https://www.qotom.net/) mini-PC
+        - [fitlet](https://fit-iot.com/web/products/fitlet2/)
+        - Intel NUC
+    - None of these are available locally from what I can tell. Might try AliExpress for the first time...
+
+---
+
 ## Feb 19, 2022
 Goals: 
 - Secure my local network
