@@ -3,6 +3,63 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## March 22, 2022
+Goal: Set up a boilerplate Svelte site with Markdown support
+- Following this tutorial: [Let's learn SvelteKit by building a static Markdown blog from scratch](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
+    - Skipped the SASS portion
+    - So far so good; MDSveX installed like a charm
+    - After md support added, VS Code is showing syntax squiggles for the Svelte code
+    - PrismJS is working by default with MDSveX but there are no highlight styles. 
+        - Problem: How to add `prism.min.css` from a CDN
+        - `svelte.head` seems to be the Svelte way of adding a `link` element to the `head` of a page. [The official tutorial](https://svelte.dev/tutorial/svelte-head) shows adding `<svelte:head>` to `App.svelte` that file doesn't exist in the skeleton site that's been generated.
+        - Solution: Added the `link` to `__layout.svelte` using `<svelte:head>` and it worked! `svelte.head` seems to be built into SvelteKit.
+        - TODO: Add some remark plugins
+            - definition lists
+            - element classes
+            - wrapper elements
+    - Using the Git page from WBDV as a sample blog post. 
+        - TODO: Figure out where/how images are handled in SK (for error screencaps)
+            - Where are static assets kept?
+            - How are relative links handled?
+            - Does SK have any fancy features for image handling?
+    - TODO: Add `/categories/index.svelte` page to list all categories
+    - [Adding autoprefixer](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#add-autoprefixer-with-postcss) requires `svelte-preprocess`, which I skipped because I'm not using SASS so I'll have to go back and install it.
+        - Pretty straight forward...
+    - TODO: Add Excerpts to the blog index page
+    - TODO: Add [Custom error page](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#customize-the-error-page)
+    - TODO: [Preload routes](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#preload-routes)
+- Done!
+
+---
+
+## March 8, 2022
+Research: Design in Figma
+- Mood boards are cool
+    - [How to Mood Board for Web Design](https://www.youtube.com/watch?v=1A-tepzfhJw) by Jesse Showalter
+        - Moodboards should contain:
+            - Colour palette
+            - Typography
+            - Textures
+            - Patterns
+            - Photo selections
+            - Misc
+        - Types of mood boards
+            1. Strict mood board
+            2. Messy mood board
+            3. Pin board
+            4. Style Tile
+    - [How to Prepare for a Brand Identity Mood Board](https://www.youtube.com/watch?v=5uHZNZc38II)
+- Compilation of Mood board contents from the above and some other videos:
+    1. Colour palettes
+    2. Typography
+    3. Photos and illustrations
+    4. Textures
+    5. Patterns
+    6. Logos
+    7. Misc: anything that directly relates to the project
+
+---
+
 ## Feb 22, 2022
 Goal: Find a router for OPNSense
 - Apparently, Memory Express isn't what it used to be. Every potential router brand that will run pfSense or OPNSense is not found. The only appliance that comes close are Ubiquiti brand, which have a bad reputation. Shame.
