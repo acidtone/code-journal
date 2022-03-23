@@ -4,7 +4,7 @@ Tony's notes and such for his coding explorations.
 ---
 
 ## March 22, 2022
-Goal: Set up a boilerplate Svelte site with Markdown support
+**Goal**: Set up a boilerplate Svelte site with Markdown support
 - Following this tutorial: [Let's learn SvelteKit by building a static Markdown blog from scratch](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
     - Skipped the SASS portion
     - So far so good; MDSveX installed like a charm
@@ -29,6 +29,19 @@ Goal: Set up a boilerplate Svelte site with Markdown support
     - TODO: Add [Custom error page](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#customize-the-error-page)
     - TODO: [Preload routes](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#preload-routes)
 - Done!
+
+**Goal**: Install remark plugins for extended markdown syntax parsing.
+- Mostly using the [MDSveX Docs](https://mdsvex.pngwn.io/docs#remarkplugins--rehypeplugins)
+- Definition lists:
+    - `remark-definition-list` doesn't seem to work anymore but `remark-deflist` does.
+- Wrappers: 
+    - `remark-container` works as advertized
+    - Tried `remark-directive` for deeper syntax support but the `{}` syntax seems to interfere with Svelte. I'd really like to get this one working. Might require an Issue submission to the `MDsveX` repo.
+- Table of Contents
+    - Leaving this for later. Can be done with `remark` and/or `rehype`. Requires more research.
+- Codepen Embeds
+    - The HTML method from Codepen's copy/paste utility breaks during build but the iFrame option seems to work.
+
 
 ---
 
