@@ -3,6 +3,13 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## March 23, 2022
+**Goal**: Deploy md SK skeleton site to Netlify
+- Going off the official [Netlify docs](https://docs.netlify.com/configure-builds/common-configurations/sveltekit/).
+- [And it worked](https://admirable-pithivier-572d1d.netlify.app/tests/markdown) after I removed `config.kit.target`. The documentation needs to be updated.
+
+---
+
 ## March 22, 2022
 **Goal**: Set up a boilerplate Svelte site with Markdown support
 - Following this tutorial: [Let's learn SvelteKit by building a static Markdown blog from scratch](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
