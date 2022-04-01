@@ -14,7 +14,11 @@ Tony's notes and such for his coding explorations.
     - sveltekit@next
     - mdsvex@0.10 
 ```
-
+- User stories: 
+    - As a learner, I want to save a great tutorial I just found, so that I can easily find it later.
+    - As a tutor, I want to collect a library of learning materials, so that I can easily assign homework to my clients.
+    - As a teacher, I want to filter out old tutorials, so that my students don't get confused by references to older syntax.
+    - As a school, I want to filter for tutorials by technology, so that I can quickly generate materials for a particular course/program.
 - Could also do the same thing with CSS properties, HTML elements and JS features?
 - How do you host it? 
     - Could it be a file database? markdown with front matter?
@@ -30,16 +34,11 @@ Tony's notes and such for his coding explorations.
     - Authors
         - name
         - slug
-        - socials
-            - gh, codepen, etc
+        - socials: gh, codepen, etc
     - Technologies
         - name
         - slug
         - homepage
-- Use stories: 
-    - As a learner, I want to save a great tutorial I just found, so that I can easily find it later.
-    - As as tutor, I want to collect a library of learning materials, so that I can easily assign homework to my clients.
-    - As a teacher, I want to filter out old tutorials, so that my students don't get confused by references to older syntax.
 
 ---
 
