@@ -3,6 +3,46 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## March 31, 2022
+**Wishlist**: A collection of tutorials tagged by the technologies and versions used.
+    
+```yaml
+- title: Let's learn SvelteKit by building a static Markdown blog from scratch
+  link: https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
+  tech: 
+    - svelte@3
+    - sveltekit@next
+    - mdsvex@0.10 
+```
+
+- Could also do the same thing with CSS properties, HTML elements and JS features?
+- How do you host it? 
+    - Could it be a file database? markdown with front matter?
+    - Add the complexity of Strapi?
+    - Sanity.io? Possible to convert to Strapi later?
+- Collections
+    - Resources
+        - title
+        - author
+        - link
+        - slug
+        - breakdown
+    - Authors
+        - name
+        - slug
+        - socials
+            - gh, codepen, etc
+    - Technologies
+        - name
+        - slug
+        - homepage
+- Use stories: 
+    - As a learner, I want to save a great tutorial I just found, so that I can easily find it later.
+    - As as tutor, I want to collect a library of learning materials, so that I can easily assign homework to my clients.
+    - As a teacher, I want to filter out old tutorials, so that my students don't get confused by references to older syntax.
+
+---
+
 ## March 27, 2022
 **Goal**: Create a slides directory in SvelteKit (SK) that wraps RevealJS around all files inside it.
 - I just did this today with Nuxt (both 2 & 3) with mixed results. I've got high hopes that this will be easier with SK.
