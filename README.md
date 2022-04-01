@@ -9,7 +9,8 @@ Tony's notes and such for his coding explorations.
 - First decision: do I carry on with the md-blog project or create a new one? 
     - I don't know what's ahead of me so I'm going to keep it simple: implement reveal site-wide and figure out how to do it on the route level later. 
     - If that works: implement markdown slides.
-- Got it working with Ash and Jess's help but the .__nuxt container needs an explicit height. 
+- Got it working with Ash and Jess's help but the .__nuxt container needs an explicit height.
+- Conclusion: now sure what's breaking but it feels like the nuxt container is hiding the slide content by becoming zero height. It could also be a tailwind issue?
 
 ---
 
