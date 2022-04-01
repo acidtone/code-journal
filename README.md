@@ -3,6 +3,16 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## March 27, 2022
+**Goal**: Create a slides directory in SvelteKit (SK) that wraps RevealJS around all files inside it.
+- I just did this today with Nuxt (both 2 & 3) with mixed results. I've got high hopes that this will be easier with SK.
+- First decision: do I carry on with the md-blog project or create a new one? 
+    - I don't know what's ahead of me so I'm going to keep it simple: implement reveal site-wide and figure out how to do it on the route level later. 
+    - If that works: implement markdown slides.
+- Got it working with Ash and Jess's help but the .__nuxt container needs an explicit height. 
+
+---
+
 ## March 23, 2022
 **Goal**: Deploy md SK skeleton site to Netlify
 - Going off the official [Netlify docs](https://docs.netlify.com/configure-builds/common-configurations/sveltekit/).
