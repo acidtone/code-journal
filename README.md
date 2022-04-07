@@ -3,6 +3,33 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 7, 2022
+Goal: Install and start MongoDB locally; just in case I need it for a Mongo review session tomorrow (planning on focusing on Atlas).
+- Found this tutorial that recommends Homebrew: [Installing MongoDB on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
+- I have a love-hate relationship with Homebrew. I always forget where it installs things (Cellar?) and I remember having to deal with duplicate installs when software overlaps with a package that comes with the mac (like php).
+- Current Homebrew version is 3.2.6; current is 3.4.5. `brew update`; probably shouldn't be doing this on pub wifi...
+- Ran into my first problem from the tutorial: 
+    - "After downloading Mongo, create the “db” directory. This is where the Mongo data files will live. You can create the directory in the default location by running `mkdir -p /data/db`"
+    - `mkdir -p /data/db` returned `mkdir: /data/db: Read-only file system`. No `/data` directory exists. I'm already close to giving up on local installation. More trouble than it's worth.
+        - googled the error and found [this post](https://stdworkflow.com/684/mongodb-error-mkdir-data-db-read-only-file-system). It gives two methods to work around the error, but the author doesn't mention (or know) the root cause.
+        - Going with Method 2 and storing the data in my home folder. Not sure why; just cuz.
+        - Created a `~/data` directory in my home folder and then tried running:
+            ```bash
+            $ sudo mongod --dbpath=/Users/tony/data
+            ```
+
+            and, of course, received the error:
+
+            ```bash
+            sudo: mongod: command not found
+            ```
+            
+            In general, if I have to add a `PATH` to my environment variables, I'm out. This isn't 1999.
+
+        - Giving up on a local installation (yet again). Going to focus tomorrow's session on Atlas.
+
+---
+
 ## March 31, 2022
 **Wishlist**: A collection of tutorials tagged by the technologies and versions used.
     
