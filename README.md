@@ -3,6 +3,21 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 10, 2022
+
+Mood Board: Technical Blog
+
+![Timeline History of Chris Coyier's life](images/mood/tech-blog/mood-aboutme-timeline.png)
+
+- I like the idea and general layout. Not as much into the colours
+
+![Stripe's page divider](images/mood/tech-blog/mood-asymmetry-section.png)
+
+- Asymmetry is great, slanted page dividers is an oldie but a goodie. 
+
+
+---
+
 ## April 9, 2022
 Thinking about a blog that:
 - Displays code really well.
