@@ -3,6 +3,34 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 9, 2022
+Thinking about a blog that:
+- Displays code really well.
+    - hightlight code selections (inline and line range)
+    - show relevant page name as heading
+- Can embed content the major vendors
+- Shows a great table of contents
+**Requirements**:
+    - SvelteKit
+    - Markdown
+        - mdsvex
+            - definitions
+            - embeds:
+                - Codepen
+                - Youtube
+                - Gists
+                - Stack Overflow?
+    - Notices
+    - Code highlighter
+        - Prism?
+        - R&D: how do code highlighters work?
+    - Easy image workflow.
+        - screencaps
+        - optimization
+            - svelte-image?
+
+---
+
 ## April 7, 2022
 Goal: Install and start MongoDB locally; just in case I need it for a Mongo review session tomorrow (planning on focusing on Atlas).
 - Found this tutorial that recommends Homebrew: [Installing MongoDB on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
@@ -27,6 +55,32 @@ Goal: Install and start MongoDB locally; just in case I need it for a Mongo revi
             In general, if I have to add a `PATH` to my environment variables, I'm out. This isn't 1999.
 
         - Giving up on a local installation (yet again). Going to focus tomorrow's session on Atlas.
+
+Goal: Figure out the pattern behind the flexbox albatross
+- Articles
+    - [The Flexbox Holy Albatross](https://heydonworks.com/article/the-flexbox-holy-albatross/)
+        - > Critically, `min-width` and `max-width` override `flex-basis`.
+    - [The Flexbox Holy Albatross Reincarnated](https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/)
+        - lol, `min-width` and `max-width` aren't even needed:
+
+            ```css
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                --margin: 1rem;
+                --modifier: calc(40rem - 100%);
+                margin: calc(var(--margin) * -1);
+            }
+
+            .container > * {
+                flex-grow: 1;
+                flex-basis: calc(var(--modifier) * 999);
+                margin: var(--margin);
+            }
+            ```
+
+            - TODO: move `40rem` to a CSS variable.
+            - Can sprinkle some >1 `flex-grow` to [create variable-width items](https://codepen.io/heydon/pen/pqGgbR)
 
 ---
 
