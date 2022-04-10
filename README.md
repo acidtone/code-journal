@@ -11,10 +11,61 @@ Mood Board: Technical Blog
 
 - I like the idea and general layout. Not as much into the colours
 
+---
+
 ![Stripe's page divider](images/mood/tech-blog/mood-asymmetry-section.png)
 
 - Asymmetry is great, slanted page dividers is an oldie but a goodie. 
 
+---
+
+![screencap of cool colour gradient and logo](images/mood/tech-blog/mood-colour-gradient-val-head.png)
+
+- Love the colours, slight gradient combined with a minimal vector logo
+
+---
+
+![screencap of nice hero section](images/mood/tech-blog/mood-curriculum-modules.png)
+
+- Would be pretty easy to do with alternating grid cell alignment.
+
+---
+
+![screencap of simple code card](images/mood/tech-blog/mood-display-code-simple.png)
+
+- Might make for a nice intro card to an activity/lesson/concept
+
+---
+
+![screencap of example displaying code](images/mood/tech-blog/mood-displaying-code.png)
+
+- Would love to figure out how to make more complex cards that display code.
+
+---
+
+![screencap of Svelte Documentation page](images/mood/tech-blog/mood-layout-table-of-contents.png)
+
+- Love the table of contents
+- Is a nice example of documentation conventions.
+- Could make a nice curriculum summary for a course?
+
+---
+
+![screencap of a warning notice on Svelte documentation](images/mood/tech-blog/mood-notice-warn.png)
+
+- Simple example that could work for notices: warnings, pro-tips, etc.
+
+---
+
+![screencap of Mandy Michaels's Notist page](images/mood/tech-blog/mood-notist-mandy-michael.png)
+
+- A little boring (not Mandy's fault; not her page) but the minimal nav for a video page could come in handy
+
+---
+
+![screencap of sara souedan's page seaprator](images/mood/tech-blog/mood-page-separator-sara.png)
+
+- Just a cool example of how you could use an SVG instead of a horizontal rule.
 
 ---
 
