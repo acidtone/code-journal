@@ -43,6 +43,15 @@ Mood Board: Technical Blog
 
 ---
 
+![screencap of vuejs tutorial](images/mood/tech-blog/mood-code-display-options-vuejs.png)
+
+- Great implementation of changing options to see different code variations in a tutorial
+- Could also work for 
+    - ES5 functions vs fat arrow syntax
+    - `.then`/`.catch` vs `async`/`await`
+
+---
+
 ![screencap of Svelte Documentation page](images/mood/tech-blog/mood-layout-table-of-contents.png)
 
 - Love the table of contents
