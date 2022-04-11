@@ -5,7 +5,7 @@ Tony's notes and such for his coding explorations.
 
 ## April 10, 2022
 
-Mood Board: Technical Blog
+### Mood Board: Technical Blog
 
 ![Timeline History of Chris Coyier's life](images/mood/tech-blog/mood-aboutme-timeline.png)
 
@@ -75,6 +75,25 @@ Mood Board: Technical Blog
 ![screencap of sara souedan's page seaprator](images/mood/tech-blog/mood-page-separator-sara.png)
 
 - Just a cool example of how you could use an SVG instead of a horizontal rule.
+
+---
+
+### `remark-attr` with `mdsvex` and SvelteKit
+**Goal**: be able to add custom classes to non-container elements (already handled by `remark-container`)
+- main worry is that the `{}` syntax of `remark-attr` will conflict with Svelte template syntax.
+- Continuing work on [sveltekit-mdsvex](https://github.com/acidtone/sveltekit-mdsvex)
+- Plan:
+    1. Add test code to `/tests/markdown` following `remark-attr` sample code
+    2. Install `remark-attr` to SK and cross fingers
+- Example syntax for test page:
+    ```
+    ### This is a title
+    {style="color:red;"}
+    ```
+
+    ```
+    Npm stand for *node*{style="color:red"} packet manager.
+    ```
 
 ---
 
@@ -243,7 +262,7 @@ Goal: Figure out the pattern behind the flexbox albatross
     - TODO: [Preload routes](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#preload-routes)
 - Done!
     - [commit](https://github.com/acidtone/sveltekit-mdsvex/commit/0f2b67ef4a41cbc4c2766e9b03d54f37aa9984bf)
-    - [Netlify Demo](https://admirable-pithivier-572d1d.netlify.app/) 
+    - [Netlify Deit/mo](https://admirable-pithivier-572d1d.netlify.app/) 
 
 **Goal**: Install remark plugins for extended markdown syntax parsing.
 - Mostly using the [MDSveX Docs](https://mdsvex.pngwn.io/docs#remarkplugins--rehypeplugins)
