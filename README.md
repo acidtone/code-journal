@@ -3,6 +3,32 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 11, 2022
+
+### Refactoring SAIT final presentation template for SvelteKit
+- Original: [sait-wbdv.github.io](https://github.com/sait-wbdv/sait-wbdv.github.io)
+- New repo: [finals](https://github.com/sait-wbdv/finals/commit/7c8b9f66447c14127e387629663dbdcb16eccb69)
+- First question: where should static json data live in SK?
+    - Doesn't look like there's an official convention. Going with a data directory.
+    - Going to import js instead of json.
+    - Should `data` go into the `lib` directory?
+        - unclear from the documentation what should go into `lib` besides modules
+        - could use [`$app/stores`](https://kit.svelte.dev/docs/modules#$app-stores) but it looks like that will increase the complexity of the app.
+        - Going with `$lib` for now
+- TODO: Convert linklist.js into a Svelte component.
+- Error importing the roster and finals list:
+    ```js
+    Module '"/Users/tony/Documents/sait/wbdv/finals/src/lib/data/f21/finals-f21"' has no default export.js(1192)
+    ```
+
+    - Looks like there's a requirement for default exports?
+    - Apparently so.
+- Next step: Convert the card templates into components.
+    - Leaving that for later. Time for a break.
+    - [finishing commit](https://github.com/sait-wbdv/finals/commit/ddc6d61b202c0722ce97cd7e5aeb4a85aad9adf9)
+
+---
+
 ## April 10, 2022
 
 ### Mood Board: Technical Blog
