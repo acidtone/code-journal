@@ -3,6 +3,19 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## March 9, 2022
+Goal: Mood board practice
+- Theme/product/company ideas
+    - Rake Bomb Landscaping Inc.
+    - Napkin Candy Designs
+    - Toy Ticket Events
+    - The Rain Whistle
+    - Team Shadow (D&D Guild, probably mostly made up of Rogues)
+    - Vomit Drum (metal band)
+
+
+---
+
 ## Feb 22, 2022
 Goal: Find a router for OPNSense
 - Apparently, Memory Express isn't what it used to be. Every potential router brand that will run pfSense or OPNSense is not found. The only appliance that comes close are Ubiquiti brand, which have a bad reputation. Shame.
