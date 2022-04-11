@@ -94,6 +94,19 @@ Tony's notes and such for his coding explorations.
     ```
     Npm stand for *node*{style="color:red"} packet manager.
     ```
+- Still new with SK. Going back to the original [MD SK tutorial](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) to remind myself how to add a `remark` plugin.
+    - Turns out it doesn't cover plugins? I guess I just figured it out last time:
+        1. install the plugin
+
+            ```
+            npm install remark-attr
+            ```
+        2. Import it into `svelte.config.js`:
+            ```js
+            import attr from "remark-attr"
+            ```
+        3. Do I add it to `remarkPlugins` in `svelte.config.js`?
+        4. [It worked!](https://github.com/acidtone/sveltekit-mdsvex/commit/b47fe6c4193d4ec146d5c60fe2b5c58afb1e076c)
 
 ---
 
@@ -246,9 +259,9 @@ Goal: Figure out the pattern behind the flexbox albatross
         - `svelte.head` seems to be the Svelte way of adding a `link` element to the `head` of a page. [The official tutorial](https://svelte.dev/tutorial/svelte-head) shows adding `<svelte:head>` to `App.svelte` that file doesn't exist in the skeleton site that's been generated.
         - Solution: Added the `link` to `__layout.svelte` using `<svelte:head>` and it worked! `svelte.head` seems to be built into SvelteKit.
         - TODO: Add some remark plugins
-            - definition lists
-            - element classes
-            - wrapper elements
+            - ~~definition lists~~ [`remark-deflist`]
+            - ~~element classes~~ [`remark-attr`]
+            - ~~wrapper elements~~ ['remark-containers']
     - Using the Git page from WBDV as a sample blog post. 
         - TODO: Figure out where/how images are handled in SK (for error screencaps)
             - Where are static assets kept?
