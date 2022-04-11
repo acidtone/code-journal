@@ -242,6 +242,8 @@ Goal: Figure out the pattern behind the flexbox albatross
     - TODO: Add [Custom error page](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#customize-the-error-page)
     - TODO: [Preload routes](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#preload-routes)
 - Done!
+    - [commit](https://github.com/acidtone/sveltekit-mdsvex/commit/0f2b67ef4a41cbc4c2766e9b03d54f37aa9984bf)
+    - [Netlify Demo](https://admirable-pithivier-572d1d.netlify.app/) 
 
 **Goal**: Install remark plugins for extended markdown syntax parsing.
 - Mostly using the [MDSveX Docs](https://mdsvex.pngwn.io/docs#remarkplugins--rehypeplugins)
