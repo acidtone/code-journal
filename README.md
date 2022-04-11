@@ -3,6 +3,295 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 10, 2022
+
+### Mood Board: Technical Blog
+
+![Timeline History of Chris Coyier's life](images/mood/tech-blog/mood-aboutme-timeline.png)
+
+- I like the idea and general layout. Not as much into the colours
+
+---
+
+![Stripe's page divider](images/mood/tech-blog/mood-asymmetry-section.png)
+
+- Asymmetry is great, slanted page dividers is an oldie but a goodie. 
+
+---
+
+![screencap of cool colour gradient and logo](images/mood/tech-blog/mood-colour-gradient-val-head.png)
+
+- Love the colours, slight gradient combined with a minimal vector logo
+
+---
+
+![screencap of nice hero section](images/mood/tech-blog/mood-curriculum-modules.png)
+
+- Would be pretty easy to do with alternating grid cell alignment.
+
+---
+
+![screencap of simple code card](images/mood/tech-blog/mood-display-code-simple.png)
+
+- Might make for a nice intro card to an activity/lesson/concept
+
+---
+
+![screencap of example displaying code](images/mood/tech-blog/mood-displaying-code.png)
+
+- Would love to figure out how to make more complex cards that display code.
+
+---
+
+![screencap of vuejs tutorial](images/mood/tech-blog/mood-code-display-options-vuejs.png)
+
+- Great implementation of changing options to see different code variations in a tutorial
+- Could also work for 
+    - ES5 functions vs fat arrow syntax
+    - `.then`/`.catch` vs `async`/`await`
+
+---
+
+![screencap of Svelte Documentation page](images/mood/tech-blog/mood-layout-table-of-contents.png)
+
+- Love the table of contents
+- Is a nice example of documentation conventions.
+- Could make a nice curriculum summary for a course?
+
+---
+
+![screencap of a warning notice on Svelte documentation](images/mood/tech-blog/mood-notice-warn.png)
+
+- Simple example that could work for notices: warnings, pro-tips, etc.
+
+---
+
+![screencap of Mandy Michaels's Notist page](images/mood/tech-blog/mood-notist-mandy-michael.png)
+
+- A little boring (not Mandy's fault; not her page) but the minimal nav for a video page could come in handy
+
+---
+
+![screencap of sara souedan's page seaprator](images/mood/tech-blog/mood-page-separator-sara.png)
+
+- Just a cool example of how you could use an SVG instead of a horizontal rule.
+
+---
+
+### `remark-attr` with `mdsvex` and SvelteKit
+**Goal**: be able to add custom classes to non-container elements (already handled by `remark-container`)
+- main worry is that the `{}` syntax of `remark-attr` will conflict with Svelte template syntax.
+- Continuing work on [sveltekit-mdsvex](https://github.com/acidtone/sveltekit-mdsvex)
+- Plan:
+    1. Add test code to `/tests/markdown` following `remark-attr` sample code
+    2. Install `remark-attr` to SK and cross fingers
+- Example syntax for test page:
+    ```
+    ### This is a title
+    {style="color:red;"}
+    ```
+
+    ```
+    Npm stand for *node*{style="color:red"} packet manager.
+    ```
+- Still new with SK. Going back to the original [MD SK tutorial](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) to remind myself how to add a `remark` plugin.
+    - Turns out it doesn't cover plugins? I guess I just figured it out last time:
+        1. install the plugin
+
+            ```
+            npm install remark-attr
+            ```
+        2. Import it into `svelte.config.js`:
+            ```js
+            import attr from "remark-attr"
+            ```
+        3. Do I add it to `remarkPlugins` in `svelte.config.js`?
+        4. [It worked!](https://github.com/acidtone/sveltekit-mdsvex/commit/b47fe6c4193d4ec146d5c60fe2b5c58afb1e076c)
+
+---
+
+## April 9, 2022
+Thinking about a blog that:
+- Displays code really well.
+    - hightlight code selections (inline and line range)
+    - show relevant page name as heading
+- Can embed content the major vendors
+- Shows a great table of contents
+**Requirements**:
+    - SvelteKit
+    - Markdown
+        - mdsvex
+            - definitions
+            - embeds:
+                - Codepen
+                - Youtube
+                - Gists
+                - Stack Overflow?
+    - Notices
+    - Code highlighter
+        - Prism?
+        - R&D: how do code highlighters work?
+    - Easy image workflow.
+        - screencaps
+        - optimization
+            - svelte-image?
+
+---
+
+## April 7, 2022
+Goal: Install and start MongoDB locally; just in case I need it for a Mongo review session tomorrow (planning on focusing on Atlas).
+- Found this tutorial that recommends Homebrew: [Installing MongoDB on a Mac](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
+- I have a love-hate relationship with Homebrew. I always forget where it installs things (Cellar?) and I remember having to deal with duplicate installs when software overlaps with a package that comes with the mac (like php).
+- Current Homebrew version is 3.2.6; current is 3.4.5. `brew update`; probably shouldn't be doing this on pub wifi...
+- Ran into my first problem from the tutorial: 
+    - "After downloading Mongo, create the “db” directory. This is where the Mongo data files will live. You can create the directory in the default location by running `mkdir -p /data/db`"
+    - `mkdir -p /data/db` returned `mkdir: /data/db: Read-only file system`. No `/data` directory exists. I'm already close to giving up on local installation. More trouble than it's worth.
+        - googled the error and found [this post](https://stdworkflow.com/684/mongodb-error-mkdir-data-db-read-only-file-system). It gives two methods to work around the error, but the author doesn't mention (or know) the root cause.
+        - Going with Method 2 and storing the data in my home folder. Not sure why; just cuz.
+        - Created a `~/data` directory in my home folder and then tried running:
+            ```bash
+            $ sudo mongod --dbpath=/Users/tony/data
+            ```
+
+            and, of course, received the error:
+
+            ```bash
+            sudo: mongod: command not found
+            ```
+            
+            In general, if I have to add a `PATH` to my environment variables, I'm out. This isn't 1999.
+
+        - Giving up on a local installation (yet again). Going to focus tomorrow's session on Atlas.
+
+Goal: Figure out the pattern behind the flexbox albatross
+- Articles
+    - [The Flexbox Holy Albatross](https://heydonworks.com/article/the-flexbox-holy-albatross/)
+        - > Critically, `min-width` and `max-width` override `flex-basis`.
+    - [The Flexbox Holy Albatross Reincarnated](https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/)
+        - lol, `min-width` and `max-width` aren't even needed:
+
+            ```css
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                --margin: 1rem;
+                --modifier: calc(40rem - 100%);
+                margin: calc(var(--margin) * -1);
+            }
+
+            .container > * {
+                flex-grow: 1;
+                flex-basis: calc(var(--modifier) * 999);
+                margin: var(--margin);
+            }
+            ```
+
+            - TODO: move `40rem` to a CSS variable.
+            - Can sprinkle some >1 `flex-grow` to [create variable-width items](https://codepen.io/heydon/pen/pqGgbR)
+
+---
+
+## March 31, 2022
+**Wishlist**: A collection of tutorials tagged by the technologies and versions used.
+    
+```yaml
+- title: Let's learn SvelteKit by building a static Markdown blog from scratch
+  link: https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog
+  tech: 
+    - svelte@3
+    - sveltekit@next
+    - mdsvex@0.10 
+```
+- User stories: 
+    - As a learner, I want to save a great tutorial I just found, so that I can easily find it later.
+    - As a tutor, I want to collect a library of learning materials, so that I can easily assign homework to my clients.
+    - As a teacher, I want to filter out old tutorials, so that my students don't get confused by references to older syntax.
+    - As a school, I want to filter for tutorials by technology, so that I can quickly generate materials for a particular course/program.
+- Could also do the same thing with CSS properties, HTML elements and JS features?
+- How do you host it? 
+    - Could it be a file database? markdown with front matter?
+    - Add the complexity of Strapi?
+    - Sanity.io? Possible to convert to Strapi later?
+- Collections
+    - Resources
+        - title
+        - author
+        - link
+        - slug
+        - breakdown
+    - Authors
+        - name
+        - slug
+        - socials: gh, codepen, etc
+    - Technologies
+        - name
+        - slug
+        - homepage
+
+---
+
+## March 27, 2022
+**Goal**: Create a slides directory in SvelteKit (SK) that wraps RevealJS around all files inside it.
+- I just did this today with Nuxt (both 2 & 3) with mixed results. I've got high hopes that this will be easier with SK.
+- First decision: do I carry on with the md-blog project or create a new one? 
+    - I don't know what's ahead of me so I'm going to keep it simple: implement reveal site-wide and figure out how to do it on the route level later. 
+    - If that works: implement markdown slides.
+- Got it working with Ash and Jess's help but the .__nuxt container needs an explicit height.
+- Conclusion: now sure what's breaking but it feels like the nuxt container is hiding the slide content by becoming zero height. It could also be a tailwind issue?
+
+---
+
+## March 23, 2022
+**Goal**: Deploy md SK skeleton site to Netlify
+- Going off the official [Netlify docs](https://docs.netlify.com/configure-builds/common-configurations/sveltekit/).
+- [And it worked](https://admirable-pithivier-572d1d.netlify.app/tests/markdown) after I removed `config.kit.target`. The documentation needs to be updated.
+
+---
+
+## March 22, 2022
+**Goal**: Set up a boilerplate Svelte site with Markdown support
+- Following this tutorial: [Let's learn SvelteKit by building a static Markdown blog from scratch](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
+    - Skipped the SASS portion
+    - So far so good; MDSveX installed like a charm
+    - After md support added, VS Code is showing syntax squiggles for the Svelte code
+    - PrismJS is working by default with MDSveX but there are no highlight styles. 
+        - Problem: How to add `prism.min.css` from a CDN
+        - `svelte.head` seems to be the Svelte way of adding a `link` element to the `head` of a page. [The official tutorial](https://svelte.dev/tutorial/svelte-head) shows adding `<svelte:head>` to `App.svelte` that file doesn't exist in the skeleton site that's been generated.
+        - Solution: Added the `link` to `__layout.svelte` using `<svelte:head>` and it worked! `svelte.head` seems to be built into SvelteKit.
+        - TODO: Add some remark plugins
+            - ~~definition lists~~ [`remark-deflist`]
+            - ~~element classes~~ [`remark-attr`]
+            - ~~wrapper elements~~ ['remark-containers']
+    - Using the Git page from WBDV as a sample blog post. 
+        - TODO: Figure out where/how images are handled in SK (for error screencaps)
+            - Where are static assets kept?
+            - How are relative links handled?
+            - Does SK have any fancy features for image handling?
+    - TODO: Add `/categories/index.svelte` page to list all categories
+    - [Adding autoprefixer](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#add-autoprefixer-with-postcss) requires `svelte-preprocess`, which I skipped because I'm not using SASS so I'll have to go back and install it.
+        - Pretty straight forward...
+    - TODO: Add Excerpts to the blog index page
+    - TODO: Add [Custom error page](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#customize-the-error-page)
+    - TODO: [Preload routes](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#preload-routes)
+- Done!
+    - [commit](https://github.com/acidtone/sveltekit-mdsvex/commit/0f2b67ef4a41cbc4c2766e9b03d54f37aa9984bf)
+    - [Netlify Deit/mo](https://admirable-pithivier-572d1d.netlify.app/) 
+
+**Goal**: Install remark plugins for extended markdown syntax parsing.
+- Mostly using the [MDSveX Docs](https://mdsvex.pngwn.io/docs#remarkplugins--rehypeplugins)
+- Definition lists:
+    - `remark-definition-list` doesn't seem to work anymore but `remark-deflist` does.
+- Wrappers: 
+    - `remark-container` works as advertized
+    - Tried `remark-directive` for deeper syntax support but the `{}` syntax seems to interfere with Svelte. I'd really like to get this one working. Might require an Issue submission to the `MDsveX` repo.
+- Table of Contents
+    - Leaving this for later. Can be done with `remark` and/or `rehype`. Requires more research.
+- Codepen Embeds
+    - The HTML method from Codepen's copy/paste utility breaks during build but the iFrame option seems to work.
+
+
+---
+
 ## March 9, 2022
 Goal: Mood board practice
 - Theme/product/company ideas
@@ -13,6 +302,32 @@ Goal: Mood board practice
     - Team Shadow (D&D Guild, probably mostly made up of Rogues)
     - Vomit Drum (metal band)
 
+---
+## March 8, 2022
+Research: Design in Figma
+- Mood boards are cool
+    - [How to Mood Board for Web Design](https://www.youtube.com/watch?v=1A-tepzfhJw) by Jesse Showalter
+        - Moodboards should contain:
+            - Colour palette
+            - Typography
+            - Textures
+            - Patterns
+            - Photo selections
+            - Misc
+        - Types of mood boards
+            1. Strict mood board
+            2. Messy mood board
+            3. Pin board
+            4. Style Tile
+    - [How to Prepare for a Brand Identity Mood Board](https://www.youtube.com/watch?v=5uHZNZc38II)
+- Compilation of Mood board contents from the above and some other videos:
+    1. Colour palettes
+    2. Typography
+    3. Photos and illustrations
+    4. Textures
+    5. Patterns
+    6. Logos
+    7. Misc: anything that directly relates to the project
 
 ---
 
