@@ -3,6 +3,16 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 12, 2022
+Continuing with SAIT template
+- Through process of elimination (commenting code), the error is from the `badges` not being properly pass to the component 
+    - Setting a default fixes it, assuming it was just the students with no badges that were breaking.
+- There are loops within loops but Badges now work (without images so far). 
+    - TODO: Optimize the Badges component; remove `.find()` nested in `.filter()`
+    - [Finishing commit](https://github.com/sait-wbdv/finals/commit/f375e4eb6765c2894204d299dce6345b2179ec74)
+
+---
+
 ## April 11, 2022
 
 ### Refactoring SAIT final presentation template for SvelteKit
