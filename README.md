@@ -10,6 +10,23 @@ Continuing with SAIT template
 - There are loops within loops but Badges now work (without images so far). 
     - TODO: Optimize the Badges component; remove `.find()` nested in `.filter()`
     - [Finishing commit](https://github.com/sait-wbdv/finals/commit/f375e4eb6765c2894204d299dce6345b2179ec74)
+- Going to have to refactor the Social link code to work as a module
+    - Kept running to a weird error where this code errored out:
+        ```js
+        item.group = info.group
+        item.icon = info.icon
+        ```
+        - `info.group` was undefined even though I confirmed it should work.
+
+        ```js
+        item = {...item, ...info};
+        ```
+        - But this DID work? Maybe something SvelteKit specific problem with the way it keeps track of assignments?
+- Done with the core of the components
+    - [finishing commit](https://github.com/sait-wbdv/finals/commit/5985cfc3ea78e4733ed563fb942efbef67e6e183)
+    - TODO: 
+        - Add image assets and Font Awesome icons
+        - Migrate CSS
 
 ---
 
