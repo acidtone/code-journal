@@ -27,6 +27,69 @@ Tony's notes and such for his coding explorations.
     - Leaving that for later. Time for a break.
     - [finishing commit](https://github.com/sait-wbdv/finals/commit/ddc6d61b202c0722ce97cd7e5aeb4a85aad9adf9)
 
+Goal: On to the next step - creating a card component.
+- Just looking at the imperative DOM code in my vanilla JS makes me shiver:
+
+    ```js
+    const card = document.querySelector('#card').content.cloneNode(true);
+
+    // Name, tagline
+    card.querySelector('header').innerHTML = student.label;
+
+    if (student.tagline) {
+        card.querySelector('p').innerHTML = student.tagline;
+    } else {
+        card.querySelector('p').remove();
+    }
+    ```
+
+    - Never thought I'd ever jump on the view framework bandwagon but SK seems like the right balance of weight to benefit. Queue cold Hell.
+- At least I used HTML templates so it's kinda declarative:
+
+    ```html
+    <figure>
+      <img src="" alt="[name]">
+      <figcaption>
+        <aside class="badges">[badges]</aside>
+        <header>[name]</header>
+        <p>[tagline]</p>
+        <footer class="social">
+          
+        </footer>
+      </figcaption>
+    </figure>
+    ```
+- Having trouble with props. Getting this error when trying to loop through `students` and pass the data to my `Card` component:
+    
+    ```
+    [HMR][Svelte] Error during component init: <Index> proxy.js:15:11
+    TypeError: can't access property "$$", cmp is null
+    ```
+    - First of all, what fuck kind of error is this?
+    - I'm assuming I'm not passing props down to the component correctly? 
+        ```js
+        {#each students as student}
+          <Card student={student} />
+        {/each}
+        ```
+    - Never mind. It's working now. I guess I have to reload after a hard error.
+- Figuring out how to handle the badges and social links. 
+    - Loops within loops. What's "better" for rendering alist of badges/social links for multiple students?
+        - an array of objects
+        - an object of objects
+        - some kind of intermediary step?
+    - I basically need to "reduce" the full array of badges into just an array of badges for a particular student so it can be handled by a simple `#each` loop. 
+        - I could do this with a `.map()` but the info is split between two arrays?
+    - Trying to figure out these cryptic errors:
+        
+        ```
+        at eval (/src/lib/components/Badges.svelte:14:38)
+        ```
+        - `Badges.svelte` only has 10 lines of code. wtf.
+
+        ![Unhelpful SvelteKit Error](images/misc/unhelpful-sveltekit-error.png)
+    - Giving up for now.
+
 ---
 
 ## April 10, 2022
