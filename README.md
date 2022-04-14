@@ -3,6 +3,28 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 14, 2022
+**Goal**: Add image handling to [SAIT presentation template](https://github.com/sait-wbdv/finals)
+- At first, I thought that SK's native image handling was what I wanted but it looks like you have to `import` individual images?
+- The SvelteKit documentation mentions two packages if I want to add images directly to the markup:
+    - [svelte-preprocess-import-assets](https://github.com/bluwy/svelte-preprocess-import-assets)
+    - [svelte-image](https://github.com/matyunya/svelte-image)
+- Also found mention of [vite-imagetools](https://www.npmjs.com/package/vite-imagetools). Not sure if SvelteKit can grab new image URLs and do its magic?
+    - For example, if a `jpg` is processed into a `webp`, how are SK links changed to use the new image?
+- `svelte-image` seems more mature and I'm not quite sure what `svelte-preprocess-import-assets` does just by looking at the documentation.
+    - This is a nice tutorial for `svelte-image`: [live code: lazy loaded & responsive images in Svelte with svelte-image module](https://www.youtube.com/watch?v=FKNc9A8u2oE)
+        - BUT:
+            - It's old: Apr 2020
+            - Was made for v0.1.9 (current is v0.2.9)
+            - It doesn't use SvelteKit
+- Pickin's are a little slim when it comes to guides to image processing in SvelteKit:
+    - Rodney Labs
+        - [Simple Svelte Responsive Image Gallery](https://rodneylab.com/simple-svelte-responsive-image-gallery/)
+        - [SvelteKit Next‑Gen Background Image](https://rodneylab.com/sveltekit-next-gen-background-image/)
+    - [Using `vite-imagetools` with SvelteKit](https://www.reddit.com/r/sveltejs/comments/mdd9ov/using_viteimagetools_with_sveltekit/)
+
+---
+
 ## April 13, 2022
 Continuing with SAIT template
 - Goal: Migrate image assets and icons
