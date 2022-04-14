@@ -3,6 +3,14 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 13, 2022
+Continuing with SAIT template
+- Goal: Migrate image assets and icons
+- Question: where to put static image assets in SK?
+    - Answer: [inside the `$lib`](https://kit.svelte.dev/docs/assets) 
+
+---
+
 ## April 12, 2022
 Continuing with SAIT template
 - Through process of elimination (commenting code), the error is from the `badges` not being properly pass to the component 
