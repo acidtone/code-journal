@@ -3,6 +3,30 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 23, 2022
+**Project**: Browser-based "game" for learning the command line
+- **Outcomes**
+    - Navigate the file system using `pwd`, `ls` and `cd`
+    - Create a mental picture of the file-system using visual cues of a traditional File Explorer/Finder
+        - Where are you?
+        - What is in the current directory?
+        - How do I get to another location?
+- **Research**: File/directory and/or command line emulation in the browser
+    - [CoCalc](https://cocalc.com/)
+        - Full-ish featured shell in the browser but looks like overkill
+    - [xTerm](https://xtermjs.org/)
+        - Looks promising! Still might be overkill, depending on how it works, but the install process looks pretty straight forward.
+        - Top Question: what does the file system look like? Does it have access to the system's? Can I create a virtual one for _Follow the White Rabbit_?
+
+**Goal**: First install of xTerm
+- It apparently requires npm to be installed; it's been awhile since I've tried using it for browser-based packages.
+- It was a pretty straight forward install but key presses aren't registering in the web terminal. It feels like it needs a proper terminal to interface with?
+    - Found this issue that hints to me that I have to write the simple stuff like echoing keys back to the terminal :/
+    - This is good news I guess? Given my use-case, it's probably easier to add what I need rather than remove what I don't need.
+    - TODO: Research some tutorials on how to add functionality to xterm.
+
+---
+
 ## April 14, 2022
 **Goal**: Add image handling to [SAIT presentation template](https://github.com/sait-wbdv/finals)
 - At first, I thought that SK's native image handling was what I wanted but it looks like you have to `import` individual images?
