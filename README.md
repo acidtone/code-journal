@@ -18,12 +18,14 @@ Tony's notes and such for his coding explorations.
         - Looks promising! Still might be overkill, depending on how it works, but the install process looks pretty straight forward.
         - Top Question: what does the file system look like? Does it have access to the system's? Can I create a virtual one for _Follow the White Rabbit_?
 
-**Goal**: First install of xTerm
+**Goal**: First install of xTermjs
 - It apparently requires npm to be installed; it's been awhile since I've tried using it for browser-based packages.
 - It was a pretty straight forward install but key presses aren't registering in the web terminal. It feels like it needs a proper terminal to interface with?
     - Found this issue that hints to me that I have to write the simple stuff like echoing keys back to the terminal :/
     - This is good news I guess? Given my use-case, it's probably easier to add what I need rather than remove what I don't need.
-    - TODO: Research some tutorials on how to add functionality to xterm.
+    - ~TODO~: Research some tutorials on how to add functionality to xterm.
+        - Results: There doesn't seem to he much, aside from [the documentation](https://xtermjs.org/docs/) and a few examples on [Codesandbox](https://codesandbox.io/examples/package/xterm).
+        - I honestly don't get what this package does or is. I thought it would be something that you could throw in some connection info and you're good to go?
 
 ---
 
