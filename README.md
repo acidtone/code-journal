@@ -4,6 +4,7 @@ Learning, reminders and frustrations written in the moment.
 ---
 
 ## April 27, 2022
+### Shell shortcuts
 I'd love to be able to easily navigate to my project folders with bash shortcuts?
 - [How to navigate directories faster with bash](https://mhoffman.github.io/2015/05/21/how-to-navigate-directories-with-the-shell.html)
     - Things this article taught me
@@ -21,6 +22,27 @@ I'd love to be able to easily navigate to my project folders with bash shortcuts
 - Found: [bash directory shortcuts](https://unix.stackexchange.com/questions/1469/bash-directory-shortcuts)
     - I forgot I switched to zsh. It apparently has a feature called [named directories](https://askubuntu.com/questions/1042002/how-do-i-make-named-directories-permanent-in-zsh-and-how-do-i-edit-them-also-wh)
         - Noice; `cd ~journals` now goes to my journals directory.
+
+### GitHub API: Activity
+**User Story**: 
+> As a coding instructor, I want to track the number of commits learners push so that I can give out Code Warrior trophies at the end of a course.
+
+**Goal**
+Set up a SvelteKit skeleton that logs public `GET /activity` data to the console.
+
+**Plan**
+1. Install latest SK skeleton
+2. Add page endpoint for my `GET /activity` as an unauthenticated use (if I can).
+3. Output a count of my latest number of commits to a page.
+
+**Brute force**
+- Source: [My Fave SK tutorial](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
+    - Stopping at the initial install to concentrate on the page endpoint
+    - Getting an irritating error in VS Code because it can't find `adapter-auto`
+- Now, how to use this [fancy new page endpoint feature](https://youtu.be/s6a1pbTVcUs?t=205) referenced in [Rich Harris's latest SvelteKit update](https://youtu.be/s6a1pbTVcUs)?
+    - Wow, I just copied the code from his screen using JSON Placeholder and it worked like a charm. That's nice.
+- Wow, [that was easy](https://github.com/acidtone/gh-activity/commit/b64d24b5a394d7733705c6eea08005e71555271e). SvelteKit is so awesome.
+
 
 ---
 
