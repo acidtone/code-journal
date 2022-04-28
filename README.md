@@ -4,7 +4,7 @@ Tony's notes and such for his coding explorations.
 ---
 
 ## April 27, 2022
-Marks are in! Gotta keep coding. But first, I'd love to be able to shortcut into my project folders with bash shortcuts?
+I'd love to be able to shortcut into my project folders with bash shortcuts?
 - [How to navigate directories faster with bash](https://mhoffman.github.io/2015/05/21/how-to-navigate-directories-with-the-shell.html)
     - Things this article taught me
         - `cd -` goes to the previous directory. 
