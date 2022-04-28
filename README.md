@@ -44,6 +44,61 @@ Set up a SvelteKit skeleton that logs public `GET /activity` data to the console
 - Wow, [that was easy](https://github.com/acidtone/gh-activity/commit/b64d24b5a394d7733705c6eea08005e71555271e). SvelteKit is so awesome.
 - Added a count of Push Events (`Array.prototype.reduce()`) and listed default 30 past events for my account.
 
+**Walk-through**
+This was all surprisingly straight forward. But there are some issues with the implementation:
+- This probably shouldn't be tied to a page endpoint. It was great to get something up and running quickly but the final counter should be a component(s).
+- This is just listing one user: me. The final app needs to compile the numbers of multiple users in a given course.
+- Given the API calls required for each user, a data store should be implemented to cache responses. That's a biggie.
+
+BUT, there's some nice data provided in the response:
+
+```json
+{
+    "id": "21512451971",
+    "type": "PushEvent",
+    "actor": {
+        "id": 6174466,
+        "login": "acidtone",
+        "display_login": "acidtone",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/acidtone",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6174466?"
+    },
+    "repo": {
+        "id": 443250889,
+        "name": "acidtone/code-journal",
+        "url": "https://api.github.com/repos/acidtone/code-journal"
+    },
+    "payload": {
+        "push_id": 9741321869,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/main",
+        "head": "4f23c9160c52bc48b273cda5db7b54bad2d53523",
+        "before": "db05fa71fad1bc195d8225d6adcf6dc7c9b9dccb",
+        "commits": [
+            {
+                "sha": "4f23c9160c52bc48b273cda5db7b54bad2d53523",
+                "author": {
+                    "email": "acidtone@tonygrimes.com",
+                    "name": "Tony Grimes"
+                },
+                "message": "tweaks",
+                "distinct": true,
+                "url": "https://api.github.com/repos/acidtone/code-journal/commits/4f23c9160c52bc48b273cda5db7b54bad2d53523"
+            }
+        ]
+    },
+    "public": true,
+    "created_at": "2022-04-28T06:40:10Z"
+}
+```
+- TODO: Research the response returned for commits. 
+    - User stories:
+        > As a coding instructor, I want to find commits with two parents so that I can auto evaluate if someone has resolved a merge conflict.
+
+        > As an event organizer, I want to count commits between two coders on a single repo so that I can see if attendees have successfully completed a pair code session.
+
 ---
 
 ## Apr 24, 2022
