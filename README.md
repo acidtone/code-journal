@@ -42,7 +42,7 @@ Set up a SvelteKit skeleton that logs public `GET /activity` data to the console
 - Now, how to use this [fancy new page endpoint feature](https://youtu.be/s6a1pbTVcUs?t=205) referenced in [Rich Harris's latest SvelteKit update](https://youtu.be/s6a1pbTVcUs)?
     - Wow, I just copied the code from his screen using JSON Placeholder and it worked like a charm. That's nice.
 - Wow, [that was easy](https://github.com/acidtone/gh-activity/commit/b64d24b5a394d7733705c6eea08005e71555271e). SvelteKit is so awesome.
-
+- Added a count of Push Events (`Array.prototype.reduce()`) and listed default 30 past events for my account.
 
 ---
 
