@@ -29,12 +29,15 @@ Given the dead ends with xTerm, I think I'll put the idea on the shelf for now. 
 
 ![Wireframe-prompt](images/wireframes/cli-game-1.webp)
 Screen 1: User is prompted to view the folder contents with `ls`.
+
 ---
 ![Wireframe-ls](images/wireframes/cli-game-2.webp)
 Screen 2: User shows directory contents with `ls`.
+
 ---
 ![Wireframe-ls-l](images/wireframes/cli-game-3.webp)
 Screen 3: User shows extra item info with `-l` flag.
+
 ---
 ![Wireframe-ls-la](images/wireframes/cli-game-4.webp)
 Screen 4: User shows hidden secrets(!) with `-a` flag.
