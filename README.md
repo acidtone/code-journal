@@ -3,6 +3,27 @@ Tony's notes and such for his coding explorations.
 
 ---
 
+## April 27, 2022
+Marks are in! Gotta keep coding. But first, I'd love to be able to shortcut into my project folders with bash shortcuts?
+- [How to navigate directories faster with bash](https://mhoffman.github.io/2015/05/21/how-to-navigate-directories-with-the-shell.html)
+    - Things this article taught me
+        - `cd -` goes to the previous directory. 
+            - Using it repeatedly will toggle between two directories! I can use this to toggle between a project and this journal.
+    - `alias ..="cd .."` adds a shortcut!
+    - `!$` is an alias for the last argument of the previous command
+        ```
+        mkdir -p make/new/directory
+        cd !$
+        ```
+        - Had to look up the `-p` flag; it's for creating nested directories
+    - `CDPATH` seems cool but the article doesn't explain it very well.
+    - I stopped at `pushd`/`popd`. They looked pretty cool, but maybe I'll revisit if I need to write a bash script.
+- Found: [bash directory shortcuts](https://unix.stackexchange.com/questions/1469/bash-directory-shortcuts)
+    - I forgot I switched to zsh. It apparently has a feature called [named directories](https://askubuntu.com/questions/1042002/how-do-i-make-named-directories-permanent-in-zsh-and-how-do-i-edit-them-also-wh)
+        - Noice; `cd ~journals` now goes to my journals directory.
+
+---
+
 ## Apr 24, 2022
 Given the dead ends with xTerm, I think I'll put the idea on the shelf for now. Here are some quick wireframes I made for the record in case I can find a collaborator with xTerm experience.
 
