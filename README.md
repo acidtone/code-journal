@@ -95,9 +95,12 @@ BUT, there's some nice data provided in the response:
 ```
 - TODO: Research the response returned for commits. 
     - User stories:
-        > As a coding instructor, I want to find commits with two parents so that I can auto evaluate if someone has resolved a merge conflict.
+        > As a coding instructor, I want to find commits with two parents so that I can evaluate if someone has resolved a merge conflict.
 
-        > As an event organizer, I want to count commits between two coders on a single repo so that I can see if attendees have successfully completed a pair code session.
+        > As an event organizer, I want to count alternating commits between two coders on a single repo so that I can see if attendees have successfully completed a pair code session.
+
+**Optimize**
+- Added user stories and a link to this post in the [project README](https://github.com/acidtone/gh-activity/commit/5db12907ee22453891ba9eec126e32a1f8dd1628).
 
 ---
 
