@@ -3,6 +3,20 @@ Learning, reminders and frustrations written in the moment.
 
 ---
 
+## April 30, 2022
+- TODO: Walk-through of [Svelte Components Using Custom Markdown Renderers](https://www.youtube.com/watch?v=ZiEROAqobwM)
+    - Deep dive into how to parse markdown strings for custom patterns
+    - User Story: As a coding instructor, I'd like to add functionality to my code highlighter so that I can:
+        - select code sections
+        - add the page the code is from
+        - toggle between ES5/ES6, named/anonymous functions, options/composition API, etc
+    - Uses Stackblitz for code sharing:
+        - [Custom Tokenizer And Renderer (forked)](https://stackblitz.com/edit/sveltejs-kit-template-default-jwtb9f?file=src%2Froutes%2Findex.svelte)
+        - [Custom Tokenizer And Renderer - Selector Version](https://stackblitz.com/edit/sveltejs-kit-template-default-jz5nyu?file=src%2Froutes%2Findex.svelte)
+        - User story: As a Twitch streamer, I'd like to share finished code so that stream watchers can follow along at their own pace.
+
+---
+
 ## April 27, 2022
 ### Shell shortcuts
 I'd love to be able to easily navigate to my project folders with bash shortcuts?
