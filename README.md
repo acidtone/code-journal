@@ -66,9 +66,78 @@ A summary of the steps outlined in the above blog post for eventual inclusion in
     ```shell
     npm install
     ```
-3. Create `routes/journal/index.svelte`
-4. Create `routes/__layout.svelte`
-5. 
+3. Create `src/routes/journal/index.svelte`
+4. Create `src/routes/__layout.svelte`
+    - Skipped adding `Header` and `Footer` components since neither are re-used in the project.
+5. Add `src/lib/styles/main.css`
+    - Just adding a couple resets for now
+6. Import `main.css` into `__layout.svelte`
+    ```js
+    <!-- __layout.svelte -->
+    <script>
+    import '$lib/styles/style.css'
+    </script>
+    ```
+7. Skipping SASS, obvs.
+8. Install `mdsvex` and 
+    ```shell
+    $ npm i -D mdsvex svelte-preprocess
+    ```
+9. Configure `mdsvex`
+    ```js
+    import sveltePreprocess from 'svelte-preprocess'
+    import { mdsvex } from 'mdsvex'
+
+    const config = {
+    kit: { /* Kit options here */ },
+    
+    extensions: ['.svelte', '.md'],
+
+    preprocess: [
+        sveltePreprocess(),
+        mdsvex({
+        extensions: ['.md']
+        })
+    ]
+    }
+    ```
+10. Created "_First Post!_"
+    - In an attempt to simplify the actual creation of a journal entry, I'm using only the `date` in file names and front matter.
+11. Add a journal layout that auto adds the date as a level one heading.
+    - Create `routes/journal/_post.svelte`
+        ```js
+        // svelte.config.js
+
+        /* Imports here */
+
+        const config = {
+        /* ...Other config properties here */
+
+        preprocess: [
+            sveltePreprocess(),
+            mdsvex({
+            extensions: ['.md'],
+            layout: {
+                journal: 'src/routes/blog/_post.svelte'
+            }
+            })
+        ]
+        }
+        ```
+    
+    - Add layout content
+        ```js
+        <!-- _post.svelte -->
+        <script>
+        export let date
+        </script>
+
+        <h1>{date}</h1>
+
+        <slot /> 
+        ```
+        - TODO: Process the date into something more readable.
+12. Uh oh: This blog post is using the `load()` method for the API. I think I'll [stop here](https://github.com/acidtone/tonygrimes.com/commits/main) and figure out if I can work out how to do the same thing with the newer page endpoint feature.
 
 ---
 
