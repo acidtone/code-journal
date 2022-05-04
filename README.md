@@ -3,6 +3,11 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 4, 2022
+Found this really great discussion about CSS and HTTP; the inflammatory named: [Is .css a bad idea? Is inlining the way forward?](https://www.youtube.com/watch?v=3sMflOp5kiQ)
+
+---
+
 ## May 3, 2022
 O.M.G. I just rediscovered opening a project in VS Code from the terminal with 
 
