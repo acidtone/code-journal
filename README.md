@@ -1,5 +1,74 @@
 # Tony's Code Journal
-Learning, reminders and frustrations written in the moment.
+Learnings, reminders and frustrations written in the moment.
+
+---
+
+## May 3, 2022
+O.M.G. I just rediscovered opening a project in VS Code from the terminal with 
+
+```shell
+$ code .
+```
+
+When zsh said, `command not found`, I was getting ready for a battle. But apparently you can just [set it up from within VS Code](https://stackoverflow.com/questions/29955500/code-is-not-working-in-on-the-command-line-for-visual-studio-code-on-os-x-ma)!
+
+Anyhoo, it's time to get my personal site up, starting with the journals.
+- [coding](https://github.com/acidtone/code-journal) and [teaching](https://github.com/acidtone/teaching-journal) set as Categories;
+- tags (ex. `mdsvex`) for easy browsing;
+- dates for page title and sorting.
+- two pages
+    - home
+        - post list
+        - pagination
+    - about
+        - "Behold! My stuff" would be great but David Parker took it first.
+        - links to Twitch, Meetup, Discord
+
+**David Parker: sveltekit markdown nerd**
+This dude's website is part of the inspiration, and conveniently created with SveltKit and MdSvex.
+- [davidparker.com](https://www.davidwparker.com)
+    - He only wrote 3 posts but they look like good ones:
+        - [Dark Mode in SvelteKit with and without JavaScript](https://www.davidwparker.com/posts/dark-mode-in-sveltekit-with-and-without-javascript)
+        - [How to make an RSS feed in SvelteKit](https://www.davidwparker.com/posts/how-to-make-an-rss-feed-in-sveltekit)
+        - [A Fresh Beginning. Hello SvelteKit!](https://www.davidwparker.com/posts/2021-06-01-a-fresh-beginning-hello-sveltekit)
+    - He's also got a lot of [great Youtube content](https://www.youtube.com/user/iamdavidwparker).
+    - He attributes these mdsvex repos:
+        - [c-bandy repo](https://github.com/furudean/website)
+            - also "only" three posts, interestingly
+            - beautiful colors
+        - [@mikenikles repo](https://github.com/gitpod-io/website)
+
+### Project: Danger Carpet
+**Project Goal**: Get some content published on `tonygrimes.com` that:
+- demonstrates a code journal;
+- can be sustainably updated;
+- easy to reference past posts
+
+**Plan it out**
+1. Install fresh SvelteKit with mdsvex
+2. Create _First Post!_ in `/routes/journal`
+    - step-by-step of the setup process
+3. Create index page
+    - Why I keep a journal
+4. README: Attributions
+    - [Let's learn SvelteKit by building a static Markdown blog from scratch](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
+    - [c-bandy repo](https://github.com/furudean/website)
+
+**Brute force: notes**
+A summary of the steps outlined in the above blog post for eventual inclusion in the first post(!)
+1. Create project:
+    ```shell
+    $ npm init svelte@next tonygrimes.com
+    ```
+    - Skeleton App
+    - No to the things
+2. Install the things
+    ```shell
+    npm install
+    ```
+3. Create `routes/journal/index.svelte`
+4. Create `routes/__layout.svelte`
+5. 
 
 ---
 
