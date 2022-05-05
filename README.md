@@ -110,6 +110,11 @@ Thinking about data visualization.
     - It seems pretty straight forward but doesn't provide any finished code.
     - I think I can just copy/paste the code after "_Putting Everything Together_" this in a Codepen?
 
+**Brute Force: Tutorial Attempt**
+- This tutorial still uses `var` and version `5.9.2`. Yuck.
+- But at least it works on version `7.4.4`.
+- Styling is a little icky but [it works](https://codepen.io/acidtone/pen/BaYNvMy).
+
 ---
 
 ## May 4, 2022
