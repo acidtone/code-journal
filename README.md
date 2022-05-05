@@ -6,6 +6,7 @@ Learnings, reminders and frustrations written in the moment.
 ## May 5, 2022
 Thinking about data visualization. 
 
+### Data Visualization Proof-of-concepts
 **Walk-through: Chartjs getting started**
 - **Goal**: Display a demo of chartjs in the centre of a Codepen.
 - **Plan**: 
@@ -109,11 +110,24 @@ Thinking about data visualization.
     - [Short Guide to Getting Started with D3](https://www.pluralsight.com/guides/guide-getting-started-with-d3)
     - It seems pretty straight forward but doesn't provide any finished code.
     - I think I can just copy/paste the code after "_Putting Everything Together_" this in a Codepen?
+- **Brute Force: Tutorial Attempt**
+    - This tutorial still uses `var` and version `5.9.2`. Yuck.
+    - But at least it works on version `7.4.4`.
+    - Styling is a little icky but [it works](https://codepen.io/acidtone/pen/BaYNvMy).
 
-**Brute Force: Tutorial Attempt**
-- This tutorial still uses `var` and version `5.9.2`. Yuck.
-- But at least it works on version `7.4.4`.
-- Styling is a little icky but [it works](https://codepen.io/acidtone/pen/BaYNvMy).
+### Data Visualization with `fetch()`
+- **Goal**: Create a commits/day graph using the data returned by the GH Activity API:
+    ```shell
+    GET https://api.github.com/users/acidtone/events
+    ```
+- For this one, I'm creating an `index.html` file and adding it as a gist.
+- **Plan**:
+    1. Get [this Codepen](https://codepen.io/acidtone/pen/BaYNvMy) to work in a stand-alone page. 
+    2. Fetch an array from the above API url;
+    3. `.map()` the array to a count per day that matches the demo data.
+    4. Pull the d3 code into the fetch block and use the `.map()` array as the data source;
+    5. Cross fingers.
+- **Brute force**: 
 
 ---
 
