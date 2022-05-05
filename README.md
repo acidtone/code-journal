@@ -97,12 +97,18 @@ Thinking about data visualization.
 - Optimization
     - completed TODOs
 - Reflection
-    - Judging by my `git log` it took me about an hour to complete and optimize the ChartJS walk-through.
+    - Judging by my `git log` it took me about an hour to complete and optimize the ChartJS walk-through (while watching _Fringe s02e15_).
     - I'm tempted to get a Proof-of-concept using my GitHub `commit` tracker but I'm going to find and attempt a D3 tutorial. I don't think there's a Getting Started in the Docs.
 
 **Treasure Hunt: D3 Tutorial**
 **Goal**: find the quickest and easiest demo of the d3.js library using a CDN.
 - If possible try to refactor for Codepen later.
+- There are [tempting examples](https://observablehq.com/@d3/sunburst) in the Docs but you need to sign-in to fork them? It'd be nice to have a direct link to a repo.
+- Abandoning the Docs for the moment. May Google find a way...
+- A quick search for "d3 getting started" gave me this article:
+    - [Short Guide to Getting Started with D3](https://www.pluralsight.com/guides/guide-getting-started-with-d3)
+    - It seems pretty straight forward but doesn't provide any finished code.
+    - I think I can just copy/paste the code after "_Putting Everything Together_" this in a Codepen?
 
 ---
 
