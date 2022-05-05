@@ -132,9 +132,11 @@ Thinking about data visualization.
     - Now, the hard part. Figure out how to reduce the raw GH data to a commits/day array.
         - Will be missing days that don't have commits but I'll figure that out later.
     - Whew, I had to use lodash to group the array by date using `_.groupBy()` but [I got it working](https://gist.github.com/acidtone/614775031e87c5bae223d404c3fd9fda).
-- Walk-through:
+- **Walk-through**:
     - There's got to be a cleaner way to reduce the raw data array but that's a job for another time.
     - Going to try moving the working code to Codepen.
+- **Optimize**
+    - Done! [Added a Codepen](https://codepen.io/acidtone/pen/gOvpEmX)
 
 ---
 
