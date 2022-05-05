@@ -90,7 +90,19 @@ Thinking about data visualization.
             margin: auto;
         }
         ```
+- Walk-through
+    - Codepen: [Hello Chartjs](https://codepen.io/acidtone/pen/dydowod)
+        - TODOs: 
+            - Move the embedded `script` code to the JS Panel.
+- Optimization
+    - completed TODOs
+- Reflection
+    - Judging by my `git log` it took me about an hour to complete and optimize the ChartJS walk-through.
+    - I'm tempted to get a Proof-of-concept using my GitHub `commit` tracker but I'm going to find and attempt a D3 tutorial. I don't think there's a Getting Started in the Docs.
 
+**Treasure Hunt: D3 Tutorial**
+**Goal**: find the quickest and easiest demo of the d3.js library using a CDN.
+- If possible try to refactor for Codepen later.
 
 ---
 
