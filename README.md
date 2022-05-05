@@ -3,6 +3,19 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 5, 2022
+Thinking about data visualization. 
+
+**Walk-through: Chartjs getting started**
+- **Goal**: Display a demo of chartjs in the centre of a Codepen.
+- **Plan**: 
+    1. Use a CDN to import Chartjs;
+    2. Find some code in the docs I can copy and paste to get a cart to show.
+    3. Sprinkle some CSS 
+- Brute force:
+
+---
+
 ## May 4, 2022
 Found this really great discussion about CSS and HTTP; the inflammatory named: [Is .css a bad idea? Is inlining the way forward?](https://www.youtube.com/watch?v=3sMflOp5kiQ)
 
