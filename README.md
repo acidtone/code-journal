@@ -16,6 +16,7 @@ Learnings, reminders and frustrations written in the moment.
             - Option 1: one file per day named `MMM-MM-DD.md`
             - Option 2: multiple posts allowed per day but will have to add more to the file name, like `YYYY-MM-DD-some-title.md`
         - Not sure which I like best yet. One grievance is I need to repeat the date in the file name and in the front matter. It's a slight inconvenience but also rubs against my goal of lightening quick posting. Right now I just add a date to a mile-long README.
+    - `import.meta.glob` is a nice SvelteKit feature? 
 
 ---
 
