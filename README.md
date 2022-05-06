@@ -4,6 +4,18 @@ Learnings, reminders and frustrations written in the moment.
 ---
 
 ## May 5, 2022
+**Project: Danger Carpet**
+- **Goal**: Refactor the original tutorial code that fetches the markdown files, BUT instead use page endpoints.
+- **Plan**: 
+    1. Migrate some content from the legacy journal to create some dated markdown posts.
+    2. Get it working with the original code
+    3. Refactor it to use only page endpoints without the `load()`, if possible.
+- **Brute force**:
+    
+
+---
+
+## May 4, 2022
 Thinking about data visualization. 
 
 ### Data Visualization Proof-of-concepts
