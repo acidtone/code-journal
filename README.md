@@ -24,7 +24,26 @@ This is a hacky version 1. Optimally, the system would be able to query the meta
 4. Set the `href` based on a `select` menu
 
 **Brute force**:
+- Question: which project to add this to? 
+    - v0 on `tonygrimes.com` and move to `browsertherapy.com` for v1.
+- I added to my list of font pairs last night. migrating over... [boom](https://github.com/acidtone/tonygrimes.com/commit/244fd70f65f793f9505a8e93d16af84caa3e0055).
+- Now, add default css file to `__layout.svelte`. 
+- Almost went down a rabbit hole trying to get `$lib` work outside of an import. I'll just [hard code the path](https://github.com/acidtone/tonygrimes.com/commit/ecf5d0beca4a787c9f815110cd43beec87d9e0f9) for now.
+- Abril and Roboto are now the default fonts! Onto the `select` menu.
+    - TODO: Check out [Svelte Headless UI Component Library](https://www.youtube.com/watch?v=7mE1UbRwU3w)
+        - Great way to maybe upgrade the select element later?
+        - Also, he has really nice screen overlays.
+- And, with the help of the [Docs](https://svelte.dev/tutorial/event-modifiers), I've got a [working select menu](https://github.com/acidtone/tonygrimes.com/commit/b5e8c0bf431f72b4fda4ea59bcbf4ca4f60c273f).
 
+**Walk-through**:
+- [added some TODOs](https://github.com/acidtone/tonygrimes.com/commit/abf6a0a1f96e417bf1c763d9795b7d2be3138479)
+
+**Optimizations**: 
+- Component-ize this thing
+    - [Docs to the rescue](https://svelte.dev/docs#component-format)
+    - [boom](https://github.com/acidtone/tonygrimes.com/commit/2cc378453ad465e455595ebe37a90745b564ced1)
+
+**Conclusion**: I guess the real goal was to decide on a font pairing. This whole exercise was to build a tool to figure out that I think Elsie and Roboto a nice starter font set for `browsertherapy.com`.
 
 ---
 
