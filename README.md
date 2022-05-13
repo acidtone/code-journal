@@ -3,6 +3,31 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 12, 2022
+I've recently re-discovered GitHub Projects Beta. I remember hitting a roadblock the first time I tried it but this last attempt was promising. I added some (possibly needless) cards to the backlog of [Browser Therapy v2](https://github.com/orgs/browsertherapy/projects/1) to test it out. 
+
+I'm currently about to go down a rabbit hole with [Google Font Install](https://github.com/browsertherapy/browsertherapy.com/issues/5) (poorly named and defined, I admit) and ot reminds me of an old idea for visualizing font pairings.
+
+**Problem**: Picking good font combinations is hard!
+1. Google for some articles listing good parings (remains to be seen)
+2. Build a list of stylesheets that each set a google font paring for body text and headings.
+3. On a page of sample text, supply a dropdown menu that dynamically switches between the sheets.
+
+This is a hacky version 1. Optimally, the system would be able to query the metadata from the Google Fonts API directly.
+
+**Goal**: In SK, create a `select` menu that sets a given font pair for body text and headings.
+
+**Plan**:
+1. Set a default font set using `svelte:head`;
+2. Move `svelte:head` code to a component and set `href` attribute to a `fontPath` prop setting the default value above.
+3. Create an array of css file objects that point to an already-created list of font files.
+4. Set the `href` based on a `select` menu
+
+**Brute force**:
+
+
+---
+
 ## May 5, 2022
 **Project: Danger Carpet**
 - **Goal**: Refactor the original tutorial code that fetches the markdown files, BUT instead use page endpoints.
