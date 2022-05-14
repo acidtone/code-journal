@@ -3,6 +3,24 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 13, 2022
+It was fun building a font selector thingy last night but the whole point was to help me decide on a font set for `browserhterapy.com`. I've already done the work but forgot to do the fancy commit message to auto-close the Issue. 
+- Luckily, you can just [paste the hash as a comment](https://www.howtogeek.com/devops/how-to-link-a-commit-from-a-github-issue/) when you manually close the Issue and [it'll link it](https://github.com/browsertherapy/browsertherapy.com/issues/5). Noice! I always wondered how to do that.
+
+## Project: Freedom Insect
+Real name: `browsertherapy.com`
+
+After adding placeholder pages for the top nav, I'm now in the tough situation of having to make actual design decisions. I'm too lazy to create actual wireframes and/or mockups, obvs, so I plan on winging it as usual.
+
+I based the top page hierarchy on CSS Tricks, with a bit of flavour:
+- Articles: basically date-centric blog posts;
+- Guides: mature step-by-steps for things like Git and functions;
+- Challenges: a place for the goal-oriented things like wrapping code into functions or centring a thing on the page.
+
+For SK functionality, I'll go with a basic list entry/single item pattern and do something fancier for the home page. I'll probably also eventually need a spot to place the live-streams but I'll figure the schedule stuff out later.
+
+---
+
 ## May 12, 2022
 I've recently re-discovered GitHub Projects Beta. I remember hitting a roadblock the first time I tried it but this last attempt was promising. I added some (possibly needless) cards to the backlog of [Browser Therapy v2](https://github.com/orgs/browsertherapy/projects/1) to test it out. 
 
