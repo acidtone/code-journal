@@ -3,8 +3,51 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 21, 2022
+New working title for the game inspired by King of Tokyo/New York: Calgary Coup. It might change later?
+
+Up until recently I was planning on building the game after King of New York but Gord convinced me to use King of Tokyo instead because of the simpler feature set. He was obvs correct.
+
+I went out an bought the KoT Dark Edition since I don't think I played it since before I learned about KoNY. I don't plan on playing it much, if at all, but the dice are distinctive enough that they'll come in handy for demos. Also, the box looks rad.
+
+I just finished version 1 of the statechart and Gord was totally right. I don't think the number of states changes between versions (unless the current player can die after the dice are Resolved) but KoT has much simpler game logic than KoNY overall. But, it also adds the 3-of-a-kind dice logic for VPs that would make a good excuse to generalize a dice roller for something like Yahtzee.
+
+Now I just have to build it...
+
+---
+
+## May 14, 2022
+**Goal**: Get journal items working on Freedom Insect.
+- Current situation is a 404 error on: `http://localhost:3000/2022-05-03-code-from-cli` which should be `http://localhost:3000/journal/2022-05-03-code-from-cli`
+    - The problem is the relative link, but it's not. The current page address is:
+
+        ```shell
+        http://localhost:3000/journals
+        ```
+
+        and the anchor tag links to:
+
+        ```html
+        <a href="2022-05-03-code-from-cli">
+        ```
+
+        but it directs to:
+        ```shell
+        http://localhost:3000/2022-05-03-code-from-cli
+        ```
+
+        when it should be:
+        ```shell
+        http://localhost:3000/jorunal/2022-05-03-code-from-cli
+        ```
+    - Hard-coding the `/journal` directory into the template works but it's not optimal. Best guess is SK is overriding the url in the address bar somehow? Is it SPA by default?
+        - There doesn't seem to be much in the way of answers. In fact, [this Issue](https://github.com/sveltejs/kit/issues/3072) seems to show that this problem shouldn't be happening.
+
+
+---
+
 ## May 13, 2022
-It was fun building a font selector thingy last night but the whole point was to help me decide on a font set for `browserhterapy.com`. I've already done the work but forgot to do the fancy commit message to auto-close the Issue. 
+It was fun building a font selector thingy last night but the whole point was to help me decide on a font set for `browsertherapy.com`. I've already done the work but forgot to do the fancy commit message to auto-close the Issue. 
 - Luckily, you can just [paste the hash as a comment](https://www.howtogeek.com/devops/how-to-link-a-commit-from-a-github-issue/) when you manually close the Issue and [it'll link it](https://github.com/browsertherapy/browsertherapy.com/issues/5). Noice! I always wondered how to do that.
 
 ## Project: Freedom Insect
