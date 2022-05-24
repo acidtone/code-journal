@@ -66,6 +66,8 @@ So, I can use data types for recognizing what to roll and how many:
     ```
 - Question: better to use `Math.ceil()` instead of adding `1`?
 
+[TODOs added to code](https://github.com/acidtone/dice-tower-vanilla/commit/2cc8b7d9cef1659410c3f661195f0ccf0fdb030e)
+
 ---
 
 ## May 23, 2022
