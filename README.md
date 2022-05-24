@@ -22,10 +22,49 @@ So, I can use data types for recognizing what to roll and how many:
 
 **Session goal**: refactor last night's code to use strings in `xdy` format.
 - keep it simple: `arg` is just one string. Leave multiple sets of dice for later.
+- keep current integer shortcut for simple die
 
 **Plan**
 - use regex to split string, `return null` if pattern does not match.
 - is it worth literally building arrays for each die or just return the random integer? nah.
+
+**Brute force**
+- regex is a blast from the past. After a refresh, it doesn't look like there are many differences from my Perl days.
+    - `\d` for digits
+    - `^` and `$` for the start and end of the string
+    - `*` for zero or more matches
+- to keep things simple I'll match all potential sides of dice and filter out non-isohedrals later.
+    - matching on `/^(\d*)d(\d+)$/` seems to work!
+        - `2d10` -> `[ "2d10", "2", "10" ]`
+        - `d6` -> `[ "d6", "", "6" ]`
+- Aaaand [done](https://github.com/acidtone/dice-tower-vanilla/commit/5a8d81312fe89043549bb9d05cffae7bdd8a280c)!
+
+**Usage**
+- Pass an isohedral integer `x` to `drop()` an `x`-sided die.
+    - `6` -> random `[1-6]`
+    - `5` -> `null` (not a valid die; not isohedral)
+- Pass an `Array` of isohedral integers `n` to roll and sum each `n`-sided die
+    - `[4,6,10]` -> random `[3-20]`
+    - `[4,5,10]` -> random `[2-14]` because `5` is not valid
+- Pass a string that matches rpg die notation to roll a set of like-sided dice. RegExp -> `/^(\d*)d(\d+)$/`
+    - `2d6` -> random `[2-12]`
+    - `d4` -> random `[1-4]`
+    - `2dTwenty` -> `null`
+
+**Walk-through**
+- TODO: Add support for an array of integers or rpg strings!
+- TODO: Print sum to the page
+- TODO: Add form for adding a text field for `arg`
+- TODO: Add support for verbose results and `return` an object instead of an integer.
+- TODO: Move duplicate code to a `isIsohedral()` function.
+    ```js
+    !allowedFaces.includes(parseInt(notationMatch[2]))
+    ```
+- TODO: Move duplicate code to a `randDieFace(faces)` when `faces` is an integer.
+    ```js
+    Math.floor(Math.random() * faces) + 1
+    ```
+- Question: better to use `Math.ceil()` instead of adding `1`?
 
 ---
 
