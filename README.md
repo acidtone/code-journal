@@ -12,6 +12,30 @@ First step toward Calgary Coup: the dice roller. I did some research into the `s
 
 ![Dice logic diagram](images/misc/dice-logic.jpg)
 
+### Dice rollers are not trivial
+I've created a dice tower function that supports single and multiple numeric dice. It wasn't too bad but a lot of energy had to be spent properly scoping the session. Limiting the scope to numeric dice was the key in avoiding rabbit holes.
+
+Given:
+
+```js
+roll(arg);
+```
+
+So far the `roll()` will:
+- `return null` when `arg` is not an integer or non-empty array
+- `return null` when `arg` is a [non-isohedral](https://en.wikipedia.org/wiki/Isohedral_figure) integer
+- if arg is integer (a die): treat `arg` as a `arg`-sided die and `return` a random integer between 1 and `arg` (the roll result)
+- if `arg` is array of integers (a hand of dice): treat `arg` as an array of `arg[i]`-sided dice and `return` the sum of random results from each die roll.
+    - if `arg[i]` is not an integer, it is ignored in the sum
+
+**Walk-through**
+TODOs:
+- add support for single custom die
+    - array of strings or objects?
+- add support for many custom dice
+    - is a sum needed?
+    - what is returned? an array of results?
+
 ---
 
 ## May 21, 2022
