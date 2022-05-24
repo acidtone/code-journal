@@ -3,6 +3,17 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 23, 2022
+First step toward Calgary Coup: the dice roller. I did some research into the `svelte-fsm` package and it looks great for the larger application. The dice roller, however, doesn't need states. In fact, it should probably just be a pure function.
+
+- The two "axis" of logic (there's a better term for that?) are:
+    - is there just one die or multiple dice?
+    - is each die basic (faces are sequential numbers starting at 1) or custom (faces can be anything)
+
+![Dice logic diagram](images/misc/dice-logic.jpg)
+
+---
+
 ## May 21, 2022
 New working title for the game inspired by King of Tokyo/New York: Calgary Coup. It might change later?
 
