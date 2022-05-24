@@ -3,6 +3,32 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 24, 2022
+Eureka! I think I figured out a way to clean up the dice tower API. D&D has a notation for rolling dice:
+- `2d6`: two 6-sided dice
+- `d8`: one 8-sided die
+- etc
+
+So, I can use data types for recognizing what to roll and how many:
+- integer: shorthand for one numeric die
+    - `6`: 6-sided die
+    - `5`: invalid die (according to my rules)
+- string in `xdy` format: roll `x` number of `y`-sided dice
+    - `2d10`: roll two 10-sided die
+- string in `dy` format: one `y`-sided die
+    - d20: one 10-sided die
+- array of strings (not in `xdy` format): one custom die
+    - could also be an array of objects if there's an advantage to including more info on the custom faces.
+
+**Session goal**: refactor last night's code to use strings in `xdy` format.
+- keep it simple: `arg` is just one string. Leave multiple sets of dice for later.
+
+**Plan**
+- use regex to split string, `return null` if pattern does not match.
+- is it worth literally building arrays for each die or just return the random integer? nah.
+
+---
+
 ## May 23, 2022
 First step toward Calgary Coup: the dice roller. I did some research into the `svelte-fsm` package and it looks great for the larger application. The dice roller, however, doesn't need states. In fact, it should probably just be a pure function.
 
