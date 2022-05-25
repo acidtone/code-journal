@@ -52,15 +52,15 @@ So, I can use data types for recognizing what to roll and how many:
     - `2dTwenty` -> `null`
 
 **Walk-through**
-- TODO: Add support for an array of integers or rpg strings!
-- TODO: Print sum to the page
-- TODO: Add form for adding a text field for `arg`
+- TODO: Add support for an array of rpg strings!
+- ~TODO~: Print sum to the page
+- ~TODO~: Add form for adding a text field for `arg`
 - TODO: Add support for verbose results and `return` an object instead of an integer.
-- TODO: Move duplicate code to a `isIsohedral()` function.
+- ~TODO~: Move duplicate code to a `isIsohedral()` function.
     ```js
     !allowedFaces.includes(parseInt(notationMatch[2]))
     ```
-- TODO: Move duplicate code to a `randDieFace(faces)` when `faces` is an integer.
+- ~TODO~: Move duplicate code to a `randDieFace(faces)` when `faces` is an integer.
     ```js
     Math.floor(Math.random() * faces) + 1
     ```
@@ -69,8 +69,26 @@ So, I can use data types for recognizing what to roll and how many:
 [TODOs added to code](https://github.com/acidtone/dice-tower-vanilla/commit/2cc8b7d9cef1659410c3f661195f0ccf0fdb030e)
 
 **Optimization**
-- `randDieFace(faces)` and `isIsohedral()` are probably a good place to clean things up.
-    - 
+- `randomDieFace(faces)` and `isIsohedral()` are probably a good place to clean things up.
+    - And [done](https://github.com/acidtone/dice-tower-vanilla/commit/3df500b070954c9ad54259feb9877b80221fca54).
+
+**Reflection**
+I'm now at point in the project where I could go in a couple directions: wide or deep.
+1. Add support for multiple sets of rpg notation, OR
+2. Add support for verbose results, OR
+3. Add a form for input and print results to the page. 
+
+It think #3 increases the value of #1 and #2.
+
+**Goals**: 
+- TODO: Add form for adding a text field for `arg`
+- TODO: Print sum to the page
+
+**Brute force**
+- When it rains regex, it pours! I thought turning a comma and/or space delimited text field would be hard to dynamically turn into an array but `String.split(/[, ]+/)` did the trick.
+    - [added form input and html result](https://github.com/acidtone/dice-tower-vanilla/commit/21c89ffa4e8df6d24a81a2a562a38d7d52f7c4ab)
+
+
 
 ---
 
@@ -100,10 +118,9 @@ So far the `roll()` will:
     - if `arg[i]` is not an integer, it is ignored in the sum
 
 **Walk-through**
-TODOs:
-- add support for single custom die
+- TODOs: add support for single custom die
     - array of strings or objects?
-- add support for many custom dice
+- TODO: add support for many custom dice
     - is a sum needed?
     - what is returned? an array of results?
 
