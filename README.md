@@ -68,6 +68,10 @@ So, I can use data types for recognizing what to roll and how many:
 
 [TODOs added to code](https://github.com/acidtone/dice-tower-vanilla/commit/2cc8b7d9cef1659410c3f661195f0ccf0fdb030e)
 
+**Optimization**
+- `randDieFace(faces)` and `isIsohedral()` are probably a good place to clean things up.
+    - 
+
 ---
 
 ## May 23, 2022
