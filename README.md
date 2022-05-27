@@ -3,6 +3,11 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 26, 2022
+I wanted to work on some design aspects but I forgot I fell asleep coding a couple days ago. It took awhile to remember what I was in the middle of, but I managed to figure it out and clean up the code to a working state.
+
+---
+
 ## May 24, 2022
 Eureka! I think I figured out a way to clean up the dice tower API. D&D has a notation for rolling dice:
 - `2d6`: two 6-sided dice
@@ -87,8 +92,6 @@ It think #3 increases the value of #1 and #2.
 **Brute force**
 - When it rains regex, it pours! I thought turning a comma and/or space delimited text field would be hard to dynamically turn into an array but `String.split(/[, ]+/)` did the trick.
     - [added form input and html result](https://github.com/acidtone/dice-tower-vanilla/commit/21c89ffa4e8df6d24a81a2a562a38d7d52f7c4ab)
-
-
 
 ---
 
