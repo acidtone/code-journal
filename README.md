@@ -8,6 +8,8 @@ I wanted to work on some design aspects but I forgot I fell asleep coding a coup
 
 It's now overtime for Game 5 against the Oilers. Not sure how much work I'll get done tonight... and they lost.
 
+**BUT!** The refactor made support for multiple RPG-style dice notation [relatively easy](https://github.com/acidtone/dice-tower-vanilla/commit/b995f8ae434feef5715be7bdb5fd49274e6b07fa).
+
 ---
 
 ## May 24, 2022
