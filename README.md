@@ -3,6 +3,13 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## May 28, 2022
+Having a coding session at PinBar with Ash. I'd love, love, love to keep working on the dice tower but I've had the markdown blog project sitting on the shelf for too long. It'll probably take a half-hour just to get back up to speed on where I left off?
+
+
+
+---
+
 ## May 26, 2022
 I wanted to work on some design aspects but I forgot I fell asleep coding a couple days ago. It took awhile to remember what I was in the middle of, but I managed to figure it out and clean up the code to [a working state](https://github.com/acidtone/dice-tower-vanilla/commit/59e5e720fd17c0684221d7632b42e6ca5366f92d).
 
