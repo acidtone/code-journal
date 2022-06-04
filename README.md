@@ -3,7 +3,26 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 3, 2022
+Bubbles sent me this sveltekit component for flow diagrams:
+- [svelvet.io](https://svelvet.io/)
 
+**Story**: As a game designer, I want to post a state diagram in the browser so that I can share/record game ideas.
+- See: [Github Project](https://github.com/browsertherapy/browsertherapy.com/issues/18)
+
+**Session Goal**:
+- Install hello-svelvet
+
+**Plan**:
+1. Use [Create SvelteKit skeleton app](https://gist.github.com/acidtone/a663a359182fd6d3025adb4445a83934) gist to boot up a quick project.
+2. Use the [Svelvet Docs](https://svelvet.io/docs) to [install](https://svelvet.io/docs/installation/)
+3. Add a component that describes the latest draft of the King of Tokyo state diagram:
+![King of Tokyo state diagram](images/misc/king-of-tokyo-state-diagram-v1.jpg)
+
+**Brute force**
+- Made [this Gist](https://gist.github.com/acidtone/a663a359182fd6d3025adb4445a83934) because I've been making a lot of SveltKit apps from scratch lately.
+- Copied demo code from [Svelvet Basic Usage](https://svelvet.io/docs/basic-usage/) page.
+    - and it just works!
 
 ---
 
