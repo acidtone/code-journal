@@ -23,6 +23,13 @@ Bubbles sent me this sveltekit component for flow diagrams:
 - Made [this Gist](https://gist.github.com/acidtone/a663a359182fd6d3025adb4445a83934) because I've been making a lot of SveltKit apps from scratch lately.
 - Copied demo code from [Svelvet Basic Usage](https://svelvet.io/docs/basic-usage/) page.
     - and it just works!
+- Buuuuut, the functionality is pretty limited:
+    - The entire diagram needs to be manually positioned? Although you can drag nodes and re-position, there's no way to save the new positions. 
+    - Looks like edge anchor locations are hard coded for the top and bottom. That's pretty limiting.
+    - I got a rudimentary state diagram working but it took a lot more work than it needed to.
+        ![Test state diagram of King of Tokyo](images/misc/king-of-tokyo-state-diagram-svelvet.png)
+- Conclusion: It's a neat proof of concept but I'd need a really good reason to build diagrams in SvelteKit. Even the most basic general diagram tool will beat this.
+
 
 ---
 
