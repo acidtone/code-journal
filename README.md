@@ -26,10 +26,15 @@ Bubbles sent me this sveltekit component for flow diagrams:
 - Buuuuut, the functionality is pretty limited:
     - The entire diagram needs to be manually positioned? Although you can drag nodes and re-position, there's no way to save the new positions. 
     - Looks like edge anchor locations are hard coded for the top and bottom. That's pretty limiting.
-    - I got a rudimentary state diagram working but it took a lot more work than it needed to.
+    - I got a rudimentary state diagram working but it took a lot more work than it needed to. Ended up having to inspect all the nodes each time I moved them so I could copy the new coords to the static definition.
         ![Test state diagram of King of Tokyo](images/misc/king-of-tokyo-state-diagram-svelvet.png)
 - Conclusion: It's a neat proof of concept but I'd need a really good reason to build diagrams in SvelteKit. Even the most basic general diagram tool will beat this.
 
+**Deploying SK to GH Pages**
+Deploying this code isn't needed but my last attempt at deploying SvelteKit to GitHub Pages failed miserably so I'll give it another shot and send my diagram to Bubbles.
+- [This article didn't work](https://javascript.plainenglish.io/sveltekit-github-pages-4fe2844773de) using a `gh-pages` branch.
+- New article: [How to Deploy SvelteKit Apps to Github Pages](https://sveltesaas.com/articles/sveltekit-github-pages-guide/) using the `/docs` directory.
+    - And I get a [404 error](https://acidtone.github.io/svelvet-state-diagram/). That's disappointing :(
 
 ---
 
