@@ -3,6 +3,38 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 16, 2022
+The streaming rig is physically set up and I'm ready to start testing some Twitch streams. Anything I do live should have a session plan that viewers can reference so I guess it's time to get back to the Browser Therapy blog/website.
+
+**Goal**: Implement list entry and item pages for Articles, Guides and Challenges so I can write out a plan for the first Twitch test (which will probably be setting up initial software).
+
+**Plan**:
+- Follow [my fave SvelteKit blog tutorial](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog)
+- Question: 
+    - Should all posts be in the same folder with `category` properties in the front matter?
+    - How to title posts? Date with title? Should dates be used at all in the title?
+
+**Brute force**:
+- It's been awhile since I've worked on this repo. Almost scared to update the SK version. It's currently at `next.345`.
+- There are a couple breaking changes between `next.345` and `next.350` but I don't think I need to worry about them.
+- I'm tempted to only update SK but it's probably best to do a full `npm update`?
+    ```
+    added 98 packages, removed 2 packages, changed 36 packages, and audited 246 packages in 2m
+    ```
+    - And everything still works. What a whole lotta nothing.
+- [list entry pages](https://github.com/browsertherapy/browsertherapy.com/commit/197b5257c5423b9dd441f2169b7eb3fd6fe89dd8) are added.
+    
+**Walkthrough**:
+- The list entry pages seem a little clunky. I ended up just copy/pasting the code across the three directories for guides, challenges and articles.
+- My gut tells me that it's a better idea to put all the posts in one directory and create hard-coded routes for the three categories of posts.
+
+**Optimization**:
+- Following the [instructions for dynamic categories](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#add-dynamic-post-category-pages) but without the dynamic bits.
+- Ended up grouping all the posts into a single directory. I had to add some filter logic to the new endpoint but it all seems to be working. Problem: I had to put all the posts into a hidden `_posts` directory so I'll need to figure out how and where I want the posts to exist by adding a dynamic route.
+- TODO: Create a dynamic route(s) for individual posts.
+
+---
+
 ## June 3, 2022
 Bubbles sent me this sveltekit component for flow diagrams:
 - [svelvet.io](https://svelvet.io/)
