@@ -32,6 +32,19 @@ The streaming rig is physically set up and I'm ready to start testing some Twitc
 - Following the [instructions for dynamic categories](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#add-dynamic-post-category-pages) but without the dynamic bits.
 - Ended up grouping all the posts into a single directory. I had to add some filter logic to the new endpoint but it all seems to be working. Problem: I had to put all the posts into a hidden `_posts` directory so I'll need to figure out how and where I want the posts to exist by adding a dynamic route.
 - TODO: Create a dynamic route(s) for individual posts.
+    - Assumption: it's better to route all posts through a single endpoint will be better for seo?
+        ```
+        tld/[slug]
+        ```
+        or, to make route logic simpler by dedicating a segment for them:
+        ```
+        tld/posts/[slug]
+        ```
+- TODO: Remove extraneous category endpoints. There's not enough content to require categories.
+- Todo: Dedicate to a migration schedule - wbdv content -> posts
+    - what content should be dated as posts?
+    - what content is better as static content?
+    - what's the learning goal(s)? 
 
 ---
 
