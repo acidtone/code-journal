@@ -3,6 +3,43 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 19, 2022
+Software install list for M1 Mac Mini initial setup:
+- iTerm -> Oh My Zsh!
+    - `ZSH_THEME="gozilla"`
+- homebrew
+    - Git (double-click installer)
+        - [First-time setup](https://gist.github.com/acidtone/6ca4c62d88570732d3760904ef965e4d)
+        - [Setup SSH Keys](https://gist.github.com/acidtone/dd9ae11a238e9f14ad0b066298f35dc5)
+    - nvm
+- VS Code
+    - Live Server
+    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+    - [GistPad](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.gistfs)
+- Zoom
+- Discord
+- Rectangle
+
+---
+
+## June 18, 2022
+Session goals:
+1. TODOs from yesterday: Remove extraneous category endpoints.
+2. Clean up nav so they don't link to the old category links. 
+3. Maybe remove the whole nav and replace with Home and About (stream schedule, rehash of the Twitch description)?
+4. Add post item pages for the blog.
+5. Write out a session plan for the stream tomorrow.
+
+**Brute force**:
+- Nav and post category cleanup has been pretty straight forward but the post item links are still broken. 
+- Going to try building a dynamic endpoint for `/blog/slug`, which will pull content from the hidden `/_posts` directory.
+    - How should slugs work? 
+        - Auto-generate from the title?
+        - Include the date?
+        - Will the format change based on category?
+
+---
+
 ## June 16, 2022
 The streaming rig is physically set up and I'm ready to start testing some Twitch streams. Anything I do live should have a session plan that viewers can reference so I guess it's time to get back to the Browser Therapy blog/website.
 
