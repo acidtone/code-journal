@@ -3,6 +3,70 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 23, 2022
+**Session goal**: load markdown files from a hidden directory
+The more I dig into this whole hidden directory requirement for the BT blog, I wonder why they need to be hidden in the first place. It would be much simpler to just dump all these posts in a `blog` directory and be done with it.
+
+But then I remember that I want to name my files with the date prepended to the title and then have the slug just be the "title" without the the date. It also be nice to be able to add an optional slug to the front matter of a post to override the whole system.
+
+All great ideas (maybe?) but the rabbit hole is beckoning. Back to Brute Force guidelines: **get the basics working first** and worry about the fancy shit later.
+
+**Brute force**
+- I've been searching for ways to import individual posts and [the same blog article](https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog) I've been using keeps coming up. I even sent him a message from his website contact form asking if I'm on the right track.
+- Current theory: the best way to handle this is to setup an additional `/posts/[slug].json` endpoint and handle it with another `load()` just like the list entry endpoint. From there I can add any logic I need once I get a base `[slug]` endpoint working.
+- Ugh, I just realized that `import.meta.glob()` only imports the front matter of md files. It seems obvious now that I think about it. 
+- After some research it looks like [the answer may lie in the `mdsvex` component](https://github.com/pngwn/MDsveX/issues/247). Based on this issue, it looks like `pngwn` is pretty responsive and the poster of this issue had his documentation PR accepted!
+- After much research and failed attempts, it's very difficult to dynamically import a markdown file as a component due to limitations with the bundler. It makes sense now that I think about it: the bundler doesn't know the path at compile time because it's a "runtime" kind of situation. 
+- Moving back to endpoints. First obstacle: is there a way to import the whole file and not just the meta data? Worst case, I guess I could try a basic readfile-type function.
+- I found two very intriguing videos on markdown blogs in sveltekit:
+    - [SvelteKit with MDsveX and Auto-Import of Svelte Components](https://www.youtube.com/watch?v=F_WC4UxStvs)
+        - [Source code](https://gitlab.com/bwklein/theme-demo)
+        - The code is pretty busy but mature!
+        - TODO: teardown
+    - [Building a blog with SvelteKit, TailwindCSS, and MDsveX](https://www.youtube.com/watch?v=U5bMAW7SINM) by Jeffrey Pohlmeyer
+        - [Companion article](https://jeffpohlmeyer.com/building-a-blog-with-sveltekit-tailwindcss-and-mdsvex) 
+        - [Source code](https://github.com/jvp-design/sveltekit-tailwind-mdsvex-blog)
+        - [Part 2: Adding Styling, Searching, Custom Components](https://www.youtube.com/watch?v=-OSTAkjGVng)
+        - TODO: walk-through
+
+---
+
+## June 21, 2022
+Research for the next couple meta Twitch sessions to figure out:
+- Blog
+    - how to load markdown files in a hidden directory
+        - [How to use [slug] (dynamic routes) in Svelte and SvelteKit](https://www.programmingtil.com/contents/how-to-use-slug-dynamic-routes-in-svelte-and-sveltekit) by David W Parker
+            - This one is from April 2021 so might be a bit out of date...
+- OBS/Twitch
+    - Adding a sound gate to OBS to cut out the hvac from the lav mic
+        - [OBS Studio - Advanced Mic Settings (Noise Removal, Compressor, Noise Gate)](https://www.youtube.com/watch?v=noqKxopwp74)by Gaming Careers
+            - Good summary of sound filters. I'll probably just need a Noise Suppressor? The others seem more for gaming.
+            - Would a gain filter be better than what I did last stream by using `Edit > Advanced Audio Settings` for boosting volume?  
+    - How to display individual Twitch comments on screen in OBS
+        - [How To Show Chat Messages On Stream](https://www.youtube.com/watch?v=OK1V_7CmyfY) by Gaming Careers
+            - Sponsor: Epidemic Sound - royalty-free music for streams
+            - Covers "Featured Chat" that should be able to handle everything I need! It uses a third-party platform that I can include in OBS using a web source.
+
+I think I already found the answers to my questions but Gaming Careers has a lot of other great videos:
+- [7 Free Tools to IMPROVE Your Twitch Stream](https://www.youtube.com/watch?v=EFTT2tZhAKk)
+    1. [VDOninja](https://vdo.ninja): I think this is what other streamers use to show video/audio of guests?
+    2. [Media Looper](https://nerdordie.com/product/media-looper-loop-videos-and-images-on-stream/
+    3. [Crossclip](https://crossclip.com/)
+    4. [Twitch Creator Goals](https://help.twitch.tv/s/article/creator-goals)
+    5. [Triggerfyre](https://overlays.thefyrewire.com/widgets/triggerfyre/)
+    6. [Free Webcam Masks](https://nerdordie.com/product/free-webcam-masks/)
+    7. [NOOBS CMDR](https://github.com/nuttylmao/NOOBS-CMDR/releases)
+- [Upgrade Your Stream Deck: 9 Advanced Tips For Streamers](https://www.youtube.com/watch?v=HA7tA4lRBpE)
+    - It details lots of cool tips but I have a feeling they only work on PC :(
+    - But there's:
+        - [Countdown Timers and Counters](https://www.youtube.com/watch?v=HA7tA4lRBpE&t=374s)
+        - [Webcam Settings Restore](https://www.youtube.com/watch?v=HA7tA4lRBpE&t=556s): for when OBS forgets my cam settings
+        - There are more that look awesome but I don't think I need them (yet).
+- [How To Make a CUSTOM Stinger Transition WITH Track Matte](https://www.youtube.com/watch?v=wCovjpmRbTE)
+    - This is pretty involved and uses Adobe After Effects. BUT, I admit this would be cool to implement. Basically, OBS bow natively supports a "track matte" that let's you do all the things when transitioning between scenes.
+
+---
+
 ## June 19, 2022
 Software install list for M1 Mac Mini initial setup:
 - iTerm -> Oh My Zsh!
@@ -77,7 +141,7 @@ The streaming rig is physically set up and I'm ready to start testing some Twitc
         ```
         tld/posts/[slug]
         ```
-- TODO: Remove extraneous category endpoints. There's not enough content to require categories.
+- TODO: ~Remove extraneous category endpoints. There's not enough content to require categories.~
 - Todo: Dedicate to a migration schedule - wbdv content -> posts
     - what content should be dated as posts?
     - what content is better as static content?
