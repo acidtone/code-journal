@@ -3,6 +3,22 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 24, 2022
+Oh day of days! [Josh Collinsworth](https://joshcollinsworth.com/) replied to my email about his article! He pointed me to two of his repos that apparently do the things:
+- [His blog](https://github.com/josh-collinsworth/joco-sveltekit)
+- [SvelteKit starter](https://github.com/josh-collinsworth/sveltekit-blog-starter) that he uses for his blog
+
+### The Magical `import()` function
+And it looks like this mysterious `import()` function is what I've been looking for. It's deceptively hard to find documentation on this function. Josh's (we're on a first-name basis, whatevs) article uses `import.meta.glob()`, which is great for pulling front matter from markdown, but I'd love to find an article/doc/whatevs giving me the low-down on this, like:
+- Is it a Vite object? It feels like it.
+- How does it interact with SvelteKit? 
+    - Is it the reason my code doesn't work with Page Endpoints?
+    - Is it compatible with SSG?
+- What's the most performant way to full a full directory of markdown files?
+- Does it work asynchronously?
+
+---
+
 ## June 23, 2022
 **Session goal**: load markdown files from a hidden directory
 The more I dig into this whole hidden directory requirement for the BT blog, I wonder why they need to be hidden in the first place. It would be much simpler to just dump all these posts in a `blog` directory and be done with it.
