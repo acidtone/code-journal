@@ -3,6 +3,43 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 26, 2022
+### Live Stream Agenda
+1. Add noise suppression ([full notes](https://acidtone.github.io/teaching-journal/breakdowns/twitch-sound-filters.html))
+    1. Click cog next to the sound source -> Filters
+    2. Click `+` to add filter
+    3. Select `Noise Suppression` -> Custom name -> OK
+    4. Tweak Level. Try -20dB?
+2. Add Featured Chat
+    - [full notes](https://acidtone.github.io/teaching-journal/breakdowns/twitch-featured-chat.html)
+3. Try adding a countdown timer?
+    - Try installing [Stream Countdown Timer](https://apps.elgato.com/plugins/com.barraider.streamcountdowntimer) Stream Deck plugin even though it doesn't list Mac in the requirements.
+4. Project workspace setup
+    - Clone some repos!
+        - Hello world
+            - [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/)
+            - [joco-sveltekit](https://github.com/josh-collinsworth/joco-sveltekit)
+        - BT Websites
+            - [browsertherapy-v2](https://github.com/browsertherapy/browsertherapy-v2)
+            - [browsertherapy.github.io](https://github.com/browsertherapy/browsertherapy.github.io)
+        - Journals
+            - [code-journal](https://github.com/acidtone/code-journal)
+            - [teaching-journal](https://github.com/acidtone/teaching-journal)
+        - Maybe some others
+
+---
+
+## June 25, 2022
+I spent a good part of the afternoon adding a dynamic route for single posts stored behind a hidden directory. Also, a post with a file name of `/2022-06-23-how-to-function` would have a URL endpoint of `/how-to-function`. That way I can order my content by date and not have the date pollute my URLs.
+
+But, that's just one victory in my journey toward a fully functioning blog for BT and there's still a long way to go. That's why I'm going to, instead, start over using Josh Collinsworth's [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/) as a starting point.
+
+It seems to have a lot of the fine points taken care of (like 404s and 500s) and it's minimal enough to build upon. First up: add the date stuff in the first paragraph above...
+
+
+
+---
+
 ## June 24, 2022
 Oh day of days! [Josh Collinsworth](https://joshcollinsworth.com/) replied to my email about his article! He pointed me to two of his repos that apparently do the things:
 - [His blog](https://github.com/josh-collinsworth/joco-sveltekit)
@@ -55,7 +92,7 @@ Research for the next couple meta Twitch sessions to figure out:
             - This one is from April 2021 so might be a bit out of date...
 - OBS/Twitch
     - Adding a sound gate to OBS to cut out the hvac from the lav mic
-        - [OBS Studio - Advanced Mic Settings (Noise Removal, Compressor, Noise Gate)](https://www.youtube.com/watch?v=noqKxopwp74)by Gaming Careers
+        - [OBS Studio - Advanced Mic Settings (Noise Removal, Compressor, Noise Gate)](https://www.youtube.com/watch?v=noqKxopwp74) by Gaming Careers
             - Good summary of sound filters. I'll probably just need a Noise Suppressor? The others seem more for gaming.
             - Would a gain filter be better than what I did last stream by using `Edit > Advanced Audio Settings` for boosting volume?  
     - How to display individual Twitch comments on screen in OBS
@@ -66,7 +103,7 @@ Research for the next couple meta Twitch sessions to figure out:
 I think I already found the answers to my questions but Gaming Careers has a lot of other great videos:
 - [7 Free Tools to IMPROVE Your Twitch Stream](https://www.youtube.com/watch?v=EFTT2tZhAKk)
     1. [VDOninja](https://vdo.ninja): I think this is what other streamers use to show video/audio of guests?
-    2. [Media Looper](https://nerdordie.com/product/media-looper-loop-videos-and-images-on-stream/
+    2. [Media Looper](https://nerdordie.com/product/media-looper-loop-videos-and-images-on-stream/)
     3. [Crossclip](https://crossclip.com/)
     4. [Twitch Creator Goals](https://help.twitch.tv/s/article/creator-goals)
     5. [Triggerfyre](https://overlays.thefyrewire.com/widgets/triggerfyre/)
