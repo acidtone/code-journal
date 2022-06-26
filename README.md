@@ -27,6 +27,34 @@ Learnings, reminders and frustrations written in the moment.
             - [teaching-journal](https://github.com/acidtone/teaching-journal)
         - Maybe some others
 
+### SvelteKit Starter Theme customization
+**Attribution**: Josh Collinsworth's excellent [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/) theme.
+
+My steps for customizing the theme in case I have to do it again (like for my personal blog):
+1. Update [`/lib/config.js`](https://github.com/josh-collinsworth/sveltekit-blog-starter/blob/main/src/lib/config.js);
+2. Replace fonts:
+    - Font values are stored as [CSS Variables in SCSS](https://github.com/josh-collinsworth/sveltekit-blog-starter/blob/main/src/lib/assets/scss/_vars.scss):
+
+        ```css
+        /* /lib/assets/scss/_vars.scss */
+        --accentFont: 'Libre Franklin', Georgia, Times, serif; 
+        --primaryFont: 'Libre Franklin', sans-serif;
+        --codeFont: 'Fira Code', monospace;
+        ```
+
+    - And the fonts, themselves, are imported directly in [`/src/app.html`](https://github.com/browsertherapy/browsertherapy-v2/blob/main/src/app.html)
+
+        ```html
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
+        ```
+
+        I would rather use Amaranth for the Heading font and Open Sans for body text. I'll need to do some leg work to figure out which styles and weights I need for the default styles to work properly. In this case it looks like I'll need `400` and `800` weights for both regular and italic? 
+        
+        It's also the same for both accent and body fonts.
+
+    - TODO: Figure out what the performance hit is for downloading normal and bold weights for two different accent and body text fonts. Does SvelteKit have a magic way of loading them performantly? Is it too soon to bother with Variable Fonts?
+
+
 ---
 
 ## June 25, 2022
