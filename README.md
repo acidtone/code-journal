@@ -53,7 +53,65 @@ My steps for customizing the theme in case I have to do it again (like for my pe
         It's also the same for both accent and body fonts.
 
     - TODO: Figure out what the performance hit is for downloading normal and bold weights for two different accent and body text fonts. Does SvelteKit have a magic way of loading them performantly? Is it too soon to bother with Variable Fonts?
+    - Draft font set:
+        - Accent
+            - [Amaranth](https://fonts.google.com/specimen/Amaranth)
+                - Regular 400
+        - Body text
+            - [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+                - Light 400 with Italic
+                - SemiBold 700 with Italic
+        - code
+            - [Fira Code](https://fonts.google.com/specimen/Fira+Code)
+                - Regular 400
+        - HTML import
+            ```html
+            <link rel="preconnect" href="https://fonts.googleapis.com">
 
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                
+            <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Fira+Code&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+            ```
+
+    - Are italic font sets needed? What's their impact on performance?
+    - TODO
+        - `h2`-`h6` is showing body text font -> accent font
+        - `.site-title` is using accent font -> code font?
+3. Update colours
+    - hex colours but nicely defined:
+        ```css
+        :root {
+            // Colors
+            --accent: #E63946;
+            --background: #FAF9F8;
+            --lightAccent: #A8DAE5;
+            --lighterAccent: #E6E8E4;
+            --dark: #457B9D;
+            --darker: #1D3557;
+            --slate: #2F3948;
+
+            --white: #fff;
+            --black: #152030;
+
+            --ink: var(--slate);
+            --paper: var(--background);
+        }
+        ```
+    - Some options for a new colour theme:
+        - convert `hex` into `hsl`
+        - use a pallet from a movie/image/art screencap?
+    - Dark mode
+        - I _love_ the use of `--ink` and `--paper` CSS variables.
+        - TODO: Refactor [Ultimate Dark Mode Toggle](https://padlet.com/acidtone/UltimateDarkModeToggle) for this theme.
+4. Update Prism theme?
+    - `$lib/assets/scss/_prism.scss`
+    - How can this be changed? To what?
+
+## Live Stream Notes
+- Audio is still present in OBS if the gain on the Scarlett is turned completely down. Probably due to the boosted gain setting.
+- Highlights
+    - @20:50 - Noise Suppression filter (RNNoise)
+    - @29:33 - Successful featured chat!
 
 ---
 
