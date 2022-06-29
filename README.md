@@ -3,6 +3,21 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 29, 2022
+Next TODOs for BT blog
+- `h2`-`h6` is showing body text font -> accent font
+- `.site-title` is using accent font -> code font?
+- Refactor [Ultimate Dark Mode Toggle](https://padlet.com/acidtone/UltimateDarkModeToggle) for this theme.
+
+---
+
+## June 28, 2022
+**Research**: for potential stream topics
+- [Flip animations | HTTP 203](https://www.youtube.com/watch?v=8q_05PUYv1o)
+- [Bezier Curves](https://www.youtube.com/watch?v=enNfb6p3j_g) by the Coding Train
+
+---
+
 ## June 26, 2022
 ### Live Stream Agenda
 1. Add noise suppression ([full notes](https://acidtone.github.io/teaching-journal/breakdowns/twitch-sound-filters.html))
