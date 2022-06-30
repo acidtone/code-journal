@@ -13,6 +13,48 @@ Next TODOs for BT blog:
 Updated [bt-v2 Project board](https://github.com/orgs/browsertherapy/projects/1). I had to delete most of the existing cards that were attached to the previous version of the site (before I adopted the theme).
 - Interestingly, there doesn't seem to be a way to directly link to individual cards/items in the project?
 
+### Convergent BTv2 Build Session
+**Goals:**
+Copy/pasted from [GH Project](https://github.com/orgs/browsertherapy/projects/1):
+- Add markdown test page
+- Install remark-containers
+- Install remark-attr
+- Install remark-deflist
+
+**Brute force notes**
+- Made a [gist for extended syntax test page](https://gist.github.com/acidtone/80ccaf03bf2e50de20428474f8a7f196).
+    - `remark-attr` syntax causes a compile error in mdsvex.
+- Process for installing `remark` plugins under `mdsvex` 
+    1. Confirm the npm package names:
+        - [remark-deflist](https://www.npmjs.com/package/remark-deflist)
+        - [remark-containers](https://www.npmjs.com/package/remark-containers)
+        - [remark-attr](https://www.npmjs.com/package/remark-attr)
+    2. Install packages:
+        ```bash
+        npm i -D remark-attr remark-containers remark-deflist
+        ```
+    2. Import packages:
+        ```js
+        // svelte.config.js
+        import attr from "remark-attr"
+        import containers from "remark-containers"
+        import defList from "remark-deflist"
+        ```
+    3. Add to `svelte.config.js`
+        ```js
+        // svelte.config.js
+        remarkPlugins: [
+            defList,
+            containers,
+            attr
+        ],
+        ```
+- Bonus: close the issues from the command line to watch the Project cards magically move from In Progress to Done!
+    ```bash
+    git commit -m "Closes #1, closes #3, closes #4, closes #5"
+    ```
+
+
 ---
 
 ## June 28, 2022
