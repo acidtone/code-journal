@@ -4,10 +4,14 @@ Learnings, reminders and frustrations written in the moment.
 ---
 
 ## June 29, 2022
-Next TODOs for BT blog
-- `h2`-`h6` is showing body text font -> accent font
-- `.site-title` is using accent font -> code font?
+Next TODOs for BT blog:
+- ~`h2`-`h6` is showing body text font -> accent font~
+    - [posted an issue](https://github.com/josh-collinsworth/sveltekit-blog-starter/issues/7) for Josh's theme
+- ~`.site-title` is using accent font -> code font?~
 - Refactor [Ultimate Dark Mode Toggle](https://padlet.com/acidtone/UltimateDarkModeToggle) for this theme.
+
+Updated [bt-v2 Project board](https://github.com/orgs/browsertherapy/projects/1). I had to delete most of the existing cards that were attached to the previous version of the site (before I adopted the theme).
+- Interestingly, there doesn't seem to be a way to directly link to individual cards/items in the project?
 
 ---
 
