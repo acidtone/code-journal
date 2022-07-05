@@ -3,6 +3,106 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 4, 2022
+Been thinking about why Browser Therapy exists. Not only why someone would want to watch a stream but what it means to me and why I'm doing this in the first place.
+
+### Why Browser Therapy?
+1. **Code craft**: Proceed with the indent of mastering your craft. Seek challenges and find progressively more difficult problems with code.
+2. **Accountability**: Commit to the journey, set some goals and share your progress with others.
+3. **Escape**: Code isn't just about work. It can also be a tool of self-expression but the journey doesn't have to be fun.
+
+These are not prescriptive but are core principles to direct me when I get distracted.
+
+---
+
+## June 30, 2022
+**Session goal**: [Feature: Dark mode](https://github.com/browsertherapy/browsertherapy-v2/issues/8)
+
+**Plan**: 
+1. Try implementing the [Ultimate Dark mode toggle](https://padlet.com/acidtone/UltimateDarkModeToggle) exercise in SvelteKit.
+2. Compare the implementation with the one Josh uses on [his personal blog](https://joshcollinsworth.com/)
+    - Note: This implementation doesn't respect system dark mode preference.
+
+**Brute force notes**:
+- First of all, coming back to this after a year tells me I need to write a step-by-step of my final solution:
+    1. Add HTML for toggle:
+        ```html
+        <!--Will add toggle switch here-->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Enable Dark Mode!</em>
+        </div>
+        ```
+    2. Add the CSS:
+        ```css
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-switch-wrapper em {
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+
+        .theme-switch input {
+            display:none;
+        }
+
+        .slider {
+            background-color: #ccc;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+        }
+
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 26px;
+        }
+
+        input:checked + .slider {
+            background-color: #66bb6a;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        ```
+    3. Add the JS. This might take some refactoring. Josh [used stores for some things](https://github.com/josh-collinsworth/sveltekit-blog-starter/blob/main/src/lib/assets/js/store.js) and it feels like it's a good way of handling state.
+        - Luckily, there's a [decent tutorial on stores](https://svelte.dev/tutorial/writable-stores) in the Svelte docs.
+
+---
+
 ## June 29, 2022
 Next TODOs for BT blog:
 - ~`h2`-`h6` is showing body text font -> accent font~
