@@ -3,6 +3,34 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 12, 2022
+Currently trying to get the marketing side of BT online. I've still got the BT MailChimp account from the original sessions I did a few years ago. Copy and pasting the embed code from the admin panel doesn't work with SvelteKit, though.
+Found this article with sample code that might be useful:
+- Article: [Build your own SvelteKit Boilerplate: Using Mailchimp with Endpoints](https://elliscs.hashnode.dev/build-your-own-sveltekit-boilerplate-using-mailchimp-with-endpoints) with [YouTube video](https://www.youtube.com/watch?v=6qYuYTeocQU)
+- Repo: [csellis/svelte-backpack](https://github.com/csellis/svelte-backpack)
+
+---
+
+## July 10, 2022
+- TODO: Breakdown [Board Game Design and the Psychology of Loss Aversion](https://www.youtube.com/watch?v=F_1YcCcBVfY)
+    - Lots of theory and examples of how to use loss aversion to make your games better.
+    - Referenced in the talk: [Thinking, Fast and Slow](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow) by Dan Kahneman
+
+---
+
+## July 6, 2022
+**Session goal**: [Feature: Dark mode](https://github.com/browsertherapy/browsertherapy-v2/issues/8) cont'd
+
+Getting back to the Dark Mode toggle, I'm unsure if a store is needed? It feels like this can be done with CSS Variables and a data attribute. Normally I'd take the time to figure it out myself but I think I'll cheat and take a look at Josh's implementation on his live blog. It doesn't respect the system preference but I'll figure that out later.
+- He's using stores and setting the mode with classes. I'll eventually use data attributes, I think? I'm not sure why but it just seems cleaner.
+- That said, I'm putting the Dark Mode toggle on the shelf for now; re-designing the default theme will be enough work without needing to think about another theme. BUT, I look forward to setting new colours for the logo when it comes to it.
+
+**Session Goal**: [Refactor banner](https://github.com/browsertherapy/browsertherapy-v2/issues/9)
+- Time to finally do some "design"! [I did a mood board](https://acidtone.github.io/code-journal/#april-10-2022) back in April that I can now use to properly rip off other designers.
+- That said, I'm going to go with the traditional left/right logo/nav layout for the banner. It works and this isn't a portfolio site.
+
+---
+
 ## July 4, 2022
 Been thinking about why Browser Therapy exists. Not only why someone would want to watch a stream but what it means to me and why I'm doing this in the first place.
 
