@@ -3,12 +3,25 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 14, 2022
+I finally committed to streaming every Saturday at noon by setting up a repeating event in my Twitch Schedule! I don't want to do the Dice topics on short notice for this weekend so I'm going to try building a cross-fade slider thingy that compares JWST and Hubble images:
+- [Example WebbCompare app](https://johnedchristensen.github.io/WebbCompare/Southern_Nebula.html) by John Christensen
+    - [Source code](https://github.com/JohnEdChristensen/WebbCompare)
+    - Originally referenced by [Joe Scott](https://youtu.be/UGK5eIuWxb4?t=882)
+- [Related Reddit thread](https://www.reddit.com/r/gifs/comments/vwyx4h/comment/iftqfoj/)
+- TODO: Find new images from recently released (today, supposedly) images used for commissioning the telescope.
+
+
+---
+
 ## July 12, 2022
 Currently trying to get the marketing side of BT online. I've still got the BT MailChimp account from the original sessions I did a few years ago. Copy and pasting the embed code from the admin panel doesn't work with SvelteKit, though.
 
 I found this article with sample code that might be useful:
 - Article: [Build your own SvelteKit Boilerplate: Using Mailchimp with Endpoints](https://elliscs.hashnode.dev/build-your-own-sveltekit-boilerplate-using-mailchimp-with-endpoints) with [YouTube video](https://www.youtube.com/watch?v=6qYuYTeocQU)
 - Repo: [csellis/svelte-backpack](https://github.com/csellis/svelte-backpack)
+- Ugh, the docs and interface of MailChimp is a pain. Currently evaluating SendinBlue as an alternative. So far so good...
+    - TODO: Setup a reCAPTCHA account for the hosted sign-up form.
 
 ---
 
