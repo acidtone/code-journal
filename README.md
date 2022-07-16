@@ -3,6 +3,35 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 16th, 2022
+I've been knocking down some BT cards this afternoon and now have to do a tricky one: adding a Twitch link to the main nav.
+- Problem: the SK theme I'm using only supports one type of nav link. Baiscally, I need to either add of fake a new Utility nav bar.
+- Solution: figure out how to add an additional class to each link so I can style the Twitch item with the logo and matching coloured background.
+    - The theme already supports `active` links using `class`. Otherwise `class` is empty. Now I just need to figure out how this Svelte syntax works:
+        ```js
+        <a
+          href={href}
+          on:click={maybeCloseMenu}
+          class:active={isCurrentPage}
+          aria-current={isCurrentPage ? 'page' : false}
+        >
+        ```
+        - Specifically, how do I add classes to `class:active={isCurrentPage}`?
+    - Svelte's terminology for this is "[class directive](https://svelte.dev/tutorial/classes)"
+    - Aaaand Svelte wins again. I can just add a separate class directive and Svelte will chain them automatically:
+        ```js
+        <a
+          href={href}
+          on:click={maybeCloseMenu}
+          class={page}
+          class:active={isCurrentPage}
+          aria-current={isCurrentPage ? 'page' : false}
+        >
+        ```
+        - I had to make some other changes to gain access to the `page` value but it was pretty straight forward.
+
+---
+
 ## July 14, 2022
 I finally committed to streaming every Saturday at noon by setting up a repeating event in my Twitch Schedule! I don't want to do the Dice topics on short notice for this weekend so I'm going to try building a cross-fade slider thingy that compares JWST and Hubble images:
 - [Example WebbCompare app](https://johnedchristensen.github.io/WebbCompare/Southern_Nebula.html) by John Christensen
