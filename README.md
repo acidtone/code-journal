@@ -5,7 +5,8 @@ Learnings, reminders and frustrations written in the moment.
 
 ## July 12, 2022
 Currently trying to get the marketing side of BT online. I've still got the BT MailChimp account from the original sessions I did a few years ago. Copy and pasting the embed code from the admin panel doesn't work with SvelteKit, though.
-Found this article with sample code that might be useful:
+
+I found this article with sample code that might be useful:
 - Article: [Build your own SvelteKit Boilerplate: Using Mailchimp with Endpoints](https://elliscs.hashnode.dev/build-your-own-sveltekit-boilerplate-using-mailchimp-with-endpoints) with [YouTube video](https://www.youtube.com/watch?v=6qYuYTeocQU)
 - Repo: [csellis/svelte-backpack](https://github.com/csellis/svelte-backpack)
 
