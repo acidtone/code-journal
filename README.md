@@ -4,6 +4,28 @@ Learnings, reminders and frustrations written in the moment.
 ---
 
 ## July 16th, 2022
+**Research**: Card designs for blog and article posts.
+- [Card UI Examples and Best Practices for Product Owners](https://www.eleken.co/blog-posts/card-ui-examples-and-best-practices-for-product-owners)
+- [Designing cards](https://uxdesign.cc/designing-cards-for-beginners-9ed9454d27f6)
+- [Material UI: Cards](https://material.io/components/cards)
+    - Excellent summary of basic card pattern best practices.
+
+### Card Mood Board
+![Material Card Diagram 1](images/mood/cards/material-1.png)
+
+![Material Card Diagram 2](images/mood/cards/material-2.png)
+
+![CSS Tricks Card Example](images/mood/cards/css-tricks-card.png)
+
+![CSS Tricks Card Example 2](images/mood/cards/css-tricks-card.png)
+
+![Codepen Card Example](images/mood/cards/codepen-card.png)
+
+![Twitch Card Example](images/mood/cards/twitch-card.png)
+
+---
+
+## July 16th, 2022
 I've been knocking down some BT cards this afternoon and now have to do a tricky one: adding a Twitch link to the main nav.
 - Problem: the SK theme I'm using only supports one type of nav link. Baiscally, I need to either add of fake a new Utility nav bar.
 - Solution: figure out how to add an additional class to each link so I can style the Twitch item with the logo and matching coloured background.
