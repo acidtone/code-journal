@@ -3,6 +3,12 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 17, 2022
+With the BT launch coming close, thoughts are beginning to turn to board game mechanics to help fill out the programming with game theory. This video on the "[I cut, you choose](https://www.youtube.com/watch?v=pa52DqBfYlM)" mechanic references a great directory of board game mechanics, along with references to the games that use them:
+- [Board Game Mechanics](https://boardgamegeek.com/browse/boardgamemechanic)
+
+---
+
 ## July 16th, 2022
 **Research**: Card designs for blog and article posts.
 - [Card UI Examples and Best Practices for Product Owners](https://www.eleken.co/blog-posts/card-ui-examples-and-best-practices-for-product-owners)
