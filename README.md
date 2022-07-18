@@ -20,8 +20,8 @@ Yet another example card diagram from the [Material Design docs](https://materia
 ![CSS Tricks Card Example](images/mood/cards/css-tricks-card.png)
 CSS Tricks card example.
 
-![CSS Tricks Card Example 2](images/mood/cards/css-tricks-card.png)
-Yet another CSS Tricks card example.
+![CSS Tricks Card Example 2](images/mood/cards/css-tricks-card-2.png)
+CSS Tricks card example with generic image.
 
 ![Codepen Card Example](images/mood/cards/codepen-card.png)
 Codepen card example.
