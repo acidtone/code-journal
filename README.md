@@ -11,28 +11,22 @@ Learnings, reminders and frustrations written in the moment.
     - Excellent summary of basic card pattern best practices.
 
 ### Card Mood Board
-![Material Card Diagram 1](images/mood/cards/material-card-1.png)
-
+![Material Card Diagram 1](images/mood/cards/material-card-1.png)<br>
 Example card diagram from the [Material Design docs](https://material.io/components/cards).
 
-![Material Card Diagram 2](images/mood/cards/material-card-2.png)
-
+![Material Card Diagram 2](images/mood/cards/material-card-2.png)<br>
 Yet another example card diagram from the [Material Design docs](https://material.io/components/cards).
 
-![CSS Tricks Card Example](images/mood/cards/css-tricks-card.png)
-
+![CSS Tricks Card Example](images/mood/cards/css-tricks-card.png)<br>
 CSS Tricks card example.
 
-![CSS Tricks Card Example 2](images/mood/cards/css-tricks-card-2.png)
-
+![CSS Tricks Card Example 2](images/mood/cards/css-tricks-card-2.png)<br>
 CSS Tricks card example with generic image.
 
-![Codepen Card Example](images/mood/cards/codepen-card.png)
-
+![Codepen Card Example](images/mood/cards/codepen-card.png)<br>
 Codepen card example.
 
-![Twitch Card Example](images/mood/cards/twitch-card.png)
-
+![Twitch Card Example](images/mood/cards/twitch-card.png)<br>
 Twitch card example.
 
 ---
