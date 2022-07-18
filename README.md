@@ -91,7 +91,7 @@ I found this article with sample code that might be useful:
 ## July 10, 2022
 - TODO: Breakdown [Board Game Design and the Psychology of Loss Aversion](https://www.youtube.com/watch?v=F_1YcCcBVfY)
     - Lots of theory and examples of how to use loss aversion to make your games better.
-    - Referenced in the talk: [Thinking, Fast and Slow](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow) by Dan Kahneman
+    - A book referenced in the talk: [Thinking, Fast and Slow](https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow) by Dan Kahneman
 
 ---
 
