@@ -3,9 +3,20 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 18, 2022
+Bubbles sent me this banger of a presentation on Async stores in SvelteKit:
+- [ Tackle Complex Async Behavior One Step at a Time With Svelte Stores](https://www.youtube.com/watch?v=Rz8Ah1y2hJM) by Scott Beale
+
+---
+
 ## July 17, 2022
 With the BT launch coming close, thoughts are beginning to turn to board game mechanics to help fill out the programming with game theory. This video on the "[I cut, you choose](https://www.youtube.com/watch?v=pa52DqBfYlM)" mechanic references a great directory of board game mechanics, along with references to the games that use them:
 - [Board Game Mechanics](https://boardgamegeek.com/browse/boardgamemechanic)
+    - Dice related mechanics in the list:
+        - [dice rolling](https://boardgamegeek.com/boardgamemechanic/2072/dice-rolling)
+        - [die icon resolution](https://boardgamegeek.com/boardgamemechanic/2856/die-icon-resolution)
+        - [different dice movement](https://boardgamegeek.com/boardgamemechanic/2950/different-dice-movement)
+        - [worker placement with dice workers](https://boardgamegeek.com/boardgamemechanic/2935/worker-placement-dice-workers) 
 
 ---
 
