@@ -3,6 +3,14 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 19, 2022
+I'm beginning to migrate three of the posts from the legacy Browser Therapy website and it'll take some work to get the markdown to play nice with SvelteKit.
+
+One feature that's broken is the final embedded Codepen. Luckily, I happened upon this post of components for embedding various things:
+- [SvelteKit Embed](https://sveltekit-embed.vercel.app/) by Scott Spence
+
+---
+
 ## July 18, 2022
 Bubbles sent me this banger of a presentation on Async stores in SvelteKit:
 - [ Tackle Complex Async Behavior One Step at a Time With Svelte Stores](https://www.youtube.com/watch?v=Rz8Ah1y2hJM) by Scott Beale
