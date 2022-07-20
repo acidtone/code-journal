@@ -9,6 +9,34 @@ I'm beginning to migrate three of the posts from the legacy Browser Therapy webs
 One feature that's broken is the final embedded Codepen. Luckily, I happened upon this post of components for embedding various things:
 - [SvelteKit Embed](https://sveltekit-embed.vercel.app/) by Scott Spence
 
+### Ugh, DNS edits
+I had the domain pointing at GitHub when it was a Jekyll website. I haven't been able to deploy SvelteKit to GH Pages yet. Yet! Whatever, Netlify seems to love SvelteKit and the repo sync is buttery smooth. 
+
+Custom domains may be another matter. I'm in propagation purgatory waiting for my name servers to update.
+
+### The hunt for a dns tool
+**Search**: "zsh dns tools"
+- reminded about `nsloop` but I remember there's another one:
+    - **Suggestion**: "nslookup vs..." -> dig
+        - Top result is a misleading answer unless you **pay attention to the dates**:
+            - [dig vs nslookup](https://unix.stackexchange.com/questions/93808/dig-vs-nslookup)
+- Basically, `dig` uses the OS and `nslookup` uses it's own things, and was considered deprecated but now it's not.
+- From [slm](https://unix.stackexchange.com/a/93812): 
+    > So it would seem that `nslookup` is perfectly fine to use along with `dig`. In addition to the 2 tools using different resolvers, there are things that are easier to do in `dig` vs. `nslookup`, though `nslookup` is generally the easier of the 2 tools to use day to day.
+
+    > Also `dig`'s output is typically easier to parse in scripts or in command line usage.
+- Going to start with `dig` to potentially troubleshoot my dns tomorrow.
+
+### Sniffing ns records
+**Search**: "dig ns records"
+- Attribution: [Edward S.](https://www.hostinger.com/tutorials/how-to-use-the-dig-command-in-linux/)
+- A little `dig browsertherapy.com` shows my `ns` records deleted but the new ones aren't there yet. Troubling?
+- Nope! A little `dig browsertherapy.com ns` shows my records.
+- Searching the Netlify docs:
+    - [Delegate your domain to Netlify](https://docs.netlify.com/domains-https/netlify-dns/delegate-to-netlify/)
+        - Leads to [DNS & HTTPS troubleshooting tips](https://docs.netlify.com/domains-https/troubleshooting-tips/) for tomorrow.
+- What are the odds that my name servers updated before Netlify's?
+
 ---
 
 ## July 18, 2022
