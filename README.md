@@ -3,6 +3,80 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 20, 2022
+### More DNS woes?
+> What are the odds that my name servers updated before Netlify's?
+
+Turns out, I don't know yet? The domain is still down and, although it hasn't been 24 hours, I'm preparing for the worst. 
+
+Here's what I know so far:
+
+The `ns` records are correct but not propagated:
+
+```bash
+$ dig browsertherapy.com ns
+
+;; ANSWER SECTION:
+browsertherapy.com.	86400	IN	NS	dns1.p05.nsone.net.
+browsertherapy.com.	86400	IN	NS	dns2.p05.nsone.net.
+browsertherapy.com.	86400	IN	NS	dns3.p05.nsone.net.
+browsertherapy.com.	86400	IN	NS	dns4.p05.nsone.net.
+```
+
+```bash
+$ whois browsertherapy.com | grep -i "name server"
+
+   Name Server: NS-1273.AWSDNS-31.ORG
+   Name Server: NS-1537.AWSDNS-00.CO.UK
+   Name Server: NS-499.AWSDNS-62.COM
+   Name Server: NS-828.AWSDNS-39.NET
+```
+
+```bash
+$ dig browsertherapy.com NS +trace
+
+; <<>> DiG 9.10.6 <<>> browsertherapy.com NS +trace
+;; global options: +cmd
+;; Received 17 bytes from 10.0.0.243#53(10.0.0.243) in 101 ms
+```
+
+This could still be a propagation issue (i.e. I don't need to do anything) but I'm skeptical. I'm not sure what it means when the returning name server is from the private network I'm on? From the docs, this should be Netlify.
+
+The point that worries me is the SOA is still pointing to AWS. 
+
+```bash
+$ dig -t SOA browsertherapy.com
+
+;; ANSWER SECTION:
+browsertherapy.com.	900	IN	SOA	ns-1273.awsdns-31.org. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400
+```
+
+It feels like this is something that AWS will manage automatically? There's also the chance that the .com registry doesn't like the absence of IP addresses with my name servers but, since the Console didn't throw an error, I don't think that's the issue. If any TLD wouldn't care, it'd be .com.
+
+Still in purgatory.
+
+Update: Found this support article posted around midnight:
+- [AWS Route 53 to Netlify domain migration](https://answers.netlify.com/t/aws-route-53-to-netlify-domain-migration/71734)
+    - They mention updating their SOA, so I changed mine to match:
+        ```bash
+        dns1.p05.nsone.net. hostmaster.nsone.net. 1 blah blah blah blah 
+        ```
+
+Update2: It worked almost immediately! (The odds were pretty low, it turned out.)
+
+```bash
+curl -s -v http://www.browsertherapy.com 2>&1 | grep -i server
+
+< Server: Netlify
+```
+
+- The website is loading under `http` but Netlify's HTTPS Verification thinger sees the internal dns as inactive. This is the same problem `slav-arcadechain` mentions in their thread.
+- Going to try changing the SOA to point to p01? It'll probably break everything but maybe I'll strike gold.
+    - Nope, broke it. Back to `.p05`.
+- TODO: Reply to `slav-arcadechain`'s thread to confirm I'm having the same problem. Plus props for catching me up!
+
+---
+
 ## July 19, 2022
 I'm beginning to migrate three of the posts from the legacy Browser Therapy website and it'll take some work to get the markdown to play nice with SvelteKit.
 
