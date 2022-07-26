@@ -3,6 +3,24 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 25, 2022
+**DNS Update**: `slav-arcadechain` [gave me some pointers](https://answers.netlify.com/t/aws-route-53-to-netlify-domain-migration/71734/5?u=acidtone) on how he got his setup to work by abandoning Netlify and serving the DNS using AWS. Will try to get that working tomorrow.
+
+### Heydon Pickering
+Very high quality browser vids published monthly. Current faves from researching SVGs (**search: "svg commands"**):
+- [Making Future Interfaces: Inline SVG](https://www.youtube.com/watch?v=1CDTw_UpQoQ)
+- [How do I draw a line?](https://www.youtube.com/watch?v=TUeb4MBbhTE)
+- [Making Future Interfaces: Unusual Shapes](https://www.youtube.com/watch?v=eCHt8zsbCT4)
+- [Making Future Interfaces: ES Modules](https://www.youtube.com/watch?v=dAIckpwW9ds)
+    - Not SVG related but a great intro to browser support.
+
+---
+
+## July 21, 2022
+**DNS Update**: `slav-arcadechain` gave up on support and decided to use AWS name servers instead. I'll do the same if someone doesn't reply by tomorrow.
+
+---
+
 ## July 20, 2022
 ### More DNS woes?
 > What are the odds that my name servers updated before Netlify's?
