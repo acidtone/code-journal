@@ -6,6 +6,7 @@ Learnings, reminders and frustrations written in the moment.
 ## July 30, 2022
 Cool site mentioned in [Coding Garden](https://www.twitch.tv/codinggarden):
 - [JavaScript Algorithms and Data Structures](https://github.com/trekhleb/javascript-algorithms)
+- Also mentioned: [cloak VS Code Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-cloak) for hiding secret .env keys on stream.
 
 ---
 
