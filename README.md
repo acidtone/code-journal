@@ -3,6 +3,25 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 30, 2022
+Cool site mentioned in [Coding Garden](https://www.twitch.tv/codinggarden):
+- [JavaScript Algorithms and Data Structures](https://github.com/trekhleb/javascript-algorithms)
+
+---
+
+## July 29, 2022
+**DNS Update**: Finally figured it out. There's a separate AWS admin panel to change name servers if they're registered with AWS. [I posted the details here](https://answers.netlify.com/t/aws-route-53-to-netlify-domain-migration/71734/6).
+
+### Dynamic imports with Vite
+I hadn't realized that Netlify was choking on my BT builds since I added my [fancy hidden date naming system to my blog filenames](https://acidtone.github.io/code-journal/#june-25-2022).
+
+I was seeing this error when I was booting up the site:
+![Vite dynamic import error](images/misc/vite-error-dynamic-imports.png)
+- It references this page of [limitations of using variables for dynamic imports](https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations), that [I learned about back in June](https://acidtone.github.io/code-journal/#the-magical-import-function).
+- I just had to [refactor my file paths](https://github.com/browsertherapy/browsertherapy-v2/commit/1657fa2b6960a125087027bfb5f7b28c6f3c0bac) so that the variable portion didn't include the relative path and extension.
+
+---
+
 ## July 25, 2022
 **DNS Update**: `slav-arcadechain` [gave me some pointers](https://answers.netlify.com/t/aws-route-53-to-netlify-domain-migration/71734/5?u=acidtone) on how he got his setup to work by abandoning Netlify and serving the DNS using AWS. Will try to get that working tomorrow.
 
@@ -13,6 +32,10 @@ Very high quality browser vids published monthly. Current faves from researching
 - [Making Future Interfaces: Unusual Shapes](https://www.youtube.com/watch?v=eCHt8zsbCT4)
 - [Making Future Interfaces: ES Modules](https://www.youtube.com/watch?v=dAIckpwW9ds)
     - Not SVG related but a great intro to browser support.
+
+Also found this intro to SVG elements:
+- [Learn SVG through 24 examples](https://www.youtube.com/watch?v=kBT90nwUb_o) by Hunor Márton Borbély
+
 
 ---
 
