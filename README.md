@@ -4,7 +4,7 @@ Learnings, reminders and frustrations written in the moment.
 ---
 
 ## July 30, 2022
-Cool sites/tools mentioned in [Coding Garden](https://www.twitch.tv/codinggarden):
+Cool sites/tools mentioned in [Coding Garden](https://www.twitch.tv/codinggarden) (ref by Danielle!):
 - [JavaScript Algorithms and Data Structures](https://github.com/trekhleb/javascript-algorithms)
 - [cloak VS Code extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-cloak) for hiding secret .env keys on stream.
 - [TODO Tree VS Code extension](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
