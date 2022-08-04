@@ -3,6 +3,43 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## August 4, 2022
+### Updated SvelteKit `next.336` to `next.403`
+Word on the street is that [many breaking changes are coming](https://github.com/sveltejs/kit/discussions/5748) down the pipe so I felt it prudent to update my SK projects to the current version before storm comes. My worry is packages like `mdsvex` may break and need updating.
+
+Some problems I ran into while updating [browsertherapy-v2](https://github.com/browsertherapy/browsertherapy-v2):
+1. The following fixes were found in [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/0c5f7ad1f27aeffeb0352ea4706598345e253f9d):
+    - Vite config has been moved to a new `vite.config.js` file.
+    - `package.json` scripts now use `vite` instead of `svelte-kit`:
+        ```json
+        "scripts": {
+            "dev": "vite dev",
+            "build": "vite build",
+            "preview": "vite preview",
+        }
+        ```
+    - `%svelte.head%` and `%svelte.body%` are now `%sveltekit.head%` and `%sveltekit.body%`, respectively.
+2. Additionally, I had to make the following fixes:
+    - Vite 3 is now required.
+    - HTTP method functions need to be uppercase:
+        ```js
+        export const get = async ({ url }) => {
+            // some code
+        }
+        ```
+
+        becomes:
+
+        ```js
+        export const GET = async ({ url }) => {
+            // some code
+        }
+        ```
+
+It got a little scary but it turned out alright.
+
+---
+
 ## July 30, 2022
 Cool sites/tools mentioned in [Coding Garden](https://www.twitch.tv/codinggarden) (ref by Danielle!):
 - [JavaScript Algorithms and Data Structures](https://github.com/trekhleb/javascript-algorithms)
