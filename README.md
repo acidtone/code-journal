@@ -3,6 +3,20 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## August 12, 2022
+Some sketches for a new dice roller interface:
+
+![Dice roller interface wireframe](images/king-of-tokyo/die-roller-interace-1.jpg)
+
+![Dice roller interface wireframe 2](images/king-of-tokyo/die-roller-interace-2.jpg)
+
+The changes:
+- both keep and roll piles on one row
+- keep pile has inset border to simulate a groove
+- auto resolve on 3rd roll?
+
+---
+
 ## August 4, 2022
 ### Updated SvelteKit `next.336` to `next.403`
 Word on the street is that [many breaking changes are coming](https://github.com/sveltejs/kit/discussions/5748) down the pipe so I felt it prudent to update my SK projects to the current version before storm comes. My worry is packages like `mdsvex` may break and need updating.
