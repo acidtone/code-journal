@@ -3,6 +3,24 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## August 17, 2022
+With the dice roller being pretty functional, the next feature will be the deck shuffler. With those two components, it should be possible for a group to play a game of King of Tokyo over Zoom if they keep track of their own VPs, Health and Energy.
+
+Deck requirements:
+- Set up: shuffle deck
+    - Stackoverflow: [How to randomize (shuffle) a JavaScript array](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+        - [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+        - [Cool visualization](https://bost.ocks.org/mike/shuffle/)
+- Deal 3 cards face up (name for this space?)
+- Buy a card
+    - Money is reduced
+    - Card is discarded OR card is attached to player
+- Replace a bought card
+- Discarded card -> discard pile
+- Keep card -> player session?
+
+---
+
 ## August 12, 2022
 Some sketches for a new dice roller interface:
 
