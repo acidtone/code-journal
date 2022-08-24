@@ -3,6 +3,115 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## August 23, 2022
+Josh Collinsworth fixed [an issue I submitted](https://github.com/josh-collinsworth/sveltekit-blog-starter)! I wish I had submitted a Pull Request but I wasn't sure how to solve the issue with `scss`. It turns out his fix was to
+> [I've changed `:where` to `:is`, which allows the heading styles to override the generic styles.](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/ca180e6dfa9ad4afc2cb767579ee8f16356e88b0)
+
+### Upgrading browsertherapy.com to _.431_+
+- The project is currently on [`.403`](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next403)
+- The project is based on a fresh init of [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter) 
+
+**Which is easier?**
+1. Clone a fresh project re-add all the changes done since the project began?
+2. Manually make the changes committed over the last 8 months? 
+
+Given my custom URL handling with blog posts, it's probably easier to got with #2. It'll get me acquainted with the theme if I use it for future SK-markdown projects.
+
+To get the project up-to-date, I need to:
+1. Update SK to [`.431`](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next431) or higher.
+    - a lot of the fixes will be in Josh's commit below.
+2. Apply fixes that Josh made to [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/commits/main) since I copied the files in Jan 25, 2022.
+
+### Update `@sveltejs/kit` and fix the errors.
+- Using the [git log of `sveltekit-blog-starter`](https://github.com/josh-collinsworth/sveltekit-blog-starter/commits/main) as a cheat sheet.
+
+---
+
+## August 19, 2022
+### Critiquing an online Catan game
+Bryce referred me to the [colonist.io](https://colonist.io/) website as an example of an open game platform for Settlers of Catan.
+- it looks like it's free but not open-source as far as I can tell. I don't mind that.
+- I'm mostly interested in the interface for rolling and cards as it relates to KoT. 
+- Update: I played it a bit and the interface is a little irritating as a first time user.
+    - Some of the elements are small. For example, I couldn't make out some of the ports on my 11" MacAir. I'm probably an edge case but the `canvas` element isn't responsive.
+    - There aren't any tooltips when you hover over an interface element. This would have been handy with the small ports.
+    - It's not obvious who's turn it is and what I need to do. I eventually found the "log" but there was very little visual hierarchy pointing me in the right direction.
+    - I think with a bid of play time, these issues would fade, except for the unreadable ports.
+    - Overall it's an impressive project build on `canvas`. How would someone build this with the DOM?
+
+### Ideas for KoT interface
+- Tooltips! Anything the player hovers should give some insight into what it is, what it means and when it's important.
+- Don't waste space. Catan has a lot going on but even the above implementation is wasting screen real estate with the ocean.
+- Make the important bits big a loud. Make it clear what the player needs to do or doesn't need to do by adding visual hierarchy to the game elements.
+
+---
+
+## August 17, 2022
+With the dice roller being pretty functional, the next feature will be the deck shuffler. With those two components, it should be possible for a group to play a game of King of Tokyo over Zoom if they keep track of their own VPs, Health and Energy.
+
+Deck requirements:
+- Set up: shuffle deck
+    - Stack Overflow: [How to randomize (shuffle) a JavaScript array](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+        - [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+        - [Cool visualization](https://bost.ocks.org/mike/shuffle/)
+- Deal 3 cards face up (name for this space?)
+- Buy a card (Discard cards only)
+    - Replace a bought card from the top of the deck
+    - Discarded card -> discard pile
+
+---
+
+## August 12, 2022
+Some sketches for a new dice roller interface:
+
+![Dice roller interface wireframe](images/king-of-tokyo/die-roller-interace-1.jpg)
+
+![Dice roller interface wireframe 2](images/king-of-tokyo/die-roller-interace-2.jpg)
+
+The changes:
+- both keep and roll piles on one row
+- keep pile has inset border to simulate a groove
+- auto resolve on 3rd roll?
+
+---
+
+## August 4, 2022
+### Updated SvelteKit `next.336` to `next.403`
+Word on the street is that [many breaking changes are coming](https://github.com/sveltejs/kit/discussions/5748) down the pipe so I felt it prudent to update my SK projects to the current version before storm comes. My worry is packages like `mdsvex` may break and need updating.
+
+Some problems I ran into while updating [browsertherapy-v2](https://github.com/browsertherapy/browsertherapy-v2):
+1. The following fixes were found in [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/0c5f7ad1f27aeffeb0352ea4706598345e253f9d):
+    - Vite config has been moved to a new `vite.config.js` file.
+    - `package.json` scripts now use `vite` instead of `svelte-kit`:
+        ```json
+        "scripts": {
+            "dev": "vite dev",
+            "build": "vite build",
+            "preview": "vite preview",
+        }
+        ```
+    - `%svelte.head%` and `%svelte.body%` are now `%sveltekit.head%` and `%sveltekit.body%`, respectively.
+2. Additionally, I had to make the following fixes:
+    - Vite 3 is now required.
+    - HTTP method functions need to be uppercase:
+        ```js
+        export const get = async ({ url }) => {
+            // some code
+        }
+        ```
+
+        becomes:
+
+        ```js
+        export const GET = async ({ url }) => {
+            // some code
+        }
+        ```
+
+It got a little scary but it turned out alright.
+
+---
+
 ## July 30, 2022
 Cool sites/tools mentioned in [Coding Garden](https://www.twitch.tv/codinggarden) (ref by Danielle!):
 - [JavaScript Algorithms and Data Structures](https://github.com/trekhleb/javascript-algorithms)
