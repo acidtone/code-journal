@@ -27,8 +27,9 @@ I was seeing this error when I was booting up the site:
 ## July 25, 2022
 **DNS Update**: `slav-arcadechain` [gave me some pointers](https://answers.netlify.com/t/aws-route-53-to-netlify-domain-migration/71734/5?u=acidtone) on how he got his setup to work by abandoning Netlify and serving the DNS using AWS. Will try to get that working tomorrow.
 
-### Heydon Pickering
-Very high quality browser vids published monthly. Current faves from researching SVGs (**search: "svg commands"**):
+### SVG Rabbit Hole
+**Heydon Pickering**
+Very high quality browser vids published monthly(ish). Current faves from researching SVGs (**search: "svg commands"**):
 - [Making Future Interfaces: Inline SVG](https://www.youtube.com/watch?v=1CDTw_UpQoQ)
 - [How do I draw a line?](https://www.youtube.com/watch?v=TUeb4MBbhTE)
 - [Making Future Interfaces: Unusual Shapes](https://www.youtube.com/watch?v=eCHt8zsbCT4)
@@ -38,6 +39,8 @@ Very high quality browser vids published monthly. Current faves from researching
 Also found this intro to SVG elements:
 - [Learn SVG through 24 examples](https://www.youtube.com/watch?v=kBT90nwUb_o) by Hunor Márton Borbély
 
+And this great SVG vid on Google Chrom Developers
+- [Demystifyingish SVG paths](https://www.youtube.com/watch?v=9qen5CKjUe8)
 
 ---
 
