@@ -24,6 +24,8 @@ To get the project up-to-date, I need to:
 
 ### Update `@sveltejs/kit` and fix the errors.
 - Using the [git log of `sveltekit-blog-starter`](https://github.com/josh-collinsworth/sveltekit-blog-starter/commits/main) as a cheat sheet.
+- First obstacle: my build version should be `.405` or higher before I can use the [fancy route migration script](https://stackoverflow.com/questions/73397838/migrate-to-sveltekits-new-routing-system) the SK team created.
+- Apparently Jess was recently successful at locking SK to a particular version so I'll wait until she's around to figure this out?
 
 ---
 
