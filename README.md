@@ -3,6 +3,14 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## September 3, 2022
+Posting this segment of a stream by Rich Harris about how to properly post a reproduction repo (repro) when submitting an issue:
+- [Things you do that annoy the core SvelteKit team](https://youtu.be/dB_YjuAMH3o?t=1348)
+
+This will come in handy if I have to submit a bug with how SvelteKit (and Vite?) handle markdown content when using page endpoints.
+
+---
+
 ## August 23, 2022
 Josh Collinsworth fixed [an issue I submitted](https://github.com/josh-collinsworth/sveltekit-blog-starter)! I wish I had submitted a Pull Request but I wasn't sure how to solve the issue with `scss`. It turns out his fix was to
 > [I've changed `:where` to `:is`, which allows the heading styles to override the generic styles.](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/ca180e6dfa9ad4afc2cb767579ee8f16356e88b0)
