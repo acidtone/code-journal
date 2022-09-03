@@ -11,6 +11,24 @@ This will come in handy if I have to submit a bug with how SvelteKit (and Vite?)
 
 ---
 
+## August 25, 2022
+New videos:
+- [New features in Chrome Dev Tools](https://www.youtube.com/watch?v=bHw_56RiVsg)
+    - Chapters:
+        - 0:00 - Intro
+        - 0:13 - Step-by-step replay in the Recorder
+        - 1:06 - Support mouse over event in the Recorder
+        - 2:21 - Identify FOIT/FOUT in the Performance insights panel
+        - 3:02 - LCP in the Performance insights panel
+        - 3:40 - Top layer badge in the Elements panel
+        - 4:38 - Attach wasm debugging info during runtime
+        - 5:06 - Protocol handlers in the Manifest Pane
+        - 6:38 - Bonus Tip: Use Recorder to record DevTools user flows
+    - [Google Recorder](https://developer.chrome.com/docs/devtools/recorder/), where have you been all my life?
+- [How to speed up your workflow with Console shortcuts](https://www.youtube.com/watch?v=hdRDTj6ObiE)
+
+---
+
 ## August 23, 2022
 Josh Collinsworth fixed [an issue I submitted](https://github.com/josh-collinsworth/sveltekit-blog-starter)! I wish I had submitted a Pull Request but I wasn't sure how to solve the issue with `scss`. It turns out his fix was to
 > [I've changed `:where` to `:is`, which allows the heading styles to override the generic styles.](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/ca180e6dfa9ad4afc2cb767579ee8f16356e88b0)
