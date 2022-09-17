@@ -3,6 +3,15 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## September 16, 2022
+Exciting news from last week: **SvelteKit is now in Release Candidate**!!!
+
+### Upgrading SAIT website to _.484_
+- Current: _.468_ (what's the worst that could happen?)
+- Update: nothing
+
+---
+
 ## September 3, 2022
 Posting this segment of a stream by Rich Harris about how to properly post a reproduction repo (repro) when submitting an issue:
 - [Things you do that annoy the core SvelteKit team](https://youtu.be/dB_YjuAMH3o?t=1348)
