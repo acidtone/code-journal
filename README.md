@@ -3,6 +3,12 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## September 17, 2022
+- Breaking news (from a couple days ago): [Adobe acquires Figma for $20B](https://techcrunch.com/2022/09/15/adobe-is-buying-figma-for-20b-taking-out-one-of-its-biggest-rivals-in-digital-design/)
+- [Is Figma Dead? - Penpot, the Open Source Figma Alternative](https://www.youtube.com/watch?v=pj7D0tSNmEg)
+
+---
+
 ## September 16, 2022
 Exciting news from last week: **SvelteKit is now in Release Candidate**!!!
 
