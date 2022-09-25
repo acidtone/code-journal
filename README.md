@@ -3,6 +3,41 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## September 24, 2022
+### Repos don't show up when I convert a draft Issue
+I finally figured out why some repos don't show up in the drop-down when I try to convert a Projects (Beta) draft issue: [Issues isn't turned on!](https://stackoverflow.com/questions/29692626/why-is-issues-tab-not-present-in-my-repos-github-page)
+
+### Spike: `prerender` error when upgrading `sveltekit-blog-starter`
+I started the fork of Josh's `sveltekit-blog-starter` today during the stream and, of course, I ran into issues upgrading from SK _[.472](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next472)_ to _[.503](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next503)_. 
+- Error: Some prerendered routes were not prerendered;
+
+After some searching on Google and in the [changelog](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md), it turns out that this has been happening for awhile but, as of _[.503](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next503)_, SK "throws an error if prerenderable routes are not prerendered ([#6974](https://github.com/sveltejs/kit/pull/6974))".
+
+The bug hunt made me realize a few things:
+- I don't really understand how prerendering works in SK:
+    - What makes a route prerenderable?
+        > "The basic rule is this: for content to be prerenderable, any two users hitting it directly must get the same content from the server. Note that you can still prerender content that is loaded based on the page's parameters as long as all users will be seeing the same prerendered content."
+        - [source](https://kit.svelte.dev/docs/appendix#prerendering)
+    - Can SK prerender dynamic routes? 
+        - Yes, it looks like it. `crawl` (`true` by default) will find all the local generated links as it goes through the site.
+    - Is there a way to dynamically create the `entries` config to handle things like pagination and tags/categories?
+        - No, but there's a `*` wildcard for routes that aren't dynamic.
+    - Can pure `+server.js` routes be prerendered?
+        - [Yup!](https://kit.svelte.dev/docs/page-options#prerender-prerendering-server-routes) (in theory).
+    - Why does Josh's template use pure `+server.js` routes to retrieve posts and pagination?
+        - Can't find this in the docs, but it points to my current lack of knowledge of what `+page.server.js` does and how it's different than `+server.js`. 
+            - I think I get the general idea (the former can run on the frontend) but why can't these queries be done in a statically generated manner. Or does it?
+
+Some key documentation that helped me answer the questions above:
+- [Appendix: prerendering](https://kit.svelte.dev/docs/appendix#prerendering)
+- [Config: prerenderer](https://kit.svelte.dev/docs/configuration#prerender)
+- Page options: 
+    - [prerenderer](https://kit.svelte.dev/docs/page-options#prerender)
+    - [Prerendering server routes](https://kit.svelte.dev/docs/page-options#prerender-prerendering-server-routes)
+- [List of all config options with defaults](https://kit.svelte.dev/docs/configuration)
+
+---
+
 ## September 17, 2022
 **Is Figma Dead?**
 - Breaking news (from a couple days ago): [Adobe acquires Figma for $20B](https://techcrunch.com/2022/09/15/adobe-is-buying-figma-for-20b-taking-out-one-of-its-biggest-rivals-in-digital-design/)
