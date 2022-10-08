@@ -3,6 +3,10 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## September 26, 2022
+**Search list**:
+- "flexbox patterns"
+
 ## September 24, 2022
 ### Repos don't show up when I convert a draft Issue
 I finally figured out why some repos don't show up in the drop-down when I try to convert a Projects (Beta) draft issue: [Issues isn't turned on!](https://stackoverflow.com/questions/29692626/why-is-issues-tab-not-present-in-my-repos-github-page)
