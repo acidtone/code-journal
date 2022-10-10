@@ -3,9 +3,45 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
-## September 26, 2022
-**Search list**:
-- "flexbox patterns"
+## October 10, 2022
+Happy Thanksgiving!
+
+I've got to learn some Strapi for teaching and also for a potential backend for some projects on my never-ending list of content projects (although this list actually ends):
+- **Resource library** for great videos and articles to use as homework;
+- **Central lab repository** for teachers;
+- **Definitions library** for domain-specific terms
+
+Since Nuxt3 (teaching requirement) is the new hotness, I found this video series by Pixelhop:
+
+**Building a JAMstack shop with Strapi 4, Nuxt 3, Snipcart**
+- Part 1: [Project Setup](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-1/)
+    - [Companion video](https://www.youtube.com/watch?v=AZZ6M1YXWlk&t)
+- Part 2: [Site structure, layout and core components](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-2/)
+    - [Companion video](https://www.youtube.com/watch?v=NWE88OuMViY)
+- Part 3: [Product entry with Strapi](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-3/)
+    - [Companion video](https://www.youtube.com/watch?v=KHqEBKbp3cY)
+- Part 4: [Snip cart setup](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-4/)
+    - [Companion video](https://www.youtube.com/watch?v=v6KLlwe_0Xc)
+
+---
+
+## October 9, 2022
+### Stat counters in Sveltekit
+User Story: As a game host, I'd like to quickly update my players' stats, so that they can stay updated on the state of the game.
+
+**Requirements**:
+- A counter component
+- default value: 0
+- UI for increment and decrement
+- State is a $tore?
+
+**Work-in-progress Counter**
+- [sveltekit-stat-counter](https://github.com/browsertherapy/sveltekit-stat-counter)
+
+**Attributions**
+- [Declaring props on a component](https://svelte.dev/tutorial/declaring-props)
+
+---
 
 ## September 24, 2022
 ### Repos don't show up when I convert a draft Issue
