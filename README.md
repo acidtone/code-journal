@@ -3,6 +3,11 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## September 29, 2022
+- [Excellent list of linear gradients](https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/)
+
+---
+
 ## September 17, 2022
 **Is Figma Dead?**
 - Breaking news (from a couple days ago): [Adobe acquires Figma for $20B](https://techcrunch.com/2022/09/15/adobe-is-buying-figma-for-20b-taking-out-one-of-its-biggest-rivals-in-digital-design/)
