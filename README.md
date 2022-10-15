@@ -2,9 +2,83 @@
 Learnings, reminders and frustrations written in the moment.
 
 ---
+## October 20, 2022
+I've got to learn some Strapi for teaching and also for a potential backend for some projects on my never-ending list of content projects (although this list actually ends):
+- **Resource library** for great videos and articles to use as homework;
+- **Central lab repository** for teachers;
+- **Definitions library** for domain-specific terms
+
+Since Nuxt3 (teaching requirement) is the new hotness, I found this video series by Pixelhop:
+
+**Building a JAMstack shop with Strapi 4, Nuxt 3, Snipcart**
+- Part 1: [Project Setup](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-1/)
+    - [Companion video](https://www.youtube.com/watch?v=AZZ6M1YXWlk&t)
+- Part 2: [Site structure, layout and core components](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-2/)
+    - [Companion video](https://www.youtube.com/watch?v=NWE88OuMViY)
+- Part 3: [Product entry with Strapi](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-3/)
+    - [Companion video](https://www.youtube.com/watch?v=KHqEBKbp3cY)
+- Part 4: [Snip cart setup](https://www.pixelhop.io/writing/building-a-jamstack-shop-with-strapi-4-nuxt-3-snipcart-part-4/)
+    - [Companion video](https://www.youtube.com/watch?v=v6KLlwe_0Xc)
+
+---
+
+## October 9, 2022
+### Stat counters in Sveltekit
+User Story: As a game host, I'd like to quickly update my players' stats, so that they can stay updated on the state of the game.
+
+**Requirements**:
+- A counter component
+- default value: 0
+- UI for increment and decrement
+- State is a $tore?
+
+**Work-in-progress Counter**
+- [sveltekit-stat-counter](https://github.com/browsertherapy/sveltekit-stat-counter)
+
+**Attributions**
+- [Declaring props on a component](https://svelte.dev/tutorial/declaring-props)
+
+---
 
 ## September 29, 2022
 - [Excellent list of linear gradients](https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/)
+## October 10, 2022
+Happy Thanksgiving!
+
+---
+
+## September 24, 2022
+### Repos don't show up when I convert a draft Issue
+I finally figured out why some repos don't show up in the drop-down when I try to convert a Projects (Beta) draft issue: [Issues isn't turned on!](https://stackoverflow.com/questions/29692626/why-is-issues-tab-not-present-in-my-repos-github-page)
+
+### Spike: `prerender` error when upgrading `sveltekit-blog-starter`
+I started the fork of Josh's `sveltekit-blog-starter` today during the stream and, of course, I ran into issues upgrading from SK _[.472](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next472)_ to _[.503](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next503)_. 
+- Error: Some prerendered routes were not prerendered;
+
+After some searching on Google and in the [changelog](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md), it turns out that this has been happening for awhile but, as of _[.503](https://github.com/sveltejs/kit/blob/master/packages/kit/CHANGELOG.md#100-next503)_, SK "throws an error if prerenderable routes are not prerendered ([#6974](https://github.com/sveltejs/kit/pull/6974))".
+
+The bug hunt made me realize a few things:
+- I don't really understand how prerendering works in SK:
+    - What makes a route prerenderable?
+        > "The basic rule is this: for content to be prerenderable, any two users hitting it directly must get the same content from the server. Note that you can still prerender content that is loaded based on the page's parameters as long as all users will be seeing the same prerendered content."
+        - [source](https://kit.svelte.dev/docs/appendix#prerendering)
+    - Can SK prerender dynamic routes? 
+        - Yes, it looks like it. `crawl` (`true` by default) will find all the local generated links as it goes through the site.
+    - Is there a way to dynamically create the `entries` config to handle things like pagination and tags/categories?
+        - No, but there's a `*` wildcard for routes that aren't dynamic.
+    - Can pure `+server.js` routes be prerendered?
+        - [Yup!](https://kit.svelte.dev/docs/page-options#prerender-prerendering-server-routes) (in theory).
+    - Why does Josh's template use pure `+server.js` routes to retrieve posts and pagination?
+        - Can't find this in the docs, but it points to my current lack of knowledge of what `+page.server.js` does and how it's different than `+server.js`. 
+            - I think I get the general idea (the former can run on the frontend) but why can't these queries be done in a statically generated manner. Or does it?
+
+Some key documentation that helped me answer the questions above:
+- [Appendix: prerendering](https://kit.svelte.dev/docs/appendix#prerendering)
+- [Config: prerenderer](https://kit.svelte.dev/docs/configuration#prerender)
+- Page options: 
+    - [prerenderer](https://kit.svelte.dev/docs/page-options#prerender)
+    - [Prerendering server routes](https://kit.svelte.dev/docs/page-options#prerender-prerendering-server-routes)
+- [List of all config options with defaults](https://kit.svelte.dev/docs/configuration)
 
 ---
 
