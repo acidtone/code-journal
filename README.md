@@ -2,6 +2,14 @@
 Learnings, reminders and frustrations written in the moment.
 
 ---
+
+## October 22, 2022
+Great news for anyone using Josh Collinsworth's [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/) (i.e. me). He's recently [updated his code](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/eb2e6bec1569cc6370986bac173ed728a061df00) to (hopefully) prevent erroring out with build `.503` and higher.
+
+Maybe the time is right to fork the theme for my own blogs?
+
+---
+
 ## October 20, 2022
 I've got to learn some Strapi for teaching and also for a potential backend for some projects on my never-ending list of content projects (although this list actually ends):
 - **Resource library** for great videos and articles to use as homework;
