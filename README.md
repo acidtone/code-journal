@@ -3,6 +3,14 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## November 20, 2022
+King of Tokyo is going to need some modals. A quick search for "SvelteKit modals" returns two REPL examples:
+- [Simple Modal](https://svelte.dev/repl/033e824fad0a4e34907666e7196caec4): A busy example of multiple types of modals that's a little overwhelming
+    - A nine-file example that seems to do what I need but it'll take some time to pull out the relevant code.
+- [Simple Modal Component](https://svelte.dev/repl/514f1335749a4eae9d34ad74dc277f20): A two-file modal example that seems simple but has a lot of extra code to handle nested modals that might not be needed.
+
+---
+
 ## October 22, 2022
 Great news for anyone using Josh Collinsworth's [sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter/) (i.e. me). He's recently [updated his code](https://github.com/josh-collinsworth/sveltekit-blog-starter/commit/eb2e6bec1569cc6370986bac173ed728a061df00) to (hopefully) prevent erroring out with build `.503` and higher.
 
