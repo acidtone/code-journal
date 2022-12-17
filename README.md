@@ -3,6 +3,18 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## December 15, 2022
+### Sveltekit 1.0 has been released!
+![Svelte Logo thing](images/misc/sveltekit.png)
+
+- [Announcing SvelteKit 1.0](https://svelte.dev/blog/announcing-sveltekit-1.0)
+    - [Svelte Docs](https://kit.svelte.dev/docs/introduction)
+    - [Interactive Tutorial](https://learn.svelte.dev/)
+- [LeveUpTuts Course Drop Party](https://www.youtube.com/watch?v=JGnXCpm-xSQ)
+    - [31 Video Course](https://levelup.video/tutorials/sveltekit)
+
+---
+
 ## November 20, 2022
 King of Tokyo is going to need some modals. A quick search for "SvelteKit modals" returns two REPL examples:
 - [Simple Modal](https://svelte.dev/repl/033e824fad0a4e34907666e7196caec4): A busy example of multiple types of modals that's a little overwhelming
