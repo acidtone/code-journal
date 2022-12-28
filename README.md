@@ -3,6 +3,79 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## December 27, 2022
+
+### Code Spike
+**[`sveltekit-blog-starter`](https://github.com/josh-collinsworth/sveltekit-blog-starter) on SvelteKit 1.0.whatever**
+
+**Goal**: Create a Sk-based markdown blog that does all the fancy highlighting I need as a teacher of code:
+
+**Notes**
+1. Installed the following side-by-side in a `_hello` directory;
+    - `sveltekit-blog-starter` [Quick Start](https://github.com/josh-collinsworth/sveltekit-blog-starter#quick-start)
+
+        ```
+        npx degit https://github.com/josh-collinsworth/sveltekit-blog-starter sveltekit-blog-starter
+        cd sveltekit-blog-starter
+        npm install
+        npm run dev -- --open
+        ```
+    - SvelteKit 1.0: [Creating a project](https://kit.svelte.dev/docs/creating-a-project)
+        - Created a Skeleton project with **No** to all the things:
+            
+            ```
+            npm create svelte@latest sveltekit-1.0
+            cd sveltekit-1.0
+            npm install
+            ```
+2. Re-installing SK with ES Lint and prettier to better match `sveltekit-blog-starter`;
+3. **In a new workspace**:
+    1. Repeat SK-1.0 install
+    2. Install MD related packages from `sveltekit-blog-starter`
+    3. Move src to new install
+    4. Cross fingers
+4. Notes:
+    - New packages:
+        - `@sveltejs/adapter-static`
+        - `mdsvex`
+        - `rehype-autolink-headings`
+        - `rehype-slug`
+        - `sass`
+        - `svelte-preprocess`
+5. I'm now realizing I probably want to process the markdown like they do in `learn.svelte.dev`.
+6. Cloning `learn.svelte.dev` into `_hello`
+    ```
+    $ git clone git@github.com:sveltejs/learn.svelte.dev.git
+    ```
+    - don't need to build it; I just want to see how they install the markdown functionality
+7. Notes:
+    - `learn.svelte.dev` uses `marked` instead of `mdsvex` in `sveltekit-blog-starter`. More research will be needed.
+    - For now, going to try `mdsvex` and get `sveltekit-blog-starter` running on sk-1.0
+    - Installed above packages
+    - Copied over code from:
+        - `svelte.config.js`
+        - `vite.config.js` 
+        - `README.md`
+    - Ignoring `jsconfig.json`, but not sure if I'll need it later.
+    - `npm run dev` boots without issue.
+    - Moving over `src` and `static`
+    - Everything seems to work!
+8. Observation: PrismJS doesn't recognize the `+++` syntax used in `learn.svelte.dev` to [select text inside a code block](https://learn.svelte.dev/tutorial/your-first-component) :(
+    - Looks like they have a [custom transformation renderer](https://github.com/sveltejs/learn.svelte.dev/blob/main/src/lib/server/markdown.js).
+    - I don't want to lose `mdsvex` functionality but maybe there are hooks that I can add to process `+++` into `<span class="hightlight add">`? 
+9. Next steps/questions:
+    - Should I remove `sass` support in favour of scoped `css` and/or `tailwind`?
+    - Convert f22 semester site to SK 1.0.
+
+---
+
+## December 20, 2022
+### Notes: [learn.svelte.dev](https://learn.svelte.dev)
+- [Keyed each blocks](https://learn.svelte.dev/tutorial/keyed-each-blocks) needs some review later. Having trouble visualizing what's happening with the emojis.
+-  [Await blocks](https://learn.svelte.dev/tutorial/await-blocks) are pretty cool. It broke my brain a bit when `text` is returned to a `number` variable in the template. But then I realized it's just a simple function.
+
+---
+
 ## December 15, 2022
 ### Sveltekit 1.0 has been released!
 ![Svelte Logo thing](images/misc/sveltekit.png)
