@@ -3,6 +3,14 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## December 29, 2022
+**SK Documentation**
+- Looking to make my endpoints more robust:
+    - [Advanced Routing](https://kit.svelte.dev/docs/advanced-routing)
+    - See: ["src/params" in `files` config](https://kit.svelte.dev/docs/configuration#files)
+
+---
+
 ## December 27, 2022
 
 ### Code Spike
