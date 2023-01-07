@@ -3,6 +3,26 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## January 7, 2022
+I've been looking for documentation on the `$:` syntax in Svelte. Example:
+
+```js
+$: resolveDisabled = rollState !== 'rolling';
+$: rollDisabled = rollState === 'resolved';
+$: resetDisabled = rollState === 'initial';
+
+$: keepPile = $dice.filter(die => die.keep);
+$: rollPile = $dice.filter(die => !die.keep);
+```
+- From: [king-of-tokyo-sveltekit](https://github.com/browsertherapy/king-of-tokyo-sveltekit/blob/2bd342dc70ede2e300c78ceb8492a9f9eba7a375/src/lib/components/DiceRoller.svelte#L63-L68)
+
+The symbols `$:` are filtered out when I Google them so what is the domain-specific terminology I should be using? A search for "svelte dollar colon" returns this helpful article:
+- [Understanding Svelte's `$:` (dollar label) syntax ](https://dev.to/itsjzt/understanding-svelte-s-dollar-label-syntax-3h2b)
+
+Nice! It's called "dollar lebel" syntax and it acts as a `useEffect()` type of functionality that allows for side effects when some state changes. Pretty slick.
+
+---
+
 ## December 29, 2022
 **SK Documentation**
 - Looking to make my endpoints more robust:
