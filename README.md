@@ -21,6 +21,8 @@ The symbols `$:` are filtered out when I Google them so what is the domain-speci
 
 Nice! It's called "dollar lebel" syntax and it acts as a `useEffect()` type of functionality that allows for side effects when some state changes. Pretty slick.
 
+Update: Brian says they're more officialy referred to as _[reactive statements](https://svelte.dev/tutorial/reactive-statements)_.
+
 ---
 
 ## December 29, 2022
