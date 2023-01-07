@@ -3,7 +3,7 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
-## January 7, 2022
+## January 7, 2023
 I've been looking for documentation on the `$:` syntax in Svelte. Example:
 
 ```js
