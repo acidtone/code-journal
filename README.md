@@ -3,6 +3,27 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Jan 25, 2023
+Happy Robbie Burns Day!
+
+Haggis puts me the mood for authentication. I've had my eye on this tutorial from Huntabyte since SK went 1.0:
+- [Authentication with Supabase & SvelteKit](https://www.youtube.com/watch?v=lSm0GNnh-0I)
+    - [Starter code](https://github.com/huntabyte/sk-supabase-auth)
+    - [Finished code](https://github.com/huntabyte/sk-supabase-auth/tree/final-code)
+
+**Notes**
+- The two repos install fine but, as expected, the `final-code` version gives me an error:
+    ```
+    Error: supabaseUrl is required.
+    ```
+- On to the Supabase documentation:
+    - [Getting Started](https://supabase.com/docs/guides/getting-started)
+    - [SvelteKit Tutorial](https://supabase.com/docs/guides/getting-started/tutorials/with-sveltekit)
+- First question: The tutorial in the docs say to Run "User Management Starter" but I'm not sure if Huntabyte uses this template (I'm not watching the video due to noise).
+- I'm going to put this on the shelf for today and run through the video again. Then I'll decide if I want to go with the video or run through this Supabase tutorial. I'll probably do both and compare afterwards.
+
+---
+
 ## January 7, 2023
 I've been looking for documentation on the `$:` syntax in Svelte. Example:
 
