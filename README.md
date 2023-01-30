@@ -3,6 +3,30 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Jan 29, 2023
+Thinking about nav bars for the new home page. For inspo, some home pages of the nerds I follow and respect:
+- [Josh Collinsworth](https://joshcollinsworth.com/)
+    ![Banner of Josh's website](images/mood/banners/josh-collinsworth.png)
+- [Rich Harris](https://github.com/Rich-Harris) (GitHub; no home page)
+- [Sarah Drasner](https://sarahdrasnerdesign.com/)
+    ![Banner of Sarah's website](images/mood/banners/sarah-drasner.png)
+- [Lea Verou](https://lea.verou.me/)
+    ![Banner of Sarah's website](images/mood/banners/lea-verou.png)
+- [Mandy Michael](https://github.com/mandymichael) (GitHub; no home page)
+- [Jen Simmons](https://jensimmons.com/)
+    ![Banner of Sarah's website](images/mood/banners/jen-simmons.png)
+- [Rachel Andrew](https://rachelandrew.co.uk/)
+
+    ![Banner of Sarah's website](images/mood/banners/rachel-andrew.png)
+- [Kevin Powell](https://www.kevinpowell.co/)
+    ![Banner of Sarah's website](images/mood/banners/kevin-powell.png)
+- [Chris Coyier](https://chriscoyier.net/)
+    ![Banner of Sarah's website](images/mood/banners/chris-coyier.png)
+- [Lara Schenck](https://notlaura.com/)
+    ![Banner of Sarah's website](images/mood/banners/lara-schenk.png)
+
+---
+
 ## Jan 25, 2023
 Happy Robbie Burns Day!
 
