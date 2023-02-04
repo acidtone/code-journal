@@ -3,6 +3,26 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Feb 3, 2023
+Working on some ideas for custom right-click menus. An area of SvelteKit I don't quite have a grasp on yet is where browser-based objects can be used. 
+
+SvelteKit components can run on both server and browser so how do I work with right-clicks?
+
+First, I found this article outlining the options:
+- [How To Deal With “Window Is Not Defined” In SvelteKit](https://joyofcode.xyz/sveltekit-window-is-not-defined)
+
+### Options for browser objects in SK
+1. [Browser module](https://kit.svelte.dev/docs/modules#$app-environment-browser)
+    - Meh, seems kind of clunky.
+2. [onMount](https://svelte.dev/tutorial/onmount)
+    - Been there, done that.
+3. [Actions: the use directive](https://svelte.dev/tutorial/actions)
+    - Looks very promising and sexy, especially since the example is an out-click event.
+    - `use:enhance` is one of my learning priorities so I think I'll definitely be exploring this one.
+
+
+---
+
 ## Jan 29, 2023
 Thinking about nav bars for the new home page. For inspo, some home pages of the nerds I follow and respect:
 - [Josh Collinsworth](https://joshcollinsworth.com/)
