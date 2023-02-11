@@ -3,6 +3,12 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Feb 11, 2023
+A great example of custom store method arguments, offered by the Great Morwynd:
+- [Custom store with args](https://svelte.dev/repl/8fa4163f013b47f3a8bb4babeadb6edc?version=3.55.1)
+
+---
+
 ## Feb 3, 2023
 Working on some ideas for custom right-click menus. An area of SvelteKit I don't quite have a grasp on yet is where browser-based objects can be used. 
 
