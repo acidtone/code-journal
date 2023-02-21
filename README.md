@@ -3,6 +3,12 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Feb 21, 2023
+- [Tips for Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
+    - Ref: Cordelle
+    
+---
+
 ## Feb 11, 2023
 A great example of custom store method arguments, offered by the Great Morwynd:
 - [Custom store with args](https://svelte.dev/repl/8fa4163f013b47f3a8bb4babeadb6edc?version=3.55.1)
