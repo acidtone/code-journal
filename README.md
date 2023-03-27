@@ -3,6 +3,12 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Mar 27, 2023
+Skeleton UI: A Tailwind package for SvelteKit
+- [Skeleton UI](https://www.skeleton.dev/elements/lists)
+
+---
+
 ## Mar 26, 2023
 ### Supabase!
 I've been getting acquainted with the Supabase admin panel and the toughest (and most important) bit that I've been trying to process is how auth works. I wish I found these earlier in my journey. They would have saved a lot of trial and error.
