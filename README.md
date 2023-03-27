@@ -3,6 +3,19 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## Mar 26, 2023
+### Supabase!
+I've been getting acquainted with the Supabase admin panel and the toughest (and most important) bit that I've been trying to process is how auth works. I wish I found these earlier in my journey. They would have saved a lot of trial and error.
+
+**Supabase Auth**
+- [Part One: JWTs](https://supabase.com/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
+- [Part Two: Row Level Security](https://supabase.com/docs/learn/auth-deep-dive/auth-row-level-security)
+- [Part Three: Policies](https://supabase.com/docs/learn/auth-deep-dive/auth-policies)
+- [Part Four: GoTrue](https://supabase.com/docs/learn/auth-deep-dive/auth-gotrue)
+- [Part Five: Google Oauth](https://supabase.com/docs/learn/auth-deep-dive/auth-google-oauth)
+
+---
+
 ## Feb 21, 2023
 - [Tips for Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
     - Ref: Cordelle
