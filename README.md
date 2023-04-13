@@ -3,6 +3,19 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## April 13, 2023
+I covered Svelte animations and motion today and learned about deferred transitions! 
+- [Svelte Tutorial: Deferred Transitions](https://learn.svelte.dev/tutorial/deferred-transitions)
+
+I didn't really get it at first but I found this article that tries to explain it (it took awhile to figure it out):
+- [Coordinating Multiple Elements with Svelte Deferred Transitions](https://imfeld.dev/writing/svelte_deferred_transitions)
+
+This is Part 2, which is now on my reading list, and has a pretty sweet demo:
+- [Coordinating Multiple Elements with Svelte Deferred Transitions, Part 2](https://imfeld.dev/writing/svelte_transitions_on_multiple_elements)
+
+
+---
+
 ## Mar 27, 2023
 Skeleton UI: A Tailwind package for SvelteKit
 - [Skeleton UI](https://www.skeleton.dev/elements/lists)
