@@ -6,6 +6,7 @@ Learnings, reminders and frustrations written in the moment.
 ## June 24, 2023
 ### CSS Animation Resources
 Some resources for understanding CSS transitions and animations to a level that I can implement some of [Disney's 12 Principles of Animation](https://www.youtube.com/watch?v=EUszcZNbtjs):
+- A great article summarizing [Disney's 12 Principles of Animation](https://idearocketanimation.com/13721-12-principles-of-animation-gifs/)
 - CSS Tricks: [Multi-step Animations](https://css-tricks.com/using-multi-step-animations-transitions/)
 - A great [Easing Function Cheatsheet](https://easings.net/)
 - HTTP 203: [Bringing bounce and elastic easing to CSS](https://www.youtube.com/watch?v=8FuafvJLDpM)
