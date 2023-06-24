@@ -3,6 +3,37 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 24, 2023
+### CSS Animation Resources
+Some resources for understanding CSS transitions and animations to a level that I can implement some of [Disney's 12 Principles of Animation](https://www.youtube.com/watch?v=EUszcZNbtjs):
+- CSS Tricks: [Multi-step Animations](https://css-tricks.com/using-multi-step-animations-transitions/)
+- A great [Easing Function Cheatsheet](https://easings.net/)
+- HTTP 203: [Bringing bounce and elastic easing to CSS](https://www.youtube.com/watch?v=8FuafvJLDpM)
+    - A great deep dive into why you can't add more than two anchors to `cubic-bezier()`
+    - Apparently, [`linear()`](https://static-misc-3.glitch.me/linear-easing/) is a new function that can mimic bouncing in CSS
+
+---
+
+## May 27, 2023
+**Tutorial Breakdown**: [Build a Blazing Fast SvelteKit Markdown Blog](https://www.youtube.com/watch?v=RhScu3uqGd0)
+- Dependencies:
+    - [Open Props](https://open-props.style/): Supercharged CSS variables
+    - [Lucide](https://lucide.dev/): Icon toolkit
+    - [`@fontsource`](https://fontsource.org/) Fonts installed with `pnpm`:
+        - `@fontsource/manrope` and `@fontsource/jetbrains-mono`
+    - [Wes Bos's favicon service](https://fav.farm/)
+- Synopsis:
+    - [2:23](https://www.youtube.com/watch?v=RhScu3uqGd0&t=143s)
+        - Fonts, Open props, Lucide install
+        - Site config file uses:
+            ```js
+            import { dev } from "$app/environment"
+            ```
+    - [17:09](https://youtu.be/RhScu3uqGd0?t=1029) - Great intro to [Open Props(https://open-props.style/)] and how it handles modern theming using CSS variables on steroids.
+- Stopped @ 17 mins for now
+
+---
+
 ## April 13, 2023
 I covered Svelte animations and motion today and learned about deferred transitions! 
 - [Svelte Tutorial: Deferred Transitions](https://learn.svelte.dev/tutorial/deferred-transitions)
