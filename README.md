@@ -12,6 +12,8 @@ Some resources for understanding CSS transitions and animations to a level that 
 - HTTP 203: [Bringing bounce and elastic easing to CSS](https://www.youtube.com/watch?v=8FuafvJLDpM)
     - A great deep dive into why you can't add more than two anchors to `cubic-bezier()`
     - Apparently, [`linear()`](https://static-misc-3.glitch.me/linear-easing/) is a new function that can mimic bouncing in CSS
+- [Vanilla Squash example](https://codepen.io/milberferreira/pen/RKVWyg?editors=0100)
+    - Reference: Yaansk
 
 ---
 
