@@ -14,7 +14,8 @@ Some resources for understanding CSS transitions and animations to a level that 
     - Apparently, [`linear()`](https://static-misc-3.glitch.me/linear-easing/) is a new function that can mimic bouncing in CSS
 - [CodePen Home The 12 Animation Principles using GSAP](https://codepen.io/milberferreira/pen/MJmOWB) and [Vanilla Squash example](https://codepen.io/milberferreira/pen/RKVWyg?editors=0100)
     - Reference: Yaansk
-
+- [Reversing an Easing Curve](https://css-tricks.com/reversing-an-easing-curve/)
+    - Reference: Morwynd
 ---
 
 ## May 27, 2023
