@@ -3,6 +3,83 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 28, 2023
+Instructions provided by [Zack Spring Chief](https://www.linkedin.com/in/joseph-spring-chief-69008b13b/):
+
+### Hello ChatGPT
+1. Create an account with [OpenAI](https://openai.com/blog/chatgpt)
+2. Go to API (vs ChatGPT, DALL*E)
+3. Follow/read [Quickstart Tutorial](https://platform.openai.com/docs/quickstart) 
+4. Create API Key: Profile > view API Keys
+5. Create project, save key in `.env`
+6. Initialize project
+7. Follow [API Reference](https://platform.openai.com/docs/api-reference)
+    1. `npm install openai`
+    2. Create `app.js` with example node code:
+        ```js
+        import { Configuration, OpenAIApi } from "openai";
+        const configuration = new Configuration({
+        //    organization: "org-GtBFKyLXxx4p9EKZOoapne7z",
+            apiKey: process.env.OPENAI_API_KEY,
+        });
+        const openai = new OpenAIApi(configuration);
+        // const response = await openai.listEngines();
+        ```
+        - Delete:
+            - `organization` (not using it) 
+            - last line (`openai.listEngines()` is deprecated)
+    3. `npm install dotenv`
+        ```js
+        // app.js
+        import { config } from 'dotenv';
+        config();
+        ```
+    4. Add `dev` script to `package.json`:
+        ```js
+        "scripts": {
+          "dev": "node app.js"
+        },
+        ```
+    5. Add `type: "module"` to `package.json`
+    6. Do a test run (it shouldn't do anything but run without error)
+8. Send a test request. Copy and paste this into Postman:
+    ```bash
+    curl https://api.openai.com/v1/chat/completions \
+        -H "Content-Type: application/json" \
+        -H "Authorization: Bearer $OPENAI_API_KEY" \
+        -d '{
+            "model": "gpt-3.5-turbo",
+            "messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Hello!"}]
+        }'
+    ```
+    - replacing `$OPENAI_API_KEY` with new key you just created
+9. Add `readline` functionality to app:
+    1. `import readline from 'readline';`
+    2. Add `readline` functionality to end of `app.js`
+        ```js
+        const userInterface = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+        });
+        userInterface.prompt();
+
+        userInterface.on("line", async (input) => {
+        const res = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [{ role: "user", content: input }],
+        });
+        // Log only useful information
+        console.log(res.data.choices[0].message.content);
+        });
+        ```
+10. Boot it up and ask it a question (response could take up to a minute or longer)!
+
+*Total time: 45 minutes*
+
+**Next step**: training the API
+
+---
+
 ## June 24, 2023
 ### CSS Animation Resources
 Some resources for understanding CSS transitions and animations to a level that I can implement some of [Disney's 12 Principles of Animation](https://www.youtube.com/watch?v=EUszcZNbtjs):
