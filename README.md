@@ -73,10 +73,17 @@ Instructions provided by [Zack Spring Chief](https://www.linkedin.com/in/joseph-
         });
         ```
 10. Boot it up and ask it a question (response could take up to a minute or longer)!
+11. Initialize Git and add a `.gitignore`:
+    ```
+    node_modules
+    .env
+    ```
 
 *Total time: 45 minutes*
 
-**Next step**: training the API
+## Next step: training the API
+- Dependencies
+    - Python 3
 
 ---
 
