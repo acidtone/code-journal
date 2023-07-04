@@ -95,7 +95,7 @@ Documentation on [Fine-tuning Open AI](https://platform.openai.com/docs/guides/f
     ```
 2. Build your `data.jsonl` file with `prompt` and `completion` examples.
     - Pro tip: have ChatGPT build these for you
-        > "Give me 10 commonly asked questions about [javascript|html|css|raster images|etc] along with possible completions for each question in jsonl format"
+        > "Give me 10 commonly asked questions about [javascript, html, css, etc] along with possible completions for each question in jsonl format"
     - Descriptive nouns used to build training data:
         - javascript
         - html
