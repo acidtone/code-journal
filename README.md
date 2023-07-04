@@ -3,6 +3,84 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## July 4, 2023
+### Adding training data to ChatGPT
+1. Prepare raw question/completion data:
+    ```bash
+    openai tools fine_tunes.prepare_data -f <LOCAL_FILE>
+    ```
+    - Type `y` to all the prompts
+    - Created `data_prepared.jsonl`
+2. Create upload file function
+    - in `app.js`, export the `openai` object
+    - import `openai` into `upload-file-function.js`
+        ```js
+        import { openai } from "./app.js";
+        import fs from "fs";
+
+        async function upload() {
+        try {
+            const response = await openai.createFile(
+            fs.createReadStream("./data_prepared.jsonl"),
+            "fine-tune"
+            );
+            console.log("File ID: ", response.data.id);
+        } catch (err) {
+            console.log("err", err);
+        } 
+        }
+
+        upload();
+        ```
+3. Run `upload-file-function.js`:
+    ```bash
+    node upload-file-function.js
+    ```
+    - File ID created: `file-Jamquc2KjDZZ7AwuUWiGsWgX`
+4. Create `fine-tune-function.js`:
+    ```js
+    import { openai } from "./app.js";
+
+    async function createFineTune() {
+    try {
+        const response = await openai.createFineTune({
+        training_file: "file-Jamquc2KjDZZ7AwuUWiGsWgX",
+        model: "davinci",
+        });
+        console.log("response: ", response);
+    } catch (err) {
+        console.log("error: ", err.response.data.error);
+    }
+    }
+
+    createFineTune();
+    ```
+    - This will take awhile
+5. Check on the status of the training by creating a `list-finetunes.js`:
+    ```js
+    import { openai } from "./app.js";
+
+    async function listFineTunes() {
+    try {
+        const response = await openai.listFineTunes();
+        console.log("data: ", response.data.data);
+    } catch (err) {
+        console.log("error: ", err);
+    }
+    }
+
+    listFineTunes();
+    ```
+    - The object contains `status` and `fine_tuned_model` properties:
+        ```js
+        ...
+            status: 'pending',
+            fine_tuned_model: null
+        ...
+        ```
+
+---
+
 ## June 29, 2023
 ### Training ChatGPT
 **Requirements**: Python 3
