@@ -3,6 +3,71 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## June 29, 2023
+### Training ChatGPT
+**Requirements**: Python 3
+- Is Python 3 installed: `pip --version`
+    - [Properly Installing Python 3](https://docs.python-guide.org/starting/installation/)
+    - Note, `pip3` works but `pip` did not on Mac. See: [Running `pip` gives 'command not found' after successful Python homebrew install](https://stackoverflow.com/questions/35186526/running-pip-gives-command-not-found-after-successful-python-homebrew-install)
+
+Documentation on [Fine-tuning Open AI](https://platform.openai.com/docs/guides/fine-tuning)
+1. Upgrade Open AI so that you can send it commands:
+    ```bash
+    pip install --upgrade openai openai"[datalib]"
+    ```
+2. Build your `data.jsonl` file with `prompt` and `completion` examples.
+    - Pro tip: have ChatGPT build these for you
+        > "Give me 10 commonly asked questions about [javascript|html|css|raster images|etc] along with possible completions for each question in jsonl format"
+    - Descriptive nouns used to build training data:
+        - javascript
+        - html
+        - css
+        - raster images
+        - vector images
+        - git
+        - Figma
+        - UX
+        - responsive design
+        - visual hierarchy
+        - the bash terminal
+        - npm
+        - semantic html
+        - css specificity
+        - css overrides
+        - css animation
+        - the document object model
+        - web typography
+        - styling SVG
+        - git merge conflicts
+        - flexbox
+        - css grid
+        - css color
+        - css selectors
+        - css variables
+        - html resource hints
+        - html entities
+        - media queries
+        - html lists
+        - hero sections
+        - responsive navigation
+        - css layouts
+        - html nesting
+        - css functions
+        - browser dev tools
+        - css frameworks
+        - component frameworks
+        - html attributes
+        - web accessibility
+        - browser console
+        - git branches
+    - When building your data file, use the `.jsonl` extension so that you can use multiple objects in one file.
+
+### Notes
+- When would you need to train your AI?
+    - When you want it to respond to your specific topics and not general questions.
+
+---
+
 ## June 28, 2023
 Instructions provided by [Zack Spring Chief](https://www.linkedin.com/in/joseph-spring-chief-69008b13b/):
 
@@ -80,6 +145,7 @@ Instructions provided by [Zack Spring Chief](https://www.linkedin.com/in/joseph-
     ```
 
 *Total time: 45 minutes*
+Test
 
 ## Next step: training the API
 - Dependencies
