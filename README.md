@@ -140,6 +140,8 @@ Documentation on [Fine-tuning Open AI](https://platform.openai.com/docs/guides/f
         - git branches
     - When building your data file, use the `.jsonl` extension so that you can use multiple objects in one file.
 
+![Screencap of ChatGPT training responses](images/misc/chat-gpt-training.png)
+
 ### Notes
 - When would you need to train your AI?
     - When you want it to respond to your specific topics and not general questions.
