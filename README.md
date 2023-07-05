@@ -78,6 +78,57 @@ Learnings, reminders and frustrations written in the moment.
             fine_tuned_model: null
         ...
         ```
+    - After it completes, it should say something like this:
+        ```js
+        ...
+            status: 'succeeded',
+            fine_tuned_model: 'davinci:ft-personal-2023-07-04-21-35-36'
+        ...        
+        ```
+6. Create `test-completion-function.js` which will test (duh) the training model:
+
+    ```js
+    import { openai } from "./script.js";
+
+    async function createCompletion() {
+        try {
+            const response = await openai.createCompletion({
+            model: "your model ID",
+            prompt:
+                "ask your questions here",
+            max_tokens: 100,
+            });
+            if (response.data) {
+            console.log("choices: ", response.data.choices);
+            }
+        } catch (err) {
+            console.log("err: ", err);
+        }
+    }
+
+    createCompletion();
+    ```
+    - Paste new model ID for `model`.
+    - Paste an example `prompt` below the `model`.
+7. Once the new model has been tested, refactor `app.js` to use the new interface:
+    - Before:
+        ```js
+        const res = await openai.createChatCompletion({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: input }],
+        });
+
+        console.log(res.data.choices[0].message.content);
+        ```
+    - After: 
+        ```js
+        const res = await openai.createCompletion({
+          model: "davinci:ft-personal-2023-07-04-21-35-36",
+          prompt: input,
+          max_tokens: 200,
+        });
+        console.log(res.data.choices[0].text);
+        ```   
 
 ---
 
