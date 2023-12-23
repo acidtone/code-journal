@@ -3,6 +3,17 @@ Learnings, reminders and frustrations written in the moment.
 
 ---
 
+## December 23, 2023
+### Installing Scala
+- **Question**: What's the best way to install Java on a Mac? 
+    - Lakin uses [asdf](https://asdf-vm.com/) on Windows and it's available on Mac.
+- Side quest: Now [installing Starship in iTerm2](https://alexshepherd.me/posts/zsh-ohmyzsh-starship-rust/)
+    - I love it!
+- Great game for learning vim: [VIM Adventures](https://vim-adventures.com/)
+- Cool podcast on [The Science of Learning to Code](https://corecursive.com/the-science-of-learning-to-code/)
+
+---
+
 ## July 4, 2023
 ### Adding training data to ChatGPT
 1. Prepare raw question/completion data:
