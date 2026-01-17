@@ -1,6 +1,126 @@
 # Tony's Code Journal
 Learnings, reminders and frustrations written in the moment.
 
+## July 5, 2025
+I may be making the switch from Windsurf to Cursor, which has given me these tips for optimizing the quality of its output, with respect to a Hello Maps I'm building to play around with geo things:
+
+1. Add relevant library documentation to the project README. Be specific to limit impact on the context window but include docs for features you plan to add in the future.
+    ```md
+    # Development Guide
+    ## API Integration
+    ### Google Maps API
+    - **Key Features**: Autocomplete, Geocoding, Markers
+    - **Documentation**: [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript)
+    - **Rate Limits**: [Quotas and Pricing](https://developers.google.com/maps/documentation/javascript/usage-and-billing)
+
+    ### Foursquare API
+    - **Key Features**: Nearby business search
+    - **Documentation**: [Foursquare Places API](https://developer.foursquare.com/docs/places-api)
+    ```
+2. Add a "Development Workflow" section:
+    ```md
+    ## Development Workflow
+    ### Getting Started
+    1. Clone and install dependencies
+    2. Set up environment variables
+    3. Start development server
+    4. Open browser to `http://localhost:5173`
+
+    ### Common Development Tasks
+    - **Adding new map features**: See `src/services/mapService.js`
+    - **Modifying business search**: See `src/services/businessService.js`
+    - **Error handling**: See `src/services/errorService.js`
+    - **State management**: See FSM patterns in `src/services/`
+
+    ### Debugging Tips
+    - Check browser console for API errors
+    - Verify API keys in `.env` file
+    - Test geolocation permissions
+    ```
+3. Add "Known Issues" section
+    ```md
+    ## Known Issues
+
+    - Geolocation may timeout on slow connections
+    - Foursquare API requires HTTPS in production
+    - Google Maps API has usage quotas
+    ```
+
+4. Add "Architecture Decisions" section
+    ```md
+    ## Architecture Decisions
+    ### Why FSM-Compatible Patterns?
+    - Prepares for future state management
+    - Consistent error handling
+    - Clear state transitions
+
+    ### Why Service-Based Architecture?
+    - Separation of concerns
+    - Easy testing and maintenance
+    - Modular functionality
+    ```
+
+5. Add "Performance Considerations"
+    ```md
+    ## Performance Considerations
+    - Bundle size: ~14.8KB total
+    - API calls: Minimized through caching
+    - Map rendering: Optimized marker management
+    - Error handling: Lightweight FSM patterns
+    ```
+
+### Pro Tips for Better AI Assistance
+- Use descriptive commit messages - I can see your git history
+- Comment complex logic - Helps me understand your intent
+- Keep related files open - I can see the full context
+- Ask follow-up questions - Don't hesitate to clarify
+- Use the "Explain Code" feature - Great for understanding existing code
+
+### Top Cursor Tips for New Users
+1. Use the Command Palette (Cmd/Ctrl + Shift + P)
+    - "Cursor: Chat" - Quick AI assistance
+    - "Cursor: Explain Code" - Get explanations
+    - "Cursor: Generate Tests" - Create test files
+2. Leverage Chat Context
+    - Open relevant files before asking questions
+    - Select code you want me to focus on
+    - Use @ mentions to reference specific files
+3. Optimize Your Questions
+    - Be specific: "How do I add marker clustering?" vs "Help with maps"
+    - Include context: "I'm getting a CORS error when..."
+    - Show what you've tried: "I tried X but Y happened"
+4. Use File References
+    - `@filename` to reference specific files
+    - `@folder/` to reference directories
+    - This helps me understand your project structure
+5. Leverage Multi-File Context
+    - Open multiple related files when asking complex questions
+    - I can see relationships between files and provide better solutions
+
+---
+
+## Dec 11, 2024
+- Google's [3 Core Web Vitals](https://web.dev/articles/vitals). Cool stuff.
+- [Google Tag Manager Data Layer Explained](https://www.analyticsmania.com/post/what-is-data-layer-in-google-tag-manager/). Work stuff.
+
+---
+
+## Nov 2, 2024
+References from today's Byte Club session:
+- [Zod](https://zod.dev/): Used by Starlight for validating collections
+- [Effect TS](https://effect.website/): Crazy FP library Lakin recommended
+- [Starlight Content Layer (Astro 5-beta)](https://astro.build/blog/content-layer-deep-dive/)
+    - Not supported by Starlight yet :(
+- [Adding custom icons to Starlight](https://hideoo.dev/notes/starlight-third-party-icon-sets)
+
+---
+
+## February 24, 2024
+Gems from today's mini-hackathon:
+- [Nexstand](https://nexstand.ca/) - laptop stand used by Lakin and Bubbles
+- [ZSA keyboards](https://www.zsa.io/voyager/) - fancy portable split keyboards
+- [Pages CMS](https://github.com/pages-cms/pages-cms) - CMS for statically generated websites. Bubbles is using it for a markdown blog.
+
 ---
 
 ## December 23, 2023
